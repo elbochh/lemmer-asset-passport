@@ -1,0 +1,1050 @@
+{
+  "products": [
+    {
+      "sku": "L011-080",
+      "product_url": "https://lemmer.com/en/product-2/pressurized-rustproofing-tank-60psi-10-liters-2-25-g-rp-460hd-gun-and-twin-hose-3-8-x-25/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43-1.pdf",
+          "label": "Part diagram RP-460 (Gun)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-18.pdf",
+          "label": "Reservoir part diagram"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-P.Pot-L011-0804-L500-005.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L011-083",
+      "product_url": "https://lemmer.com/en/product-2/20l-5g-deluxe-pressurized-rust-inhibitor-tank-0-86-mpa-125-psi-rp-460hd-spray-gun-and-25-foot-hose/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43-1.pdf",
+          "label": "part diagram RP-460HD (gun)"
+        }
+      ]
+    },
+    {
+      "sku": "L011-084",
+      "product_url": "https://lemmer.com/en/product-2/pressurized-rustproofing-tank-60-psi-20-liters-5-g-rp-460hd-gun-and-twin-hose-3-8-x-25/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43-1.pdf",
+          "label": "Part diagram RP-460 (Gun)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-17.pdf",
+          "label": "Reservoir part diagram"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-P.Pot-L011-0804-L500-005.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L011-085",
+      "product_url": "https://lemmer.com/en/product-2/pressurized-rustproofing-tank-125-psi-40-liters-10-g-rp-460hd-gun-and-twin-hose-3-8-x-25/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43-1.pdf",
+          "label": "part diagram RP-460HD (gun)"
+        }
+      ]
+    },
+    {
+      "sku": "L011-547",
+      "product_url": "https://lemmer.com/en/product-2/swivel-z-connector-for-compressed-air/",
+      "documents": []
+    },
+    {
+      "sku": "L015-138",
+      "product_url": "https://lemmer.com/en/product-2/anti-rust-flat-jet-air-atomizer-nozzle/",
+      "documents": []
+    },
+    {
+      "sku": "L015-141",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-rigid-28-with-double-jet-180-air-atomizer/",
+      "documents": []
+    },
+    {
+      "sku": "L015-142",
+      "product_url": "https://lemmer.com/en/product-2/round-jet-air-atomizer-rust-protection-nozzle/",
+      "documents": []
+    },
+    {
+      "sku": "L015-143",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-10-curved-round-jet-hose-18-air-atomizer/",
+      "documents": []
+    },
+    {
+      "sku": "L015-144",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-deluxe-10-courbee-jet-rond-hose-18-atomisation-a-air/",
+      "documents": []
+    },
+    {
+      "sku": "L015-145",
+      "product_url": "https://lemmer.com/en/product-2/38-rigid-anti-rust-extension-with-double-180-jet-air-atomizer/",
+      "documents": []
+    },
+    {
+      "sku": "L015-146",
+      "product_url": "https://lemmer.com/en/product-2/anti-rust-spray-extension-kit-with-flexible-air-3-with-360-jet-and-90-hook-with-flat-jet/",
+      "documents": []
+    },
+    {
+      "sku": "L015-147",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-spray-air-flexible-3-a-jet-360/",
+      "documents": []
+    },
+    {
+      "sku": "L015-148",
+      "product_url": "https://lemmer.com/en/product-2/anti-rust-extension-kit-air-atomizer-hook-90-flat-jet/",
+      "documents": []
+    },
+    {
+      "sku": "L015-149",
+      "product_url": "https://lemmer.com/en/product-2/rigid-72-anti-rust-extension-with-double-180-jet-air-atomizer/",
+      "documents": []
+    },
+    {
+      "sku": "L015-150",
+      "product_url": "https://lemmer.com/en/product-2/38-rigid-anti-rust-extension-with-360-air-atomizer-jet/",
+      "documents": []
+    },
+    {
+      "sku": "L015-151",
+      "product_url": "https://lemmer.com/en/product-2/33-rigid-anti-rust-extension-with-double-180-jet-air-atomizer/",
+      "documents": []
+    },
+    {
+      "sku": "L015-152",
+      "product_url": "https://lemmer.com/en/product-2/6-piece-air-spray-rustproofing-extension-kit/",
+      "documents": []
+    },
+    {
+      "sku": "L015-153",
+      "product_url": "https://lemmer.com/en/product-2/10-piece-air-spray-rustproofing-extension-kit/",
+      "documents": []
+    },
+    {
+      "sku": "L015-155",
+      "product_url": "https://lemmer.com/en/product-2/quick-couplers-for-air-atomized-rustproofing-extensions/",
+      "documents": []
+    },
+    {
+      "sku": "L015-156",
+      "product_url": "https://lemmer.com/en/product-2/quick-connectors-1-4f-for-air-atomized-rustproofing-extensions/",
+      "documents": []
+    },
+    {
+      "sku": "L015-157",
+      "product_url": "https://lemmer.com/en/product-2/quick-connectors-1-4f-for-air-atomized-rustproofing-extensions-2/",
+      "documents": []
+    },
+    {
+      "sku": "L015-158",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-rigid-air-atomizer-from-10-to-45-angle-round-jet/",
+      "documents": []
+    },
+    {
+      "sku": "L015-159",
+      "product_url": "https://lemmer.com/en/product-2/38%e2%80%b3-round-spray-rigid-air-anti-rust-extension/",
+      "documents": []
+    },
+    {
+      "sku": "L015-160",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-spray-air-flexible-5-to-jet-360/",
+      "documents": []
+    },
+    {
+      "sku": "L015-161",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-spray-air-flexible-10-to-jet-360/",
+      "documents": []
+    },
+    {
+      "sku": "L015-162",
+      "product_url": "https://lemmer.com/en/product-2/anti-rust-round-jet-air-atomizer-3-pack/",
+      "documents": []
+    },
+    {
+      "sku": "L015-163",
+      "product_url": "https://lemmer.com/en/product-2/anti-rust-flat-jet-air-atomizer-nozzle-3-pack/",
+      "documents": []
+    },
+    {
+      "sku": "L015-164",
+      "product_url": "https://lemmer.com/en/product-2/quick-couplers-for-air-atomized-rustproofing-extensions-3-pack/",
+      "documents": []
+    },
+    {
+      "sku": "L015-165",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-rigid-air-atomizer-9-flat-jet/",
+      "documents": []
+    },
+    {
+      "sku": "L015-166",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-deluxe-10-a-angle-de-45-jet-rond-hose-de-36-atomisation-a-air/",
+      "documents": []
+    },
+    {
+      "sku": "L015-167",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-rigid-38-round-jet-hose-36-air-atomizer/",
+      "documents": []
+    },
+    {
+      "sku": "L015-168",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-deluxe-rigid-38-round-jet-hose-36-air-atomizer/",
+      "documents": []
+    },
+    {
+      "sku": "L015-169",
+      "product_url": "https://lemmer.com/en/product-2/set-of-3-360-heads-for-hose-repair-l015-147-for-air-atomizers/",
+      "documents": []
+    },
+    {
+      "sku": "L015-201",
+      "product_url": "https://lemmer.com/en/product-2/rp-460hd-professional-air-rust-remover-125-psi/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43-1.pdf",
+          "label": "Part diagram"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-460HD.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L015-202",
+      "product_url": "https://lemmer.com/en/product-2/pressurized-rustproofing-tank-60psi-2-liters-0-5-g-gun-rp-460hd-and-twin-hose-1-4-x-5/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43-1.pdf",
+          "label": "Part diagram RP-460 (Gun)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-15.pdf",
+          "label": "Reservoir part diagram"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-460HD.pdf",
+          "label": "RP-460 instruction manual"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-PPot-1.pdf",
+          "label": "tank instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L015-203",
+      "product_url": "https://lemmer.com/en/product-2/rp-460hd-deluxe-125-psi-professional-air-rust-gun/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43-1.pdf",
+          "label": "Part diagram"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-460HD.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L015-207",
+      "product_url": "https://lemmer.com/en/product-2/rp-50-undercoat-rustproofing-gun/",
+      "documents": []
+    },
+    {
+      "sku": "L015-208",
+      "product_url": "https://lemmer.com/en/product-2/rp-100-economic-air-rust-remover-gun-90-psi/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-47.pdf",
+          "label": "Part diagram"
+        }
+      ]
+    },
+    {
+      "sku": "L015-210",
+      "product_url": "https://lemmer.com/en/product-2/rp-460hd-air-rust-remover-gun-for-pressurized-supply/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43-1.pdf",
+          "label": "PART DIAGRAM"
+        }
+      ]
+    },
+    {
+      "sku": "L033-140",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-1-4-metre-10-swivel-head-with-nozzle-417-airless-atomization/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-193.pdf",
+          "label": "PART DIAGRAM"
+        }
+      ]
+    },
+    {
+      "sku": "L033-141",
+      "product_url": "https://lemmer.com/en/product-2/anti-rust-extension-1-2-metre-20-swivel-head-with-417-airless-spray-nozzle/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-193.pdf",
+          "label": "PART DIAGRAM"
+        }
+      ]
+    },
+    {
+      "sku": "L033-142",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-1-meter-39-swivel-head-with-nozzle-417-airless-atomization/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-193.pdf",
+          "label": "PART DIAGRAM"
+        }
+      ]
+    },
+    {
+      "sku": "L033-144",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-10-flat-jet-front-nozzle-417-airless-atomization/",
+      "documents": []
+    },
+    {
+      "sku": "L033-145",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-10-curved-flat-jet-nozzle-417-airless-atomization/",
+      "documents": []
+    },
+    {
+      "sku": "L033-147",
+      "product_url": "https://lemmer.com/en/product-2/airless-spray-rustproofing-set-gun-2-extensions-and-hose-25/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "PART DIAGRAM"
+        }
+      ]
+    },
+    {
+      "sku": "L033-148",
+      "product_url": "https://lemmer.com/en/product-2/rustproof-quick-connect-11-16-for-airless-spray-extension/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "PART DIAGRAM"
+        }
+      ]
+    },
+    {
+      "sku": "L033-149",
+      "product_url": "https://lemmer.com/en/product-2/517-flat-jet-rust-proofing-nozzle-with-quick-connection-airless-atomization/",
+      "documents": []
+    },
+    {
+      "sku": "L033-150",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-10-curved-flat-jet-417-hose-36-airless-atomizer/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "PART DIAGRAM"
+        }
+      ]
+    },
+    {
+      "sku": "L033-189",
+      "product_url": "https://lemmer.com/en/product-2/fogger-air-atomizing-rustproofing-set-regulator-filter-gun-and-50-ultraflex-hose/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-44-1.pdf",
+          "label": "Part diagram : F-1001 ( gun )"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Fogger-L033-2856-L500-004.pdf",
+          "label": "manual instruction"
+        }
+      ]
+    },
+    {
+      "sku": "L033-195",
+      "product_url": "https://lemmer.com/en/product-2/airless-spray-anti-rust-kit-for-20-liters-pneumatic-pump-rp-1115/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/RP-1115.pdf",
+          "label": "Component diagram: RP-1115 (Pump)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "Piece diagram: accessory"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Airless-L033-2045-L500-002.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-197",
+      "product_url": "https://lemmer.com/en/product-2/double-high-pressure-hose-50x-1-4-ultraflex/",
+      "documents": []
+    },
+    {
+      "sku": "L033-198",
+      "product_url": "https://lemmer.com/en/product-2/double-high-pressure-hose-25x-1-4/",
+      "documents": []
+    },
+    {
+      "sku": "L033-199",
+      "product_url": "https://lemmer.com/en/product-2/double-high-pressure-hose-50x-1-4/",
+      "documents": []
+    },
+    {
+      "sku": "L033-201",
+      "product_url": "https://lemmer.com/en/product-2/fogger-air-spray-rustproofing-kit-for-60-liters-15g-pneumatic-pump-rp-1115-gun-f-1001-and-25-hose/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-46-2.pdf",
+          "label": "Part diagram RP-1115 (Pump)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-44.pdf",
+          "label": "Part diagram : f-1001 (pistol)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Fogger-L033-2012-L500-003.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-202",
+      "product_url": "https://lemmer.com/en/product-2/fogger-air-spray-rustproofing-kit-for-205-liters-45g-pneumatic-pump-rp-1115-gun-f-1001-and-25-hose/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-46-2.pdf",
+          "label": "Part diagram RP-1115 (Pump)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-44-1.pdf",
+          "label": "Part diagram : f-1001 (pistol)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Fogger-L033-2012-L500-003.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-204",
+      "product_url": "https://lemmer.com/en/product-2/airless-spray-rustproofing-kit-for-60-liters-15g-pneumatic-pump-rp-11152-quick-connect-extensions/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-46.pdf",
+          "label": "Part diagram RP-1115 (Pump)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "Accessory parts diagram"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Airless-L033-2045-L500-002.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-205",
+      "product_url": "https://lemmer.com/en/product-2/airless-spray-rustproofing-kit-for-205-liters-45g-pneumatic-pump-rp-1115-2-quick-connect-extensions/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-46.pdf",
+          "label": "Part diagram RP-1115 (Pump)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "Accessory parts diagram"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Airless-L033-2045-L500-002.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-207",
+      "product_url": "https://lemmer.com/en/product-2/air-atomized-rustproofing-kit-for-20-liters-5g-pneumatic-pump-rp-1202-gun-rp-460-and-25-hose/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43.pdf",
+          "label": "Part diagram RP-1202 (Pump)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43.pdf",
+          "label": "Component diagram: RP-460HD (Gun)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1202-L033-207814-L500-006.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-208",
+      "product_url": "https://lemmer.com/en/product-2/air-spray-rustproofing-kit-for-60-205-liters-15-55-g-pneumatic-pump-rp-1202-gun-rp-460-and-25-hose/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/part-diagram-RP-1202.pdf",
+          "label": "Part diagram RP-1202 (Pump)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43-1.pdf",
+          "label": "Component diagram: RP-460HD (Gun)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1202-L033-207814-L500-006-1.pdf",
+          "label": "RP-1202 instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-210",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-10-curved-flat-jet-413-hose-36-airless-atomizer/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "PART DIAGRAM"
+        }
+      ]
+    },
+    {
+      "sku": "L033-213",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-rigid-38-conical-jet-airless-atomization/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "PART DIAGRAM"
+        }
+      ]
+    },
+    {
+      "sku": "L033-214",
+      "product_url": "https://lemmer.com/en/product-2/air-spray-rustproofing-kit-for-60-205-liters-15-55-g-pneumatic-pump-rp-1202-gun-rp-460-and-50-mm-hose/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/part-diagram-RP-1202.pdf",
+          "label": "part number RP-1202 (pump)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43-1.pdf",
+          "label": "Component diagram: RP-460 (pistol)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1202-L033-207814-L500-006.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-215",
+      "product_url": "https://lemmer.com/en/product-2/rustproof-quick-connect-7-8-for-airless-spray-extension/",
+      "documents": []
+    },
+    {
+      "sku": "L033-216",
+      "product_url": "https://lemmer.com/en/product-2/413-flat-jet-rust-proofing-nozzle-with-quick-connection-airless-atomization/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "PART DIAGRAM"
+        }
+      ]
+    },
+    {
+      "sku": "L033-229",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-10-curved-conical-jet-hose-36-airless-atomizer/",
+      "documents": []
+    },
+    {
+      "sku": "L033-230",
+      "product_url": "https://lemmer.com/en/product-2/airless-spray-rustproofing-kit-for-20-liters-5g-electric-pump-rp-dc3100/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L500-000-owner-manual-electric-piston-pump-2024.pdf",
+          "label": "instruction manual"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "Extension part diagram"
+        }
+      ]
+    },
+    {
+      "sku": "L033-231",
+      "product_url": "https://lemmer.com/en/product-2/rp-dc3300-airless-electric-rustproofing-kit-for-205-liters-45g/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "Piece extension diagram"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L500-000-owner-manual-electric-piston-pump-2024-1.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-232",
+      "product_url": "https://lemmer.com/en/product-2/rp-lx17-electric-airless-rustproofing-kit-for-20-liters-5g/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/05/LX-17-LEMMER-AIRLESS-ELECTRIC-part-diagram.pdf",
+          "label": "Part diagram"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/05/LX-17-manual.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-283",
+      "product_url": "https://lemmer.com/en/product-2/airless-spray-rustproofing-kit-for-60-liters-15g-pneumatic-pump-rp-1115-flat-spray-nozzle-517/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/RP-1115.pdf",
+          "label": "part number RP-1115"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "Piece diagram: accessory"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Airless-L033-2045-L500-002.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-284",
+      "product_url": "https://lemmer.com/en/product-2/airless-spray-anti-rust-kit-for-205-liters-45g-pneumatic-pump-rp-1115-flat-spray-nozzle-517/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/RP-1115.pdf",
+          "label": "part number RP-1115"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "Piece diagram: accessory"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Airless-L033-2045-L500-002.pdf",
+          "label": "manual instruction"
+        }
+      ]
+    },
+    {
+      "sku": "L033-285",
+      "product_url": "https://lemmer.com/en/product-2/fogger-deluxe-air-spray-rustproofing-kit-for-60-liters-15g-pneumatic-pump-rp-1115-gun-f-1001-and-hose-50-ultraflex/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-46-2.pdf",
+          "label": "Part diagram RP-1115 (Pump)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-44-1.pdf",
+          "label": "Part diagram : f-1001 (pistol)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Fogger-L033-2856-L500-004.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-286",
+      "product_url": "https://lemmer.com/en/product-2/fogger-deluxe-air-spray-rustproofing-kit-for-205-liters-45g-pneumatic-pump-rp-1115-gun-f-1001-and-hose-50-ultraflex/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-46-2.pdf",
+          "label": "Part diagram RP-1115 (Pump)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-44-1.pdf",
+          "label": "Part diagram : f-1001 (pistol)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Fogger-L033-2856-L500-004.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-287",
+      "product_url": "https://lemmer.com/en/product-2/rp-1115-deluxe-pneumatic-airless-rustproofing-kit-for-60-liters-15g-2-quick-connect-extensions/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/RP-1115.pdf",
+          "label": "Part diagram RP-1115 (Pump)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "Accessory parts diagram"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Airless-L033-2045-L500-002.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-288",
+      "product_url": "https://lemmer.com/en/product-2/rp-1115-deluxe-airless-pneumatic-rustproofing-set-for-205-liters-45g-2-quick-connect-extensions/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/RP-1115.pdf",
+          "label": "Part diagram RP-1115 (Pump)"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "Accessory parts diagram"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Airless-L033-2045-L500-002.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L033-300",
+      "product_url": "https://lemmer.com/en/product-2/fogger-f-1001-anti-rust-air-spray-gun/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-44.pdf",
+          "label": "PART DIAGRAM"
+        }
+      ]
+    },
+    {
+      "sku": "L034-061",
+      "product_url": "https://lemmer.com/en/product-2/pipe-protector-50/",
+      "documents": []
+    },
+    {
+      "sku": "L034-062",
+      "product_url": "https://lemmer.com/en/product-2/pipe-protector-1500/",
+      "documents": []
+    },
+    {
+      "sku": "L035-415",
+      "product_url": "https://lemmer.com/en/product-2/rustproof-quick-connector-for-airless-extension-1-4m/",
+      "documents": []
+    },
+    {
+      "sku": "L035-416",
+      "product_url": "https://lemmer.com/en/product-2/rustproof-quick-connector-for-installation-on-grease-gun-for-airless-extension-1-4m/",
+      "documents": []
+    },
+    {
+      "sku": "L035-418",
+      "product_url": "https://lemmer.com/en/product-2/rustproof-quick-connector-for-airless-extension-1-4f/",
+      "documents": []
+    },
+    {
+      "sku": "L035-419",
+      "product_url": "https://lemmer.com/en/product-2/rustproof-quick-connector-for-airless-extension-1-4m-2/",
+      "documents": []
+    },
+    {
+      "sku": "L035-420",
+      "product_url": "https://lemmer.com/en/product-2/replacement-o-ring-for-anti-rust-fitting-l035-415/",
+      "documents": []
+    },
+    {
+      "sku": "L075-899",
+      "product_url": "https://lemmer.com/en/product-2/extension-anti-rust-flexible-36-conical-spray-airless-atomization/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+          "label": "Part diagram"
+        }
+      ]
+    },
+    {
+      "sku": "L080-661",
+      "product_url": "https://lemmer.com/en/product-2/double-low-pressure-hose-3-8-x-50/",
+      "documents": []
+    },
+    {
+      "sku": "L080-729",
+      "product_url": "https://lemmer.com/en/product-2/double-hose-3-8-x-25-low-pressure/",
+      "documents": []
+    },
+    {
+      "sku": "L090-001",
+      "product_url": "https://lemmer.com/en/product-2/rp-1115-anti-rust-pump-20l-5-g-or-for-wall-mounting/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/RP-1115.pdf",
+          "label": "Part diagram"
+        }
+      ]
+    },
+    {
+      "sku": "L090-003",
+      "product_url": "https://lemmer.com/en/product-2/rp-1115-anti-rust-pump-60l-15-g/",
+      "documents": []
+    },
+    {
+      "sku": "L090-004",
+      "product_url": "https://lemmer.com/en/product-2/rp-1115-anti-rust-pump-205l-55-g/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/RP-1115.pdf",
+          "label": "Part diagram"
+        }
+      ]
+    },
+    {
+      "sku": "L090-019",
+      "product_url": "https://lemmer.com/en/product-2/rp-1202n-anti-rust-pump/",
+      "documents": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/part-diagram-RP-1202.pdf",
+          "label": "PART DIAGRAM"
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1202-L033-207814-L500-006-1.pdf",
+          "label": "instruction manual"
+        }
+      ]
+    },
+    {
+      "sku": "L090-030",
+      "product_url": "https://lemmer.com/en/product-2/wall-bracket-for-extension/",
+      "documents": []
+    },
+    {
+      "sku": "L090-047",
+      "product_url": "https://lemmer.com/en/product-2/3-hose-for-transfer-pump-l090-049/",
+      "documents": []
+    },
+    {
+      "sku": "L090-049",
+      "product_url": "https://lemmer.com/en/product-2/manual-transfer-pump-for-60l-15-g-or-205l-55-g/",
+      "documents": []
+    },
+    {
+      "sku": "L090-050",
+      "product_url": "https://lemmer.com/en/product-2/lid-for-rp-1115-60l/",
+      "documents": []
+    },
+    {
+      "sku": "L090-051",
+      "product_url": "https://lemmer.com/en/product-2/wall-bracket-for-rp-1115-pump/",
+      "documents": []
+    },
+    {
+      "sku": "L090-052",
+      "product_url": "https://lemmer.com/en/product-2/lid-for-rp-1202-20l/",
+      "documents": []
+    },
+    {
+      "sku": "L090-053",
+      "product_url": "https://lemmer.com/en/product-2/barrel-adapter-for-rp-1115-pump/",
+      "documents": []
+    },
+    {
+      "sku": "L090-054",
+      "product_url": "https://lemmer.com/en/product-2/lid-for-rp-1115-20l/",
+      "documents": []
+    },
+    {
+      "sku": "L090-071",
+      "product_url": "https://lemmer.com/en/product-2/suction-filter-for-pump-rp-1115-rustproof/",
+      "documents": []
+    },
+    {
+      "sku": "L090-073",
+      "product_url": "https://lemmer.com/en/product-2/barrel-adapter-for-rp-1202-pump/",
+      "documents": []
+    },
+    {
+      "sku": "L090-089",
+      "error": "HTTPStatusError",
+      "documents": []
+    },
+    {
+      "sku": "L090-210",
+      "error": "HTTPStatusError",
+      "documents": []
+    },
+    {
+      "sku": "L090-211",
+      "error": "HTTPStatusError",
+      "documents": []
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/L500-000-owner-manual-electric-piston-pump-2024-1.pdf",
+      "file": "39a5f3722bd62d75.md",
+      "pages": 8,
+      "sha256": "5ff8b749a45f2d3d601d0595e2dd5b44a420eed966eb4ce0aade904287395e0e"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/L500-000-owner-manual-electric-piston-pump-2024.pdf",
+      "file": "a3d93229d5c90a28.md",
+      "pages": 8,
+      "sha256": "5ff8b749a45f2d3d601d0595e2dd5b44a420eed966eb4ce0aade904287395e0e"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-PPot-1.pdf",
+      "file": "7a2a1ccbf4e14d77.md",
+      "pages": 2,
+      "sha256": "40e5d816820c0e9530221f9b7a890d48499391081ade401fddd8d8eced85b9f8"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Airless-L033-2045-L500-002.pdf",
+      "file": "76da4693636861c1.md",
+      "pages": 2,
+      "sha256": "9e4a33dc98b316d086f48dbf5454254ed95a4c6768878106750af0a3ac929047"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Fogger-L033-2012-L500-003.pdf",
+      "file": "aa1b1ae46ea41091.md",
+      "pages": 2,
+      "sha256": "b6d834075ebdbaf426de715fba972d5b75870da9a891dff3151b395bd2a823a7"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1115-Fogger-L033-2856-L500-004.pdf",
+      "file": "bc5dbabbe5529068.md",
+      "pages": 2,
+      "sha256": "219e71668da8a985352b6bc7f0d67d63bb8e230ac1381031985da5ed38192df5"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1202-L033-207814-L500-006-1.pdf",
+      "file": "e63acf1f4a78afba.md",
+      "pages": 2,
+      "sha256": "c34a52d1f8cfcf1d771571dedb5d13ca8b88beb363e46f6810c4c00f718eba36"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-1202-L033-207814-L500-006.pdf",
+      "file": "501a22a85676a2fd.md",
+      "pages": 2,
+      "sha256": "c34a52d1f8cfcf1d771571dedb5d13ca8b88beb363e46f6810c4c00f718eba36"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-460HD.pdf",
+      "file": "6e655a5f40ed97da.md",
+      "pages": 2,
+      "sha256": "9c80856a81c53d42f6159b7734437396d9f0594fa09e966326ca62e3a8ef9ad9"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Manual-RP-P.Pot-L011-0804-L500-005.pdf",
+      "file": "b173461d66da5b2e.md",
+      "pages": 2,
+      "sha256": "37e0245af0d6715daa53144f54e260cff05d1a2975e2004bd766fd5750133142"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-15.pdf",
+      "file": "7c6e3345720989f4.md",
+      "pages": 1,
+      "sha256": "50d085560acd44ac9e0f181851b0f1510f4820d930769c6553ef047231dc5c43"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-17.pdf",
+      "file": "0f3f3316c218e598.md",
+      "pages": 1,
+      "sha256": "483fcd9a58b9ed09e1014518a37eb64e33eaa938de61f9c0d9c1b0493613fc82"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-18.pdf",
+      "file": "550f683425b9c478.md",
+      "pages": 1,
+      "sha256": "8561a8b472661964aaca0bff2e18add34723b3422e745df1c3f45eea821100d7"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-193.pdf",
+      "file": "d3b760ff438e00d6.md",
+      "pages": 1,
+      "sha256": "5b434a72df9bb4cb640cbc4df43a41b493fb0fcb3a95bda261a9773801e67e0e"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43-1.pdf",
+      "file": "4efb7c88cdc78fd5.md",
+      "pages": 1,
+      "sha256": "620fb3c8acf6f158eb9bd6650e54e591e55329b65e9d90b3a2329bfbffc039e1"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-43.pdf",
+      "file": "702cf06fa3467e73.md",
+      "pages": 1,
+      "sha256": "620fb3c8acf6f158eb9bd6650e54e591e55329b65e9d90b3a2329bfbffc039e1"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-44-1.pdf",
+      "file": "13d1fe388af8e789.md",
+      "pages": 1,
+      "sha256": "52f769bf04060b263f22c3ffffbf8c731178b1be6c012b660301fc2ed8428824"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-44.pdf",
+      "file": "8e72f2775971d5a1.md",
+      "pages": 1,
+      "sha256": "52f769bf04060b263f22c3ffffbf8c731178b1be6c012b660301fc2ed8428824"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-45.pdf",
+      "file": "d2c0c439dcf7fd2b.md",
+      "pages": 1,
+      "sha256": "8905216469c30644cad7e961790abd363a3f15cd14ada1020c5f2c55461bf70c"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-46-2.pdf",
+      "file": "c509cff2e9af004b.md",
+      "pages": 1,
+      "sha256": "6308a5ba5865939b03bed02e7239b75ad25b3ea7d33ea01f018add47bbd024e8"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-46.pdf",
+      "file": "7a4db3c61cb25cf3.md",
+      "pages": 1,
+      "sha256": "6308a5ba5865939b03bed02e7239b75ad25b3ea7d33ea01f018add47bbd024e8"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/Parts-Book-Complete-47.pdf",
+      "file": "e77278a5f28863b5.md",
+      "pages": 1,
+      "sha256": "b982915f9674531cdbbabc504d229fb8a817c51e8b5c7d0ffd3260c1b9260192"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/RP-1115.pdf",
+      "file": "b47841437680e479.md",
+      "pages": 1,
+      "sha256": "49f48b6ccb16a7bfe3ff3923bcc506d517c7958538529fa9e4f47f8efc96e477"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/01/part-diagram-RP-1202.pdf",
+      "file": "38f1fa3ec93e1f21.md",
+      "pages": 1,
+      "sha256": "b0c4b5692449400d6d78d3761910923238bef18dbd5fb497518ee115298936f8"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/05/LX-17-LEMMER-AIRLESS-ELECTRIC-part-diagram.pdf",
+      "file": "f89674b02e9c2cc7.md",
+      "pages": 2,
+      "sha256": "42458a0726d4d6a8619a146efe9a8e58909d79a69c0776c28565153a80aa583b"
+    },
+    {
+      "url": "https://lemmer.com/wp-content/uploads/2026/05/LX-17-manual.pdf",
+      "file": "324491a8c9afb0cf.md",
+      "pages": 64,
+      "sha256": "7be043089a4539748fe7f643647462e9ebc8e630b25fab55bba77d3d2e05449e"
+    }
+  ]
+}

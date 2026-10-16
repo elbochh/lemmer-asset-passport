@@ -1,0 +1,2999 @@
+{
+  "captured_at": "2026-09-26T08:07:24.930742+00:00",
+  "source": "https://lemmer.com/en/wp-json/wc/store/v1/products?category=126",
+  "count": 103,
+  "review_status": "unreviewed",
+  "products": [
+    {
+      "id": 988543,
+      "sku": "L011-080",
+      "name": "10L / 2.25G Pressurized Rustproofing Tank 0.4 MPa / 60 Psi , RP-460HD Gun and 7,6M / 25′ Hose",
+      "url": "https://lemmer.com/en/product-2/pressurized-rustproofing-tank-60psi-10-liters-2-25-g-rp-460hd-gun-and-twin-hose-3-8-x-25/",
+      "file": "l011-080-988543.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L011-080-RP-2G-KIT-crop.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "3c28888930605014437782006a9fa45c572eb206c3e293b0e26d934f1bb62452"
+    },
+    {
+      "id": 990898,
+      "sku": "L011-083",
+      "name": "20L / 5G pressurized rust inhibitor tank (0.86 MPa / 125 psi), RP-460HD spray gun, and 25′ hose",
+      "url": "https://lemmer.com/en/product-2/20l-5g-deluxe-pressurized-rust-inhibitor-tank-0-86-mpa-125-psi-rp-460hd-spray-gun-and-25-foot-hose/",
+      "file": "l011-083-990898.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/05/L011-083-kit.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/05/L011-083-air-reg.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/05/L011-083-fluid-filter.jpg",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "c9621f6418bbef066202a6086d56c7700c099a5b705e1c758cf34f9305468308"
+    },
+    {
+      "id": 988545,
+      "sku": "L011-084",
+      "name": "20L / 5G pressurized tank for rustproofing 0.4 MPa / 60 Psi , RP-460HD gun and 7.6M / 25′ hose",
+      "url": "https://lemmer.com/en/product-2/pressurized-rustproofing-tank-60-psi-20-liters-5-g-rp-460hd-gun-and-twin-hose-3-8-x-25/",
+      "file": "l011-084-988545.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L011-084.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "908a1248b21e6d96d86237c35bb8bcdfae6a9f1db74e95f4bbf312b3ff37050e"
+    },
+    {
+      "id": 988546,
+      "sku": "L011-085",
+      "name": "40L / 10G Deluxe pressurized tank for rustproofing 0.86 MPa / 125 Psi , RP-460HD gun and 25′ hose",
+      "url": "https://lemmer.com/en/product-2/pressurized-rustproofing-tank-125-psi-40-liters-10-g-rp-460hd-gun-and-twin-hose-3-8-x-25/",
+      "file": "l011-085-988546.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L011-085-RP-10G-p.pot-kit.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L011-085-RP-10G-p.pot-kit-funnel.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L011-085-RP-10G-p.pot-kit-outlet-filter.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L011-085-RP-10G-p.pot-kit-air-reg.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L011-085-RP-10G-p.pot-kit-side-sticker.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L011-085-Part-diagram.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "568d94e77b2a405fd546d166cdaa54dcb123196f18e4ee00a0fca52b07569d08"
+    },
+    {
+      "id": 988569,
+      "sku": "L011-547",
+      "name": "Z« swivel connection for compressed air",
+      "url": "https://lemmer.com/en/product-2/swivel-z-connector-for-compressed-air/",
+      "file": "l011-547-988569.md",
+      "categories": [
+        {
+          "id": 185,
+          "name": "Accessoires divers",
+          "slug": "accessoire-divers-2",
+          "link": "https://lemmer.com/en/product-category-2/accessory/miscellaneous-accessories-2/"
+        },
+        {
+          "id": 167,
+          "name": "Accessoires et pièces pour pistolets pneumatiques",
+          "slug": "acc-pistolet-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/air-spray-gun/acc-air-gun-accessory/"
+        },
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 170,
+          "name": "Boyau à air comprimé",
+          "slug": "boyau-a-air",
+          "link": "https://lemmer.com/en/product-category-2/accessory/air-hose/"
+        },
+        {
+          "id": 135,
+          "name": "Raccords basse pression",
+          "slug": "raccords-basse-pression",
+          "link": "https://lemmer.com/en/product-category-2/accessory/low-pressure-fittings/"
+        },
+        {
+          "id": 171,
+          "name": "Raccords rapides pour air comprimé",
+          "slug": "raccords-basse-pression-boyaux-et-raccord-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/accessory/low-pressure-fittings-hoses-and-accessory-fittings/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L011-547.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L011-547-Z-swivel.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "797a074ade89f3bc268a7d9012e136b3eec2c0d82c8f2360fcb1826a2fcf2b9d"
+    },
+    {
+      "id": 988619,
+      "sku": "L015-138",
+      "name": "Flat-jet anti-rust nozzle, air atomized",
+      "url": "https://lemmer.com/en/product-2/anti-rust-flat-jet-air-atomizer-nozzle/",
+      "file": "l015-138-988619.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-138-flat-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-138-RP-nozzle-flat-c.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "8bb78d30ddb097ac4f10f0ff6c68cddccd4bba19286c96a2f5d7307be99d5781"
+    },
+    {
+      "id": 988620,
+      "sku": "L015-141",
+      "name": "Rigid 71cm / 28” Double Jet 180°, Anti-rust extension, air atomization",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-rigid-28-with-double-jet-180-air-atomizer/",
+      "file": "l015-141-988620.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-145-double-flat-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-145-RP-wand-LP-38inc.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "19b621ddc0d2f3ad8260db044bdd233710919314000f3cc16d9e4138e2df5779"
+    },
+    {
+      "id": 988621,
+      "sku": "L015-142",
+      "name": "Round-jet rust protection nozzle, air atomized",
+      "url": "https://lemmer.com/en/product-2/round-jet-air-atomizer-rust-protection-nozzle/",
+      "file": "l015-142-988621.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-142-round-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-142-RP-nozzle-round-c.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "2c12ddff12b7e1d94d90af17ee448719dbb0e8a9045d66132f3ec2b5a2a55bbe"
+    },
+    {
+      "id": 988622,
+      "sku": "L015-143",
+      "name": "Rigid 25cm / 10″, 45° round jet on 45cm / 18″ hose, Rust-proof extension, air atomizer",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-10-curved-round-jet-hose-18-air-atomizer/",
+      "file": "l015-143-988622.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-143-round-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-143.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-143-part-diagram.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "834c5d0e27194cf6109bb9360eafb6c21e0282bab1090644d7d425f6a2716a61"
+    },
+    {
+      "id": 988623,
+      "sku": "L015-144",
+      "name": "Rigid 25cm / 10″, 45° round jet on 45cm / 18″ hose, Deluxe Rustproofing Extension, air atomizer",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-deluxe-10-courbee-jet-rond-hose-18-atomisation-a-air/",
+      "file": "l015-144-988623.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-144-rond-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-144-RP-wand-LP-45d-blc.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-144-RP-wand-LP-45d-blc-diagram.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "4cb5455f57383a84168d89dfa8a1e62a89cc667db699232b882c208e925be89d"
+    },
+    {
+      "id": 988624,
+      "sku": "L015-145",
+      "name": "Rigid 96cm / 38” Double Jet 180°, Anti-rust extension, air atomization",
+      "url": "https://lemmer.com/en/product-2/38-rigid-anti-rust-extension-with-double-180-jet-air-atomizer/",
+      "file": "l015-145-988624.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-145-double-flat-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-145-RP-wand-LP-38inc.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-145.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "9bcf91c8da44a4ab8041b7b73ae214522f1e6f58cd98ee2dcde578d98d8c0256"
+    },
+    {
+      "id": 988625,
+      "sku": "L015-146",
+      "name": "2 anti-rust extensions 0.9M / 3′, 360° jet hose and 90° flat jet hook, air atomizer",
+      "url": "https://lemmer.com/en/product-2/anti-rust-spray-extension-kit-with-flexible-air-3-with-360-jet-and-90-hook-with-flat-jet/",
+      "file": "l015-146-988625.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-146-360-and-90-degree.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-147-360-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-147.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-148-90-hook-.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-148-flat-spray.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "62ad296f1b5be035569e22d0dfe6770aebc20779625d1005b660664b3aa03022"
+    },
+    {
+      "id": 988626,
+      "sku": "L015-147",
+      "name": "91 CM / 3′ hose with 360° jet, Rust-proof extension, air atomization",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-spray-air-flexible-3-a-jet-360/",
+      "file": "l015-147-988626.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-147-360-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-147.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "4f08dcf44cf749ef2c12007ca2e035ce2093ecdda28af21a10bf0849daccb916"
+    },
+    {
+      "id": 988627,
+      "sku": "L015-148",
+      "name": "90° flat spray hook, anti-rust extension, air atomization,",
+      "url": "https://lemmer.com/en/product-2/anti-rust-extension-kit-air-atomizer-hook-90-flat-jet/",
+      "file": "l015-148-988627.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-148-flat-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-148-90-hook-.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "9ae3df522b13bcfdd66847b15dc82f514dea1db5d53b154d0db3306492aaa5cc"
+    },
+    {
+      "id": 988628,
+      "sku": "L015-149",
+      "name": "Rigid 1.8m / 72” Double Jet 180°, Anti-rust extension, air atomization",
+      "url": "https://lemmer.com/en/product-2/rigid-72-anti-rust-extension-with-double-180-jet-air-atomizer/",
+      "file": "l015-149-988628.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-145-double-flat-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-145-RP-wand-LP-38inc.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-145.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "6619a9f7c7043623adcfac379ca70da73c9baa0c151aba03151a0a68ebd68966"
+    },
+    {
+      "id": 988629,
+      "sku": "L015-150",
+      "name": "Rigid 96cm / 38” 360° Jet, Anti-rust extension, air atomization",
+      "url": "https://lemmer.com/en/product-2/38-rigid-anti-rust-extension-with-360-air-atomizer-jet/",
+      "file": "l015-150-988629.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-150-round-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-150-RP-wand-LP-38inc.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "746f3ba35698532e18b46170560f1c88f378ee09d7869e78bded2e3e3f256189"
+    },
+    {
+      "id": 988630,
+      "sku": "L015-151",
+      "name": "Rigid 84cm / 33” Double Jet 180°, Anti-rust extension, air atomization",
+      "url": "https://lemmer.com/en/product-2/33-rigid-anti-rust-extension-with-double-180-jet-air-atomizer/",
+      "file": "l015-151-988630.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-145-double-flat-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-145-RP-wand-LP-38inc.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-145.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "29f254bd0530a4cb2f2ccfa472a0785ff5663b8588204cf54a78106730f511a0"
+    },
+    {
+      "id": 988631,
+      "sku": "L015-152",
+      "name": "Rustproof extension kit, air atomized, (6 pieces)",
+      "url": "https://lemmer.com/en/product-2/6-piece-air-spray-rustproofing-extension-kit/",
+      "file": "l015-152-988631.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-152-with-spray-patern.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-152-RP-Fogger-accy-kit-n.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "66eed650c5e39ffc4b36f4dfbc153ba0aa135c7ddb2c35ac1b8676fb90d7be48"
+    },
+    {
+      "id": 988632,
+      "sku": "L015-153",
+      "name": "Rustproof extension kit, air atomized, (10 pieces)",
+      "url": "https://lemmer.com/en/product-2/10-piece-air-spray-rustproofing-extension-kit/",
+      "file": "l015-153-988632.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-153-spray-patern.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-153.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "cae484c38910ab2cbf1d36d2e371aa9123877d39dc847238bb41bc2d57406c57"
+    },
+    {
+      "id": 988633,
+      "sku": "L015-155",
+      "name": "Quick couplers for air-atomized rustproofing extensions.",
+      "url": "https://lemmer.com/en/product-2/quick-couplers-for-air-atomized-rustproofing-extensions/",
+      "file": "l015-155-988633.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-155-on-L015-210.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-155-RP-QC-Crop.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "26c86dd65803a17224f77781a5b6223ee3d957ea8fc603f8d4ccc50d24ebb17c"
+    },
+    {
+      "id": 988634,
+      "sku": "L015-156",
+      "name": "1/4F quick-release couplings for air-sprayed rustproofing extensions.",
+      "url": "https://lemmer.com/en/product-2/quick-connectors-1-4f-for-air-atomized-rustproofing-extensions/",
+      "file": "l015-156-988634.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-156-14F.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-156-14-back-view.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-156-on-L015-145.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "2865620b32da8a0f99f39772b04053587edb91e93a3590df9e9d5a02efa91698"
+    },
+    {
+      "id": 988635,
+      "sku": "L015-157",
+      "name": "1/4M quick connectors for air-atomized rustproofing extensions.",
+      "url": "https://lemmer.com/en/product-2/quick-connectors-1-4f-for-air-atomized-rustproofing-extensions-2/",
+      "file": "l015-157-988635.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-157-14M.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-157-on-L015-144.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-157-1.4m-back-view.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "7cb85b0419ca0e42ea5d7dd1e2287f7c0b32dd0d58f2fe8a1124fbc8ef11ef16"
+    },
+    {
+      "id": 988636,
+      "sku": "L015-158",
+      "name": "Rigid 25cm / 10″, 45° round jet, Anti-rust extension, air atomization",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-rigid-air-atomizer-from-10-to-45-angle-round-jet/",
+      "file": "l015-158-988636.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-158-rond-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-158.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-158-head.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "38c3afdd12d96550a93faf22e94c0b3056456fa4d841a22c298b8e2cbb9d0680"
+    },
+    {
+      "id": 988637,
+      "sku": "L015-159",
+      "name": "Rigid 96cm / 38″ round jet, Rustproof extension, air atomization",
+      "url": "https://lemmer.com/en/product-2/38%e2%80%b3-round-spray-rigid-air-anti-rust-extension/",
+      "file": "l015-159-988637.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-159-round-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-159-front-end.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-159.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "53018706b386d281b93cc9159ea8ca9f04c59cbff9c0f90d6690f2c654225330"
+    },
+    {
+      "id": 988638,
+      "sku": "L015-160",
+      "name": "1.5M / 5′ hose with 360° jet, Rust-proof extension, air atomization",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-spray-air-flexible-5-to-jet-360/",
+      "file": "l015-160-988638.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-160-1.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "3f7504992a4827a3b4d0a40a937dbda5b2143a8d8b2d09048f03998af832eb45"
+    },
+    {
+      "id": 988639,
+      "sku": "L015-161",
+      "name": "3M / 10′ hose with 360° jet, Rust prevention extension, air atomization",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-spray-air-flexible-10-to-jet-360/",
+      "file": "l015-161-988639.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-161.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "4fb1b8626896efef24de42324e99c840cc0be35fc760ffffae796bbef05201dd"
+    },
+    {
+      "id": 988640,
+      "sku": "L015-162",
+      "name": "Round-jet rustproofing nozzle, air atomized, 3-pack",
+      "url": "https://lemmer.com/en/product-2/anti-rust-round-jet-air-atomizer-3-pack/",
+      "file": "l015-162-988640.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-162.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "a1ab6abd8c2ae51e2fe67cd5bb0ceb62e15d6cf8b93b75b1a9ce9e08be291b96"
+    },
+    {
+      "id": 988641,
+      "sku": "L015-163",
+      "name": "Flat spray anti-rust nozzle, air atomized, 3-pack",
+      "url": "https://lemmer.com/en/product-2/anti-rust-flat-jet-air-atomizer-nozzle-3-pack/",
+      "file": "l015-163-988641.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-163.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "c13d5b867c728bd664ecd75d8a276825183415e236122f7424d28218f6b7d456"
+    },
+    {
+      "id": 988642,
+      "sku": "L015-164",
+      "name": "Quick couplers for air-atomized rustproofing extensions. Pack of 3",
+      "url": "https://lemmer.com/en/product-2/quick-couplers-for-air-atomized-rustproofing-extensions-3-pack/",
+      "file": "l015-164-988642.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-164.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-155-on-L015-210.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-155-RP-QC-Crop.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "9b78ee82b1d0dac7b4e4aff7fffb527e9908aaab365593fcaf34e10ef8dd52b3"
+    },
+    {
+      "id": 988643,
+      "sku": "L015-165",
+      "name": "Anti-rust extension, air atomized, rigid 23cm (9″) flat jet.",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-rigid-air-atomizer-9-flat-jet/",
+      "file": "l015-165-988643.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-165-flat-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-165.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "01dd31d9fa1beaa8802b9ee11e6bde163f414b50edae4a54aa3ceb4cbba2b9e2"
+    },
+    {
+      "id": 988644,
+      "sku": "L015-166",
+      "name": "Rigid 25cm / 10″, 45° round jet on 91cm / 36″ hose, Deluxe anti-rust extension, air atomizer",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-deluxe-10-a-angle-de-45-jet-rond-hose-de-36-atomisation-a-air/",
+      "file": "l015-166-988644.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-166-round-spray-with-arrow.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-166.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-166-diagram.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "b61b2035f3404ba2c6a1f6dc1f347f205418128026f7949dcc077328c2fe9cae"
+    },
+    {
+      "id": 988645,
+      "sku": "L015-167",
+      "name": "Rigid 96cm / 38″ round jet, 0.9M / 36″ hose, anti-rust extension, air atomizer",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-rigid-38-round-jet-hose-36-air-atomizer/",
+      "file": "l015-167-988645.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-167-round-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-167-round-spray-diagram.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-167.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "b93c060f6e611f50a6a67fd9d837a235f7e7fe1df123b50be460687503d6727d"
+    },
+    {
+      "id": 988646,
+      "sku": "L015-168",
+      "name": "Rigid 96cm / 38″ round jet, 0.9M / 36″ hose, Deluxe anti-rust extension, air atomizer",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-deluxe-rigid-38-round-jet-hose-36-air-atomizer/",
+      "file": "l015-168-988646.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-168-round-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-168.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-168-round-spray-diagram.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "8a5f1560fdaa2f89dd02eb5809e45c1d18d60c090b36bc72b9eb154d384c3520"
+    },
+    {
+      "id": 988647,
+      "sku": "L015-169",
+      "name": "360° Repair Heads, for air atomizers, 3x pack",
+      "url": "https://lemmer.com/en/product-2/set-of-3-360-heads-for-hose-repair-l015-147-for-air-atomizers/",
+      "file": "l015-169-988647.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-169.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "2efa8f3bb72e2d4403c091c91c59cdbefee6321aed926c4996733e45598c025c"
+    },
+    {
+      "id": 988648,
+      "sku": "L015-201",
+      "name": "RP-460HD Professional air rust gun 0.86 MPa / 125 psi",
+      "url": "https://lemmer.com/en/product-2/rp-460hd-professional-air-rust-remover-125-psi/",
+      "file": "l015-201-988648.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-201-new-picture.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "bd33ec6cf9d88274f727bf0952c458fbf581385b8b0557085666a3704f694e2d"
+    },
+    {
+      "id": 988649,
+      "sku": "L015-202",
+      "name": "2L / 0.5G Pressurized Rustproofing Tank 0.4 MPa / 60Psi , RP-460HD Gun and 1.5m / 5′ Twin Hose",
+      "url": "https://lemmer.com/en/product-2/pressurized-rustproofing-tank-60psi-2-liters-0-5-g-gun-rp-460hd-and-twin-hose-1-4-x-5/",
+      "file": "l015-202-988649.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-202-RP460-2Q-Kit-Crop.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "fa1a7d47a85d9ffff7975dffc14debf98c090f171b30336fe9aedf25fdbaa2e7"
+    },
+    {
+      "id": 988650,
+      "sku": "L015-203",
+      "name": "RP-460HD Deluxe Professional Air Rust Gun 0.86 MPa / 125 psi",
+      "url": "https://lemmer.com/en/product-2/rp-460hd-deluxe-125-psi-professional-air-rust-gun/",
+      "file": "l015-203-988650.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-203-new-picture.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "9a93a2ed8654bbf6693a52ba1afb85e4868c4c43450dd6a6ec3da3debb2e4509"
+    },
+    {
+      "id": 988651,
+      "sku": "L015-207",
+      "name": "RP-50 Undercoat rust protection gun",
+      "url": "https://lemmer.com/en/product-2/rp-50-undercoat-rustproofing-gun/",
+      "file": "l015-207-988651.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-207-RP50.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "e48993954c06a4dbcb32c8d755f23a982f398b1d8fdfa5c324419b084fa7725f"
+    },
+    {
+      "id": 988652,
+      "sku": "L015-208",
+      "name": "RP-100 Economical air rust protection gun 0.5 MPa / 75 Psi",
+      "url": "https://lemmer.com/en/product-2/rp-100-economic-air-rust-remover-gun-90-psi/",
+      "file": "l015-208-988652.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-208.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "ce58445ca8fb4b7609d674ed4c6fc14c1a52e75c8ee393750bf4faa58ab9f69e"
+    },
+    {
+      "id": 988653,
+      "sku": "L015-210",
+      "name": "RP-460HD Air-operated rust protection gun for pressurized supply",
+      "url": "https://lemmer.com/en/product-2/rp-460hd-air-rust-remover-gun-for-pressurized-supply/",
+      "file": "l015-210-988653.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L015-210.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "2bb70209b4e98f41c9ad90ad308a7e88fe7cb19a974777bef5797e7e1667766d"
+    },
+    {
+      "id": 988731,
+      "sku": "L033-140",
+      "name": "25 cm / 10″ swivel head extension, 20cm / 8″ flat jet for rustproofing, airless atomization",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-1-4-metre-10-swivel-head-with-nozzle-417-airless-atomization/",
+      "file": "l033-140-988731.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-141-RP-12M-with-spray-fan.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-140-RP-14M.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "87fdb2da8b88bc535aee9f37e9044f32ceb919433e7e8795597adc2ddd5382f4"
+    },
+    {
+      "id": 988732,
+      "sku": "L033-141",
+      "name": "Extension with swivel head 0.5m / 20″, with Flat Jet 20 cm / 8″ for rustproofing, airless atomization",
+      "url": "https://lemmer.com/en/product-2/anti-rust-extension-1-2-metre-20-swivel-head-with-417-airless-spray-nozzle/",
+      "file": "l033-141-988732.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-141-RP-12M-with-spray-fan.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-141-RP-12M.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "563891ee301632694156f99c8d4bbe16eee2d5e63a9404af44889a280f68124c"
+    },
+    {
+      "id": 988733,
+      "sku": "L033-142",
+      "name": "1m / 39″ swivel head extension, 20cm / 8″ flat jet for rustproofing, airless atomization",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-1-meter-39-swivel-head-with-nozzle-417-airless-atomization/",
+      "file": "l033-142-988733.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-141-RP-12M-with-spray-fan.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-142-RP-1M.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "b2a53dae4c19aa42e2dc6fbb0d198d203deaedc95996c233aa9b33f0062254a2"
+    },
+    {
+      "id": 988734,
+      "sku": "L033-144",
+      "name": "20cm / 8″ Flat Spray Extension for Rustproofing, Airless Atomization",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-10-flat-jet-front-nozzle-417-airless-atomization/",
+      "file": "l033-144-988734.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-144-fan-spray.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-144.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "bd92c4243fa2a595d37376546cff703d4d626a06e0ec137e2b17b3218fa09fe8"
+    },
+    {
+      "id": 988735,
+      "sku": "L033-145",
+      "name": "22cm / 9″ Curved Extension to 20cm / 8″ Flat Spray for Anti-Rust, Airless Atomization",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-10-curved-flat-jet-nozzle-417-airless-atomization/",
+      "file": "l033-145-988735.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-145.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "d54050b6f5d761330be10d9607c22abb55392cb5ac8ddec9f59aebd92efc4dd6"
+    },
+    {
+      "id": 988736,
+      "sku": "L033-147",
+      "name": "Airless spray rustproofing kit: spray gun, 2 extensions and 7.5m / 25′ hose",
+      "url": "https://lemmer.com/en/product-2/airless-spray-rustproofing-set-gun-2-extensions-and-hose-25/",
+      "file": "l033-147-988736.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-147-with-spray-patern.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "914587df4cafc04d4990832f93f22404ffee8126f12c90e14f9dd298e087909d"
+    },
+    {
+      "id": 988737,
+      "sku": "L033-148",
+      "name": "11/16″ quick connection, for airless spray rustproofing extension",
+      "url": "https://lemmer.com/en/product-2/rustproof-quick-connect-11-16-for-airless-spray-extension/",
+      "file": "l033-148-988737.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-148-on-L50.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "d6ee3a674344a02a19acfd5a6b9423490f0434e163ad3e6ace7abd9fa2de6b53"
+    },
+    {
+      "id": 988738,
+      "sku": "L033-149",
+      "name": "25 cm / 10″ flat-jet nozzle for standard rustproofing, quick-connect, airless atomization",
+      "url": "https://lemmer.com/en/product-2/517-flat-jet-rust-proofing-nozzle-with-quick-connection-airless-atomization/",
+      "file": "l033-149-988738.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-149-with-flat-spray-patern.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-149-flat-tip.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "9123fb7ae9c534b1b5ab9a6348188d78731ef525d0081241ba3849966165c69d"
+    },
+    {
+      "id": 988739,
+      "sku": "L033-150",
+      "name": "20cm / 8″ flat jet curved extension on swivel handle and 91cm / 36″ hose, Standard Rustproof, airless atomization",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-10-curved-flat-jet-417-hose-36-airless-atomizer/",
+      "file": "l033-150-988739.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-150-and-L033-210-Flat-Spray-patern.bmp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-150-and-L033-210.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "7cb0547c03e943fe6f7f6ce33e93be71d43dba2af3fba0734895f59b62467588"
+    },
+    {
+      "id": 988740,
+      "sku": "L033-189",
+      "name": "Fogger air-spray rustproofing kit: gun, regulator, filter and 50′ ultraflex hose.",
+      "url": "https://lemmer.com/en/product-2/fogger-air-atomizing-rustproofing-set-regulator-filter-gun-and-50-ultraflex-hose/",
+      "file": "l033-189-988740.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-189-hgt-deluxe-kit-1.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "c38fb29673bd3757954295d838af406a9a16b4fcdcd424ccd8cd4ea3961365b9"
+    },
+    {
+      "id": 988741,
+      "sku": "L033-195",
+      "name": "RP-1115 Pneumatic airless rustproofing kit for 20 liters (5G)",
+      "url": "https://lemmer.com/en/product-2/airless-spray-anti-rust-kit-for-20-liters-pneumatic-pump-rp-1115/",
+      "file": "l033-195-988741.md",
+      "categories": [
+        {
+          "id": 158,
+          "name": "Antirouille à atomisation sans air (Airless)",
+          "slug": "atomisation-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-195.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "60ea45846702af3775769c55826372ac3c88bad6f1417c2af73467dcc88de6e4"
+    },
+    {
+      "id": 988742,
+      "sku": "L033-197",
+      "name": "1/4″ x 15m / 50′ Ultraflex high-pressure double hose",
+      "url": "https://lemmer.com/en/product-2/double-high-pressure-hose-50x-1-4-ultraflex/",
+      "file": "l033-197-988742.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-197-twin-hose-fogger-deluxe.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "7345830d5328a1dbd76ae493f38db0bcfbcb6fea087d63d4d69ed4a294b9e9cd"
+    },
+    {
+      "id": 988743,
+      "sku": "L033-198",
+      "name": "1/4″ x 7.5M / 25′, Double high-pressure hose",
+      "url": "https://lemmer.com/en/product-2/double-high-pressure-hose-25x-1-4/",
+      "file": "l033-198-988743.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-198.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "80526b36a23e8dcbc7906f07a11a107e6eb269058fc8b31366041c698ccc4c25"
+    },
+    {
+      "id": 988744,
+      "sku": "L033-199",
+      "name": "1/4″ x 15M / 50′, Double high-pressure hose",
+      "url": "https://lemmer.com/en/product-2/double-high-pressure-hose-50x-1-4/",
+      "file": "l033-199-988744.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-198.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "8802cac75709c0695909cf71c7686edbdbfa7d8ff5e4d67c163f4d581c609c8b"
+    },
+    {
+      "id": 988745,
+      "sku": "L033-201",
+      "name": "RP-1115 60L / 15G. Fogger » F-1001 pneumatic air-assisted rust-proofing kit and 7.6M / 25′ hose",
+      "url": "https://lemmer.com/en/product-2/fogger-air-spray-rustproofing-kit-for-60-liters-15g-pneumatic-pump-rp-1115-gun-f-1001-and-25-hose/",
+      "file": "l033-201-988745.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-201-new-picture.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-2012-part-diagram.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "de7672d49b1c1a77406b9143b7b0b3315e406eb3dfec336284d2c51ac8a05e91"
+    },
+    {
+      "id": 988746,
+      "sku": "L033-202",
+      "name": "RP-1115 205L / 45G »Fogger» F-1001 Air-Assisted Rust Proofing Kit and 7.6M / 25′ Hose",
+      "url": "https://lemmer.com/en/product-2/fogger-air-spray-rustproofing-kit-for-205-liters-45g-pneumatic-pump-rp-1115-gun-f-1001-and-25-hose/",
+      "file": "l033-202-988746.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-201-new-picture.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-2012-part-diagram.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "4829979ffae0511024f9bb781909e759d19f39b55ffaa61bf534282879c45a51"
+    },
+    {
+      "id": 988747,
+      "sku": "L033-204",
+      "name": "RP-1115 Pneumatic airless rustproofing kit for 60 liters (15G), 2 quick-connect extensions",
+      "url": "https://lemmer.com/en/product-2/airless-spray-rustproofing-kit-for-60-liters-15g-pneumatic-pump-rp-11152-quick-connect-extensions/",
+      "file": "l033-204-988747.md",
+      "categories": [
+        {
+          "id": 158,
+          "name": "Antirouille à atomisation sans air (Airless)",
+          "slug": "atomisation-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-204-and-L033-205.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "1979eb308c034bd32a05a378060ac375eddef360d22dfb6f7120364f85060cb0"
+    },
+    {
+      "id": 988748,
+      "sku": "L033-205",
+      "name": "RP-1115 Pneumatic airless rustproofing kit for 205 liters / 45G, 2 quick-connect extensions",
+      "url": "https://lemmer.com/en/product-2/airless-spray-rustproofing-kit-for-205-liters-45g-pneumatic-pump-rp-1115-2-quick-connect-extensions/",
+      "file": "l033-205-988748.md",
+      "categories": [
+        {
+          "id": 158,
+          "name": "Antirouille à atomisation sans air (Airless)",
+          "slug": "atomisation-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-204-and-L033-205.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "5f07d2cc541f97ee65d3bb9a3bf123cb1fb1aafd9e74337efffafa6cb4a37462"
+    },
+    {
+      "id": 988749,
+      "sku": "L033-207",
+      "name": "RP-1202 20L / 5G Air Atomized Pneumatic Rustproofing Kit, RP-460 Gun and 7.6m (25′) hose",
+      "url": "https://lemmer.com/en/product-2/air-atomized-rustproofing-kit-for-20-liters-5g-pneumatic-pump-rp-1202-gun-rp-460-and-25-hose/",
+      "file": "l033-207-988749.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-207-new.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-208-part-diagram.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "d91c88f30dc9f91319a72de54ef8d09467ffa39d15503abf1595212792b4f377"
+    },
+    {
+      "id": 988750,
+      "sku": "L033-208",
+      "name": "RP-1202 60L / 15G ET 205L / 45G, Air Atomized Pneumatic Rustproofing Kit, RP-460 Gun and 7.6m/25′ Hose",
+      "url": "https://lemmer.com/en/product-2/air-spray-rustproofing-kit-for-60-205-liters-15-55-g-pneumatic-pump-rp-1202-gun-rp-460-and-25-hose/",
+      "file": "l033-208-988750.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-208.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-208-part-diagram.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "192d28ac3a4b95f3030e08f82b6a125c8aaf8f69ed0c688b26d9d6c8414b43d9"
+    },
+    {
+      "id": 988751,
+      "sku": "L033-210",
+      "name": "20cm / 8″ flat jet curved extension on swivel handle and 91cm / 36″ hose, Lightweight rustproofing, Airless atomization",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-10-curved-flat-jet-413-hose-36-airless-atomizer/",
+      "file": "l033-210-988751.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-150-and-L033-210-Flat-Spray-patern.bmp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-150-and-L033-210.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "50f47aa747c1f2eddecdcabe0f7fd5a25a9d3b59aa276b5ad8380508b660d40a"
+    },
+    {
+      "id": 988752,
+      "sku": "L033-213",
+      "name": "96cm / 38″ rigid conical spray extension, Lightweight rustproof, airless atomization.",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-rigid-38-conical-jet-airless-atomization/",
+      "file": "l033-213-988752.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-213-with-conical-spray-patern.bmp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-213.bmp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "65639d3a9c5e2eab5533bc6e54d227ddfe367d944d4bf692bd1f080351cd2688"
+    },
+    {
+      "id": 988753,
+      "sku": "L033-214",
+      "name": "RP-1202 60L / 15G ET 205L / 45G, Air Atomized Pneumatic Rust Proofing Kit, RP-460 Gun and 15m / 50′ hose",
+      "url": "https://lemmer.com/en/product-2/air-spray-rustproofing-kit-for-60-205-liters-15-55-g-pneumatic-pump-rp-1202-gun-rp-460-and-50-mm-hose/",
+      "file": "l033-214-988753.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-208.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-208-part-diagram.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "348915a4fcaffea0385fad91e2f4a0c3a7ad37d9eb056bf5db298f266f46fb16"
+    },
+    {
+      "id": 988754,
+      "sku": "L033-215",
+      "name": "7/8″ quick connector, for airless spray rustproofing extension",
+      "url": "https://lemmer.com/en/product-2/rustproof-quick-connect-7-8-for-airless-spray-extension/",
+      "file": "l033-215-988754.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-215.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "aa0449039e4a12a26384bdc3ef95b68aae20dcbadba242751b43a20542f9de7f"
+    },
+    {
+      "id": 988755,
+      "sku": "L033-216",
+      "name": "Flat jet nozzle 20cm / 8″ for light rustproofing, quick connection, airless atomization",
+      "url": "https://lemmer.com/en/product-2/413-flat-jet-rust-proofing-nozzle-with-quick-connection-airless-atomization/",
+      "file": "l033-216-988755.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-216-with-flat-spray-patern.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-216.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "3ef852a8aa237098dc61ec43b61e00cb22a434421020c7946afaa5d44d687e19"
+    },
+    {
+      "id": 988758,
+      "sku": "L033-229",
+      "name": "Conical Jet Extension, 25cm / 10″ curved, Swivel handle and 91 cm / 36″ hose, Lightweight rustproofing, Airless atomization",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-10-curved-conical-jet-hose-36-airless-atomizer/",
+      "file": "l033-229-988758.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-229-with-conical-spray-patern.bmp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-229.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "d684b25eb6433b4c83e61b0b0b38cf2baf01cb5e6190c804352c4a1c1794a259"
+    },
+    {
+      "id": 988756,
+      "sku": "L033-230",
+      "name": "RP-DC3300 Electric airless rustproofing kit for 20 liters (5G)",
+      "url": "https://lemmer.com/en/product-2/airless-spray-rustproofing-kit-for-20-liters-5g-electric-pump-rp-dc3100/",
+      "file": "l033-230-988756.md",
+      "categories": [
+        {
+          "id": 158,
+          "name": "Antirouille à atomisation sans air (Airless)",
+          "slug": "atomisation-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-230-RP-dc3300-20L.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-147-with-spray-patern.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "85c36a5f907d5f5a5a0aed0ab0095f046d0989ade3e566b59c49862b328f8da7"
+    },
+    {
+      "id": 990542,
+      "sku": "L033-231",
+      "name": "RP-DC3300 Electric airless rustproofing kit for 205 liters (45G)",
+      "url": "https://lemmer.com/en/product-2/rp-dc3300-airless-electric-rustproofing-kit-for-205-liters-45g/",
+      "file": "l033-231-990542.md",
+      "categories": [
+        {
+          "id": 158,
+          "name": "Antirouille à atomisation sans air (Airless)",
+          "slug": "atomisation-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-231-RP-dc3300-205L.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-147-with-spray-patern.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "b1009eaab0b1b298bb7d85593a4086c7f138e1a24e08e0d13aae579ae10d9a79"
+    },
+    {
+      "id": 990906,
+      "sku": "L033-232",
+      "name": "RP-LX17 Electric airless rustproofing kit for 20 liters (5G)",
+      "url": "https://lemmer.com/en/product-2/rp-lx17-electric-airless-rustproofing-kit-for-20-liters-5g/",
+      "file": "l033-232-990906.md",
+      "categories": [
+        {
+          "id": 158,
+          "name": "Antirouille à atomisation sans air (Airless)",
+          "slug": "atomisation-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-atomization/"
+        },
+        {
+          "id": 197,
+          "name": "Nouveauté",
+          "slug": "nouveaute",
+          "link": "https://lemmer.com/en/product-category-2/new/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/06/L033-232-RP-LX17.png",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/06/L047-001-LX-17-stand.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/06/L047-001-LX-17-side.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/06/L047-001-LX-17-stand-front.jpg",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "e08a24f9c47f505f10398da84f149217fa4da8054c505a6beb52209fa03bda74"
+    },
+    {
+      "id": 988759,
+      "sku": "L033-283",
+      "name": "RP-1115 Pneumatic airless rustproofing kit for 60 liters (15G)",
+      "url": "https://lemmer.com/en/product-2/airless-spray-rustproofing-kit-for-60-liters-15g-pneumatic-pump-rp-1115-flat-spray-nozzle-517/",
+      "file": "l033-283-988759.md",
+      "categories": [
+        {
+          "id": 158,
+          "name": "Antirouille à atomisation sans air (Airless)",
+          "slug": "atomisation-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-283-and-L033-284.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "189ed346a34d5aaf123172b1e29fb64964505b4ad9a87f891a81688f3e771248"
+    },
+    {
+      "id": 988760,
+      "sku": "L033-284",
+      "name": "RP-1115 Pneumatic airless rustproofing kit for 205 liters (45G)",
+      "url": "https://lemmer.com/en/product-2/airless-spray-anti-rust-kit-for-205-liters-45g-pneumatic-pump-rp-1115-flat-spray-nozzle-517/",
+      "file": "l033-284-988760.md",
+      "categories": [
+        {
+          "id": 158,
+          "name": "Antirouille à atomisation sans air (Airless)",
+          "slug": "atomisation-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-283-and-L033-284.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "0c176f4ee4776ae978496ea48cda42db0ace2faad61471092aba42eccd2df369"
+    },
+    {
+      "id": 988761,
+      "sku": "L033-285",
+      "name": "RP-1115 60L / 15G »Fogger» F-1001 Deluxe Air-Assisted Rust Proofing Kit and 15m / 50′ Ultraflex Hose",
+      "url": "https://lemmer.com/en/product-2/fogger-deluxe-air-spray-rustproofing-kit-for-60-liters-15g-pneumatic-pump-rp-1115-gun-f-1001-and-hose-50-ultraflex/",
+      "file": "l033-285-988761.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-285-fooger-deluxe-60L.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-285-parts.jpg",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "84b86bef69e8be97ffa3a5db8448ed987c8cad9b483dfd60ac41b0a6b6827d12"
+    },
+    {
+      "id": 988762,
+      "sku": "L033-286",
+      "name": "RP-1115 205L / 45G F-1001 Deluxe Pneumatic Fogger Rustproofing Kit and 15m / 50′ Ultraflex Hose",
+      "url": "https://lemmer.com/en/product-2/fogger-deluxe-air-spray-rustproofing-kit-for-205-liters-45g-pneumatic-pump-rp-1115-gun-f-1001-and-hose-50-ultraflex/",
+      "file": "l033-286-988762.md",
+      "categories": [
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-285-fooger-deluxe-60L.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-285-parts.jpg",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "9cf82ca06453d1611df734dea141746a885a22c4e68c3cb18406f5eac7e98302"
+    },
+    {
+      "id": 990534,
+      "sku": "L033-287",
+      "name": "RP-1115 Deluxe airless rustproofing kit for 60 liters (15G), 2 quick-connect extensions",
+      "url": "https://lemmer.com/en/product-2/rp-1115-deluxe-pneumatic-airless-rustproofing-kit-for-60-liters-15g-2-quick-connect-extensions/",
+      "file": "l033-287-990534.md",
+      "categories": [
+        {
+          "id": 158,
+          "name": "Antirouille à atomisation sans air (Airless)",
+          "slug": "atomisation-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-atomization/"
+        },
+        {
+          "id": 197,
+          "name": "Nouveauté",
+          "slug": "nouveaute",
+          "link": "https://lemmer.com/en/product-category-2/new/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/02/l033-287-and-L033-288.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "97b0fcc81c5d167bcd5adf5629d9c7e590670abfcd7c517d871c1beb09abdf6b"
+    },
+    {
+      "id": 990536,
+      "sku": "L033-288",
+      "name": "RP-1115 Deluxe airless rustproofing kit for 205 liters (45G), 2 quick-connect extensions",
+      "url": "https://lemmer.com/en/product-2/rp-1115-deluxe-airless-pneumatic-rustproofing-set-for-205-liters-45g-2-quick-connect-extensions/",
+      "file": "l033-288-990536.md",
+      "categories": [
+        {
+          "id": 158,
+          "name": "Antirouille à atomisation sans air (Airless)",
+          "slug": "atomisation-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-atomization/"
+        },
+        {
+          "id": 197,
+          "name": "Nouveauté",
+          "slug": "nouveaute",
+          "link": "https://lemmer.com/en/product-category-2/new/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/02/l033-287-and-L033-288.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "a942a3957ea6c3954d2d33ecd2eb2baf4e3a2dc66018907db76fe8905228dc33"
+    },
+    {
+      "id": 988763,
+      "sku": "L033-300",
+      "name": "Fogger F-1001 anti-rust spray gun, air atomization",
+      "url": "https://lemmer.com/en/product-2/fogger-f-1001-anti-rust-air-spray-gun/",
+      "file": "l033-300-988763.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-300-F1001-crop.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L033-300-F1001-front-crop.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "68294dd1a10e7ef27967bf96493a18e280edb55d818e80b00c7c6e25ee89028c"
+    },
+    {
+      "id": 988773,
+      "sku": "L034-061",
+      "name": "50‘ pipe protector‘",
+      "url": "https://lemmer.com/en/product-2/pipe-protector-50/",
+      "file": "l034-061-988773.md",
+      "categories": [
+        {
+          "id": 167,
+          "name": "Accessoires et pièces pour pistolets pneumatiques",
+          "slug": "acc-pistolet-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/air-spray-gun/acc-air-gun-accessory/"
+        },
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        },
+        {
+          "id": 132,
+          "name": "Accessoires pour réservoirs pressurisés",
+          "slug": "acc-reservoir-pressurisee",
+          "link": "https://lemmer.com/en/product-category-2/pressurized-paint-tank/pressurized-tank-acc/"
+        },
+        {
+          "id": 142,
+          "name": "Accessoires pour systèmes Air-Assisté",
+          "slug": "acc-air-assiste",
+          "link": "https://lemmer.com/en/product-category-2/air-assiste/acc-air-assiste/"
+        },
+        {
+          "id": 125,
+          "name": "Applicateurs de colle industrielle",
+          "slug": "applicateur-a-colle",
+          "link": "https://lemmer.com/en/product-category-2/glue-applicator/"
+        },
+        {
+          "id": 170,
+          "name": "Boyau à air comprimé",
+          "slug": "boyau-a-air",
+          "link": "https://lemmer.com/en/product-category-2/accessory/air-hose/"
+        },
+        {
+          "id": 169,
+          "name": "Boyau à fluide basse pression",
+          "slug": "boyau-basse-pression",
+          "link": "https://lemmer.com/en/product-category-2/accessory/low-pressure-hose/"
+        },
+        {
+          "id": 151,
+          "name": "Boyau à fluide haute pression",
+          "slug": "boyau-haute-pression",
+          "link": "https://lemmer.com/en/product-category-2/accessory/high-pressure-hose/"
+        },
+        {
+          "id": 163,
+          "name": "Boyau jumelé basse pression",
+          "slug": "boyau-jumele-basse-pression",
+          "link": "https://lemmer.com/en/product-category-2/accessory/low-pressure-twin-hose/"
+        },
+        {
+          "id": 123,
+          "name": "Boyau jumelé haute pression",
+          "slug": "boyau-jumele-haute-pression",
+          "link": "https://lemmer.com/en/product-category-2/accessory/twin-high-pressure-hose/"
+        },
+        {
+          "id": 196,
+          "name": "Items compatibles pour équipements Sames® / Sames Kremlin MD",
+          "slug": "adaptateurs-pour-equipements-sames-sames-kremlin-md",
+          "link": "https://lemmer.com/en/product-category-2/air-assiste/adapters-for-sames-equipment-sames-kremlin-md/"
+        },
+        {
+          "id": 119,
+          "name": "Pompes Airless (Sans air)",
+          "slug": "pompe-sans-air-airless",
+          "link": "https://lemmer.com/en/product-category-2/airless-pump/"
+        },
+        {
+          "id": 140,
+          "name": "Pompes avec pulvérisation à air",
+          "slug": "pompe-avec-pulverisateur-a-air",
+          "link": "https://lemmer.com/en/product-category-2/pump-with-air-sprayer/"
+        },
+        {
+          "id": 160,
+          "name": "Pulvérisation intérieure de tuyaux",
+          "slug": "pulverisation-interieure-de-tuyaux",
+          "link": "https://lemmer.com/en/product-category-2/internal-pipe-spraying/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L034-061.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L034-066-on-hose.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "e3252ebe43ad3e453fdf38134ee67aa2c5a50da04f15bdb59c3e7b993de72cf0"
+    },
+    {
+      "id": 988774,
+      "sku": "L034-062",
+      "name": "Pipe protector 5cm x 457M (2″ x 1500′)",
+      "url": "https://lemmer.com/en/product-2/pipe-protector-1500/",
+      "file": "l034-062-988774.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        },
+        {
+          "id": 132,
+          "name": "Accessoires pour réservoirs pressurisés",
+          "slug": "acc-reservoir-pressurisee",
+          "link": "https://lemmer.com/en/product-category-2/pressurized-paint-tank/pressurized-tank-acc/"
+        },
+        {
+          "id": 142,
+          "name": "Accessoires pour systèmes Air-Assisté",
+          "slug": "acc-air-assiste",
+          "link": "https://lemmer.com/en/product-category-2/air-assiste/acc-air-assiste/"
+        },
+        {
+          "id": 169,
+          "name": "Boyau à fluide basse pression",
+          "slug": "boyau-basse-pression",
+          "link": "https://lemmer.com/en/product-category-2/accessory/low-pressure-hose/"
+        },
+        {
+          "id": 151,
+          "name": "Boyau à fluide haute pression",
+          "slug": "boyau-haute-pression",
+          "link": "https://lemmer.com/en/product-category-2/accessory/high-pressure-hose/"
+        },
+        {
+          "id": 163,
+          "name": "Boyau jumelé basse pression",
+          "slug": "boyau-jumele-basse-pression",
+          "link": "https://lemmer.com/en/product-category-2/accessory/low-pressure-twin-hose/"
+        },
+        {
+          "id": 123,
+          "name": "Boyau jumelé haute pression",
+          "slug": "boyau-jumele-haute-pression",
+          "link": "https://lemmer.com/en/product-category-2/accessory/twin-high-pressure-hose/"
+        },
+        {
+          "id": 196,
+          "name": "Items compatibles pour équipements Sames® / Sames Kremlin MD",
+          "slug": "adaptateurs-pour-equipements-sames-sames-kremlin-md",
+          "link": "https://lemmer.com/en/product-category-2/air-assiste/adapters-for-sames-equipment-sames-kremlin-md/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L034-062.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L034-066-on-hose.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "4daeb873e6bbb08566b13483ac128b82e6b7e70cdcabd58e8ebec82e493b2b1e"
+    },
+    {
+      "id": 988845,
+      "sku": "L035-415",
+      "name": "1/4″M Quick Connect, for Airless Spray Rust Proofing Extension",
+      "url": "https://lemmer.com/en/product-2/rustproof-quick-connector-for-airless-extension-1-4m/",
+      "file": "l035-415-988845.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L035-415-QC-coupler.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "3ab5450fed6871a193df43934b68a77e0ddefbc1f8b1b7eb4ef98fb0eef18328"
+    },
+    {
+      "id": 988846,
+      "sku": "L035-416",
+      "name": "Quick connection for grease gun, for airless spray anti-rust extension",
+      "url": "https://lemmer.com/en/product-2/rustproof-quick-connector-for-installation-on-grease-gun-for-airless-extension-1-4m/",
+      "file": "l035-416-988846.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L035-416-on-grease-gun.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L035-416-Quick-RP-x-18M-HP.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "52ef74eed502e6b574f2e6d67d30f92f0d58e828404e91c39f97e8a58f28fcc1"
+    },
+    {
+      "id": 988847,
+      "sku": "L035-418",
+      "name": "1/4F quick coupling, for Airless Rust Proofing Extension",
+      "url": "https://lemmer.com/en/product-2/rustproof-quick-connector-for-airless-extension-1-4f/",
+      "file": "l035-418-988847.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L035-418-nipple-1.4F.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "e0e1010bd6b0efa8ae109fa8431cefab1e004a827d36df366ed08ded4fe188fd"
+    },
+    {
+      "id": 988848,
+      "sku": "L035-419",
+      "name": "1/4M Quick Coupling, for Airless Spray Rust Proofing Extension",
+      "url": "https://lemmer.com/en/product-2/rustproof-quick-connector-for-airless-extension-1-4m-2/",
+      "file": "l035-419-988848.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L035-419-QC-nipple.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "86af130a5315158621a907c18486d241b7d6eb2e3f78b9bacebcb86d8c1d9294"
+    },
+    {
+      "id": 988849,
+      "sku": "L035-420",
+      "name": "Replacement O-RING for rustproof fitting L035-415",
+      "url": "https://lemmer.com/en/product-2/replacement-o-ring-for-anti-rust-fitting-l035-415/",
+      "file": "l035-420-988849.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L035-420.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L035-420-and-L035-415.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "e6136a9ec51d72993f04d13975daa67dedcd159c4f13db8c096cb7f6735343b4"
+    },
+    {
+      "id": 988910,
+      "sku": "L075-899",
+      "name": "Flexible 91cm / 36″ conical spray extension, Lightweight rustproofing, Airless atomization",
+      "url": "https://lemmer.com/en/product-2/extension-anti-rust-flexible-36-conical-spray-airless-atomization/",
+      "file": "l075-899-988910.md",
+      "categories": [
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L075-899-with-conical-spray-patern.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L075-899-RP-wand-flex-swirl-.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "03096e407502dd0f9e119c3c8edfc78c572c8d67c752feb992af3123d4c081ab"
+    },
+    {
+      "id": 988934,
+      "sku": "L080-661",
+      "name": "3/8″ x 15M / 50′ , Double low-pressure hose",
+      "url": "https://lemmer.com/en/product-2/double-low-pressure-hose-3-8-x-50/",
+      "file": "l080-661-988934.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 163,
+          "name": "Boyau jumelé basse pression",
+          "slug": "boyau-jumele-basse-pression",
+          "link": "https://lemmer.com/en/product-category-2/accessory/low-pressure-twin-hose/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L080-729.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "2310a712b92b80ce3d5b77e390db1b6fa6a5fb263e5fd2246d499ac184ba6ecb"
+    },
+    {
+      "id": 988943,
+      "sku": "L080-729",
+      "name": "3/8″ x 7.5M / 25′, Double low-pressure hose",
+      "url": "https://lemmer.com/en/product-2/double-hose-3-8-x-25-low-pressure/",
+      "file": "l080-729-988943.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 163,
+          "name": "Boyau jumelé basse pression",
+          "slug": "boyau-jumele-basse-pression",
+          "link": "https://lemmer.com/en/product-category-2/accessory/low-pressure-twin-hose/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L080-729.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "d9938432707b78a51df96084aec99869ddf219fd5fa42998b3bbee1b42aa9d19"
+    },
+    {
+      "id": 988956,
+      "sku": "L090-001",
+      "name": "RP-1115 20L (5 G) or Wall Mount, Rustproof Pump only",
+      "url": "https://lemmer.com/en/product-2/rp-1115-anti-rust-pump-20l-5-g-or-for-wall-mounting/",
+      "file": "l090-001-988956.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-001.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "6ef45ac5fbd3f5865590a749928697cd26859b2ca7507e73d761855da778fd3a"
+    },
+    {
+      "id": 988957,
+      "sku": "L090-003",
+      "name": "RP-1115 60L / 15G Rustproofing Pump only",
+      "url": "https://lemmer.com/en/product-2/rp-1115-anti-rust-pump-60l-15-g/",
+      "file": "l090-003-988957.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-003.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "c6d2337556ec38bc4b7be735569bb363f4ec00cc1464bdf4c06f19fb19754f9e"
+    },
+    {
+      "id": 988958,
+      "sku": "L090-004",
+      "name": "RP-1115 205L / 55 G Rustproofing pump only",
+      "url": "https://lemmer.com/en/product-2/rp-1115-anti-rust-pump-205l-55-g/",
+      "file": "l090-004-988958.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-004.jpg",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "1a28cc6cd6bebfdcae65bf2dc05fa385efd41a2df4836fa3a82d0ea89c31ab44"
+    },
+    {
+      "id": 988959,
+      "sku": "L090-019",
+      "name": "RP-1202N Rust protection pump only",
+      "url": "https://lemmer.com/en/product-2/rp-1202n-anti-rust-pump/",
+      "file": "l090-019-988959.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-018-RP-1202.jpg",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "79687a87ce72130d047775c1ebe4e979c55813e4d1939c1d186b23fd2e4c7384"
+    },
+    {
+      "id": 988960,
+      "sku": "L090-030",
+      "name": "Extension Bracket, Mounting: Wall, Trolley or others",
+      "url": "https://lemmer.com/en/product-2/wall-bracket-for-extension/",
+      "file": "l090-030-988960.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-030-wand-holder-with-wand.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-030-wand-holder.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-030-wand-holder-top-view.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "80973098922cb0a9d0af799bced3cc10f0edd692bd845543f15b573628578155"
+    },
+    {
+      "id": 988961,
+      "sku": "L090-047",
+      "name": "3′ hose for transfer pump L090-049",
+      "url": "https://lemmer.com/en/product-2/3-hose-for-transfer-pump-l090-049/",
+      "file": "l090-047-988961.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        },
+        {
+          "id": 141,
+          "name": "Pompes de transfert de fluides",
+          "slug": "pompe-a-transfert",
+          "link": "https://lemmer.com/en/product-category-2/transfer-pump/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-047-bare.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-047.jpg",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "abeb0e3836b36c5001287cdcf7d5e4464cb5febcd208024f757fc52c21201214"
+    },
+    {
+      "id": 988962,
+      "sku": "L090-049",
+      "name": "Manual Transfer Pump for 60L (15 G) or 205L (55 G)",
+      "url": "https://lemmer.com/en/product-2/manual-transfer-pump-for-60l-15-g-or-205l-55-g/",
+      "file": "l090-049-988962.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 127,
+          "name": "Antirouille à atomisation pneumatique",
+          "slug": "atomisation-a-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/air-atomization/"
+        },
+        {
+          "id": 141,
+          "name": "Pompes de transfert de fluides",
+          "slug": "pompe-a-transfert",
+          "link": "https://lemmer.com/en/product-category-2/transfer-pump/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-049-barrel-hand-pumpc.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-049-in-a-drum.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "3e5dc8ddfe1a09f8eee522a41e929fad6aeaf2ee2b9bd87801bb459ab656d69f"
+    },
+    {
+      "id": 988963,
+      "sku": "L090-050",
+      "name": "Lid 60L / 15G for RP-1115",
+      "url": "https://lemmer.com/en/product-2/lid-for-rp-1115-60l/",
+      "file": "l090-050-988963.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-050-RP-Lid-60L.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "7dd796895103a8342b80b2985c60d01dadf911c6b54c5d5caf18c252d5165f57"
+    },
+    {
+      "id": 988964,
+      "sku": "L090-051",
+      "name": "Wall bracket for RP-1115 pump",
+      "url": "https://lemmer.com/en/product-2/wall-bracket-for-rp-1115-pump/",
+      "file": "l090-051-988964.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-051-with-RP-1115-set-up-1.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-051-Wall-Bracket.jpg",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "eaba121cff788850ac49765d340d0ed4ca392229b6a4c72a43a291b9f08d0df3"
+    },
+    {
+      "id": 988965,
+      "sku": "L090-052",
+      "name": "20L lid for RP-1202",
+      "url": "https://lemmer.com/en/product-2/lid-for-rp-1202-20l/",
+      "file": "l090-052-988965.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-052-RP-Lid-20L-w-Bung.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "0534c6e6dc40adb0dc81c1de5c4831a439f211a92cbb2020083c09adb19bf8f0"
+    },
+    {
+      "id": 988966,
+      "sku": "L090-053",
+      "name": "barrel adapter for RP-1115 pump",
+      "url": "https://lemmer.com/en/product-2/barrel-adapter-for-rp-1115-pump/",
+      "file": "l090-053-988966.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-053-top-view-open-screw.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-053-open-explanation.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "dd9da5aee5b2e526b6a20e7d64f3f4cb88150ea3cd6b4935115374b1e24d20c4"
+    },
+    {
+      "id": 988967,
+      "sku": "L090-054",
+      "name": "Lid 20L / 5G for RP-1115",
+      "url": "https://lemmer.com/en/product-2/lid-for-rp-1115-20l/",
+      "file": "l090-054-988967.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-050-RP-Lid-60L.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "12aae255285e5726e1470654f3d552aa647555e48dc0c79d67ff2c3b88ae5c89"
+    },
+    {
+      "id": 988969,
+      "sku": "L090-071",
+      "name": "Suction filter for RP-1115 Rustproof pump",
+      "url": "https://lemmer.com/en/product-2/suction-filter-for-pump-rp-1115-rustproof/",
+      "file": "l090-071-988969.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-071-filter-RP-1115.bmp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "386744ddd0f1223e392b303453f2346bc2779fa0aa649e655c161fd2d0b5990e"
+    },
+    {
+      "id": 988970,
+      "sku": "L090-073",
+      "name": "barrel adapter for RP-1202 pump",
+      "url": "https://lemmer.com/en/product-2/barrel-adapter-for-rp-1202-pump/",
+      "file": "l090-073-988970.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-073-bung-RP-1202.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-073-opening-explanation.jpg",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "37b36b6ca6ce3814bccb6ada3aa4fbc8a5603a4375bc5e73f756bda64a250c16"
+    },
+    {
+      "id": 988972,
+      "sku": "L090-089",
+      "name": "Cart for 60L / 15G",
+      "url": "https://lemmer.com/en/product-2/portable-cart-for-60l/",
+      "file": "l090-089-988972.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-089-RP1115-060L-Cartc.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "6fa7c6df58a41ff4aa864c497ccb1c37bdbc88d61f65d48d97d45cc9881a25a4"
+    },
+    {
+      "id": 988984,
+      "sku": "L090-210",
+      "name": "Suction Hose 205 Litres / 55 G for RP-1115 Pump on Wall Bracket",
+      "url": "https://lemmer.com/en/product-2/205-liter-55-g-suction-hose-for-rp-1115-pump-on-wall-bracket/",
+      "file": "l090-210-988984.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-210-Suction-Hose-RP1115-205L.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/l090-210-on-RP-1115.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "4318d45a493ed00ebf49c14a0c216909890372bcb1e8066c264fb3af920ad73b"
+    },
+    {
+      "id": 988985,
+      "sku": "L090-211",
+      "name": "Return Hose for Pump RP-1115",
+      "url": "https://lemmer.com/en/product-2/return-hose-for-rp-1115-pump/",
+      "file": "l090-211-988985.md",
+      "categories": [
+        {
+          "id": 159,
+          "name": "Accessoires pour antirouille pneumatique",
+          "slug": "antirouille-a-air-accessoire",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/accessory-air-rust-remover/"
+        },
+        {
+          "id": 157,
+          "name": "Accessoires pour antirouille sans air",
+          "slug": "antirouille-sans-air",
+          "link": "https://lemmer.com/en/product-category-2/rustproofing/airless-rustproofing/"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-211.webp",
+          "alt": ""
+        },
+        {
+          "url": "https://lemmer.com/wp-content/uploads/2026/01/L090-211-on-a-kit.webp",
+          "alt": ""
+        }
+      ],
+      "pdf_links": [],
+      "source_sha256": "153255c43504338fa276f030865a2ae146aa8a8af943b061ef06d91124c9131f"
+    }
+  ]
+}

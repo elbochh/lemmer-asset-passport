@@ -1,0 +1,17 @@
+{
+  "label": "Synthetic engineering fixture, not diagnostic accuracy evidence",
+  "family": "RP-460HD",
+  "corpus": [
+    {"id":"OBS-PACKING","model":"RP-460HD","product_number":"L015-201","text":"Fluid seeps around needle packing after use. Record whether seepage is external and where it appears. This observation checklist does not authorize replacement."},
+    {"id":"OBS-SPRAY","model":"RP-460HD","product_number":"L015-201","text":"Uneven spray pattern. Record the material and whether the observed pattern changed. No diagnosis confirmed."},
+    {"id":"OTHER-MODEL","model":"RP-1202","product_number":"L033-207","text":"Fluid seeps around needle packing after use. Wrong equipment family for RP-460HD."}
+  ],
+  "cases": [
+    {"id":"exact-packing","group":"packing-original","split":"development","model":"RP-460HD","product_number":"L015-201","query":"Fluid seeps around needle packing after use","expected":["OBS-PACKING"]},
+    {"id":"paraphrase-packing","group":"packing-reworded","split":"development","model":"RP-460HD","product_number":"L015-201","query":"Coating liquid escapes outside around the needle after finishing","expected":["OBS-PACKING"]},
+    {"id":"incomplete","group":"incomplete","split":"development","model":"RP-460HD","product_number":"L015-201","query":"It does not work","expected":[]},
+    {"id":"unknown","group":"unknown","split":"development","model":"RP-460HD","product_number":"L015-201","query":"The digital screen turns purple","expected":[]},
+    {"id":"spray","group":"spray","split":"development","model":"RP-460HD","product_number":"L015-201","query":"Uneven spray pattern appeared today","expected":["OBS-SPRAY"]}
+  ],
+  "holdout_note":"These examples are visible to developers. None is claimed as a real unseen holdout. branch reviewers must supply separate grouped evaluation cases and expected answers after the corpus and settings are frozen."
+}
