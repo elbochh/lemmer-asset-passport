@@ -156,21 +156,21 @@ function Welcome({ onStart }: { onStart: (s: any) => void }) {
         <div className="welcome-product">
           <div className="product-halo" />
           <img
-            src="/images/catalog/L015-201.webp"
-            alt="Lemmer RP-460HD rustproofing gun"
+            src="/images/equipment.svg"
+            alt="Synthetic TEST-MODEL-001 equipment"
           />
           <div className="floating-passport">
             <div className="tiny-icon">
               <ShieldCheck size={20} />
             </div>
             <div>
-              <strong>RP-460HD · Asset LM-1042</strong>
+              <strong>TEST-MODEL-001 · TEST-ASSET-001</strong>
               <span>Service history connected</span>
             </div>
             <CheckCircle2 size={20} className="green" />
           </div>
           <span className="product-caption">
-            LEMMER RP-460HD / RUSTPROOFING GUN
+            OWNER-PROVIDED SYNTHETIC TEST EQUIPMENT
           </span>
         </div>
       </div>
@@ -640,9 +640,9 @@ function Shell() {
         >
           <ol className="demo-steps">
             <li>
-              <strong>Open LM-1042’s request</strong>
+              <strong>Open TEST-ASSET-001’s request</strong>
               <p>
-                Start with “Pump runs, but will not prime” in Service requests.
+                Start with “Will not start” in Service requests.
               </p>
             </li>
             <li>
@@ -670,8 +670,8 @@ function Shell() {
             <li>
               <strong>Compare a second asset</strong>
               <p>
-                LM-1043 is another rustproofing variant, with its own serial and
-                service history.
+                TEST-ASSET-002 is a separate equipment passport, with its own
+                model, serial and service history.
               </p>
             </li>
           </ol>

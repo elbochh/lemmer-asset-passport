@@ -25,7 +25,7 @@ def switch(c, role):
         a
         for a in accounts
         if (
-            a.get("label") == "Prairie Fleet Services"
+            a.get("label") == "Fictional Customer 002"
             if role == "second_customer"
             else a["role"] == role
         )
@@ -45,9 +45,9 @@ def test_catalog_and_customer_asset_isolation(demo):
     staff_assets = c.get("/api/assets").json()
     session = switch(c, "customer")
     assets = c.get("/api/portal/assets").json()
-    assert len(assets) == 3
+    assert len(assets) == 4
     forbidden = next(
-        a for a in staff_assets if a["customer"] == "Prairie Fleet Services"
+        a for a in staff_assets if a["customer"] == "Fictional Customer 002"
     )
     assert c.get("/api/portal/assets/" + forbidden["id"]).status_code == 404
     assert c.get("/api/assets").status_code == 403
@@ -148,7 +148,7 @@ def test_parts_request_handoff_idempotence_and_access(demo):
         "asset_id": a["id"],
         "description": req["description"],
         "request_id": req["id"],
-        "part": "L015-291",
+        "part": "TEST-PART-M1-001",
         "quantity": 1,
         "submission_id": "same-submission-123",
     }
@@ -232,8 +232,9 @@ def test_maintenance_basis_and_cache_invalidation(demo):
     c = demo
     a = c.get("/api/assets").json()[0]
     d = c.get("/api/portal/assets/" + a["id"]).json()
-    assert d["maintenance"][0]["interval_days"] == 120
-    assert "Synthetic" in d["maintenance"][0]["basis"]
+    assert d["maintenance"]
+    assert all(x.get("interval_days") is None for x in d["maintenance"])
+    assert all("synthetic" in x["basis"].lower() for x in d["maintenance"])
     with Session() as db:
         asset = db.get(Asset, a["id"])
         key = cache_key(db, asset.workspace_id, asset, "same symptoms")
@@ -418,7 +419,7 @@ def test_repair_installation_updates_estimate_and_keeps_identity(demo):
     body = {
         "diagnosis": "Worn packing confirmed",
         "work": "Technician replaced the worn packing",
-        "parts": ["L015-291"],
+        "parts": ["TEST-PART-M1-001"],
         "parts_replaced": True,
         "test": "Leak check passed",
         "outcome": "Repaired",
@@ -430,7 +431,11 @@ def test_repair_installation_updates_estimate_and_keeps_identity(demo):
     assert first.status_code == 200, first.text
     assert c.post("/api/requests/" + r["id"] + "/reports", json=body).status_code == 200
     outlook = c.get("/api/portal/assets/" + a["id"]).json()["maintenance"]
-    assert len(outlook) == 1
-    assert outlook[0]["installed"] == date.today().isoformat()
-    assert outlook[0]["interval_days"] == 90
-    assert "Observed" in outlook[0]["basis"]
+    installed = next(
+        x
+        for x in outlook
+        if x["part"] == "TEST-PART-M1-001"
+        and x["installed"] == date.today().isoformat()
+    )
+    assert installed["interval_days"] > 0
+    assert "Observed" in installed["basis"]

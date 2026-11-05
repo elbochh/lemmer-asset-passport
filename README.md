@@ -63,15 +63,17 @@ The sample paper is explicitly fictional. Your actual service-paper template has
 
 ## Demo journey
 
-1. Open the demo workspace and choose the request **Pump runs, but will not prime** for **LM-1042**.
+1. Open the demo workspace and choose a **Will not start** request for **TEST-ASSET-001**.
 2. Guidance starts automatically for an older sample request when opened; reception handoffs start it at submission. Inspect Recommendation, Sources and Evidence review. A live result usually takes tens of seconds because retrieval, generation and judging are sequential.
 3. Complete the technician report with an actual simulated diagnosis, work, parts, test and outcome. Wait for **Draft saved**, then finalize.
-4. Open LM-1042's Passport and the Knowledge library. The new event and its corresponding case are persisted together.
+4. Open TEST-ASSET-001's Passport and the Knowledge library. The new event and its corresponding case are persisted together.
 5. Run assistance again with a relevant symptom. The new case is eligible for retrieval without retraining.
-6. Compare **LM-1043**, another L-1095 with its own serial/history. Each QR opens its own public passport and linked request form.
+6. Compare **TEST-ASSET-002**, a separate fictional model with its own serial/history. Each QR opens its own protected passport and linked request form.
 7. Use **AI evaluation** to compare the same input under three context conditions. Export the result for technician review.
 
-This is a demonstrable application, not a production deployment. It uses synthetic customers and cases. Email notifications are previews, CV is deferred, and the product reference contains the cited parts sheets for L-1095 and L-65, not the full Lemmer catalog. No historical company data has been received or validated.
+The default demo is seeded from the owner-provided `Asset_Passport_Synthetic_Test_Data hb v3 Emailed.xlsx` workbook: 10 fictional customers, 25 equipment assets, 50 service records, 32 part-use records, 30 attachment placeholders and 200 troubleshooting test cases. The workbook rows remain synthetic and technically unverified; they are not production-approved procedures.
+
+This is a demonstrable application, not a production deployment. It uses synthetic customers and cases. Email notifications are previews, CV is deferred, and the product reference contains selected sourced material, not a complete verified service library. No real company repair history has been received or validated.
 
 ## AI configuration
 

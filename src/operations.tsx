@@ -250,10 +250,8 @@ export function Procedures() {
               className="button secondary"
               onClick={() =>
                 begin({
-                  title: "Synthetic RP-460HD observation checklist",
-                  symptoms: [
-                    "Fluid seeps around the needle packing after use.",
-                  ],
+                  title: "Synthetic TEST-MODEL-001 observation checklist",
+                  symptoms: ["Will not start"],
                   solution:
                     "Demonstration only: record the actual diagnosis and verification separately. This checklist does not authorize replacement.",
                   steps: [
@@ -288,10 +286,10 @@ export function Procedures() {
         }
       />
       <div className="note-box">
-        Start with RP-460HD as the demo family. Actual procedures, repair
-        evidence and approval criteria still need branch reviewers’s review. Public
-        manuals establish product facts; they do not by themselves confirm a
-        fault.
+        Start with TEST-MODEL-001 as the owner-provided synthetic demo family.
+        The imported troubleshooting rows are test evidence, not approved
+        procedures. Actual repair evidence and approval criteria still need
+        Brad and Min’s review.
       </div>
       {editing && (
         <section className="panel">

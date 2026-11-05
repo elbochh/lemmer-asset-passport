@@ -16,8 +16,8 @@ def check(name, ok):
 
 with httpx.Client(base_url=url, timeout=160) as c:
     check(
-        "PostgreSQL v2 health",
-        c.get("/api/health").json().get("version") in ["2.0", "2.1"],
+        "PostgreSQL v3 health",
+        c.get("/api/health").json().get("version") == "3.0",
     )
     r = c.post("/api/demo/start")
     r.raise_for_status()
@@ -25,7 +25,7 @@ with httpx.Client(base_url=url, timeout=160) as c:
     accounts = session["accounts"]
 
     def switch(role):
-        a = next(a for a in accounts if (a.get("label") == "Prairie Fleet Services" if role == "second_customer" else a["role"] == role))
+        a = next(a for a in accounts if (a.get("label") == "Fictional Customer 002" if role == "second_customer" else a["role"] == role))
         c.post("/api/accounts/switch", json={"name": a["name"]}).raise_for_status()
 
     check(
@@ -38,8 +38,8 @@ with httpx.Client(base_url=url, timeout=160) as c:
     check("Local catalogue photo", c.get(catalog[0]["image"]).status_code == 200)
     assets = c.get("/api/portal/assets").json()
     v = next(a for a in assets if a["ownership"]["kind"] == "vehicle")
-    a = next(a for a in assets if a["code"] == "LM-1042")
-    other = next(a for a in assets if a["customer"] == "Prairie Fleet Services")
+    a = next(a for a in assets if a["code"] == "TEST-ASSET-001")
+    other = next(a for a in assets if a["customer"] == "Fictional Customer 002")
     visit = c.post("/api/visits", json={"asset_id": v["id"]}).json()
     path = "/api/visits/" + visit["id"]
     for version, status in enumerate(
@@ -68,12 +68,12 @@ with httpx.Client(base_url=url, timeout=160) as c:
     check("Vehicle visit completes persistently", r.json()["status"] == "Completed")
     switch("customer")
     own = c.get("/api/portal/assets").json()
-    check("Customer sees own three assets", len(own) == 3)
+    check("Customer sees own equipment and vehicle", len(own) == 4)
     check(
         "Other customer asset blocked",
         c.get("/api/portal/assets/" + other["id"]).status_code == 404,
     )
-    check("Staff API blocked", c.get("/api/assets").status_code == 401)
+    check("Staff API blocked", c.get("/api/assets").status_code == 403)
     check(
         "QR resolves owned asset",
         c.get(f"/api/qr/{session['share']}/{a['code']}").json()["id"] == a["id"],
@@ -86,7 +86,7 @@ with httpx.Client(base_url=url, timeout=160) as c:
     body = {
         "asset_id": a["id"],
         "description": "Synthetic packing seepage; request branch compatibility review",
-        "part": "L015-291",
+        "part": "TEST-PART-M1-001",
         "quantity": 1,
         "submission_id": str(uuid.uuid4()),
     }
@@ -114,6 +114,7 @@ with httpx.Client(base_url=url, timeout=160) as c:
             "/api/registry",
             json={
                 "customer_id": customer["id"],
+                "customer_confirmed": True,
                 "name": f"Demo third-party pump {i}",
                 "manufacturer": "Demo manufacturer",
                 "model": "Demo-20",
@@ -136,4 +137,4 @@ with httpx.Client(base_url=url, timeout=160) as c:
 Path(".local/expansion-cloud-validation.json").write_text(
     json.dumps({"url": url, "checks": checks}, indent=2)
 )
-print("Hosted v2 workflow checks complete.")
+print("Hosted ownership and vehicle workflow checks complete.")

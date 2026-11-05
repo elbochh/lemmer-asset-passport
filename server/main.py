@@ -365,9 +365,7 @@ def asset_detail(asset_id: str, who=Depends(claims), db=Depends(dbdep)):
         "documents": (
             documents(reference_key(a)) if a.manufacturer.lower() == "lemmer" else []
         ),
-        "parts": (
-            parts_for(reference_key(a)) if a.manufacturer.lower() == "lemmer" else {}
-        ),
+        "parts": parts_for(reference_key(a)),
     }
 
 
@@ -656,9 +654,7 @@ def save_report(request_id, body, who, db):
                 422, "Combine duplicate parts into one line with a quantity."
             )
         body.parts = [p.part for p in body.part_lines if p.action != "Requested"]
-    reference = (
-        parts_for(reference_key(a)) if a.manufacturer.lower() == "lemmer" else {}
-    )
+    reference = parts_for(reference_key(a))
     if reference and any(
         p not in reference for p in (body.parts + [x.part for x in body.part_lines])
     ):

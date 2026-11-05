@@ -34,7 +34,7 @@ def switch(c, role):
         a
         for a in c.get("/api/session").json()["accounts"]
         if (
-            a.get("label") == "Prairie Fleet Services"
+            a.get("label") == "Fictional Customer 002"
             if role == "second_customer"
             else a["role"] == role
         )
@@ -149,7 +149,7 @@ def test_unavailable_is_visible_and_retry_is_bounded(demo):
 def test_customer_evidence_and_request_isolation(demo):
     c = demo
     assets = c.get("/api/assets").json()
-    forbidden = next(a for a in assets if a["code"] == "LM-1042")
+    forbidden = next(a for a in assets if a["code"] == "TEST-ASSET-001")
     a, r = start(c)
     with Session() as db:
         asset = db.get(Asset, a["id"])
@@ -197,7 +197,7 @@ def test_reviewed_candidates_require_judge_approval_and_no_guessed_probability(
                 "id": "CASE-1",
                 "kind": "case",
                 "asset_id": a["id"],
-                "content": "Packing wear; L015-291 packing replacement corrected seepage",
+                "content": "Switch fault; TEST-PART-M1-002 replacement corrected failure",
                 "model": a["model"],
             }
         ], "test"
@@ -210,7 +210,7 @@ def test_reviewed_candidates_require_judge_approval_and_no_guessed_probability(
                 questions=["Where does fluid appear?"],
                 part_candidates=[
                     PartCandidate(
-                        part="L015-291",
+                        part="TEST-PART-M1-002",
                         reason="Prior matching packing repair",
                         confirm_with="Record whether seepage is at the needle packing.",
                         source_ids=["CASE-1"],
@@ -227,7 +227,7 @@ def test_reviewed_candidates_require_judge_approval_and_no_guessed_probability(
                     reason="History supports the hypothesis",
                 )
             ],
-            approved_candidates=["L015-291"],
+            approved_candidates=["TEST-PART-M1-002"],
         )
 
     monkeypatch.setattr(ai, "retrieve", retrieve)
@@ -253,7 +253,7 @@ def test_reviewed_candidates_require_judge_approval_and_no_guessed_probability(
             checks=[
                 JudgeCheck(criterion="Evidence", status="fail", reason="No support")
             ],
-            approved_candidates=["L015-291"],
+            approved_candidates=["TEST-PART-M1-002"],
         )
 
     monkeypatch.setattr(ai, "model_json", fail)

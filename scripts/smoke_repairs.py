@@ -29,7 +29,7 @@ with httpx.Client(base_url=args.url, timeout=120) as c:
         {a["role"] for a in accounts}
         == {"technician", "reception", "customer", "superuser"},
     )
-    owner = next(a for a in accounts if a.get("label") == "Prairie Fleet Services")
+    owner = next(a for a in accounts if a.get("label") == "Fictional Customer 002")
     check("Business owner has customer access", owner["role"] == "customer")
     c.post("/api/accounts/switch", json={"name": owner["name"]}).raise_for_status()
     assets = c.get("/api/portal/assets").json()

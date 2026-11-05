@@ -33,14 +33,18 @@ with httpx.Client(base_url=args.url, timeout=160, follow_redirects=True) as c:
         )
     session = c.post("/api/demo/start")
     check("Create demo workspace", session.status_code == 200)
+    technician = session.json()["technician"]
     check(
         "HTTP-only secure session cookie",
         "HttpOnly" in session.headers["set-cookie"]
-        and "Secure" in session.headers["set-cookie"],
+        and (
+            args.url.startswith("http://127.0.0.1")
+            or "Secure" in session.headers["set-cookie"]
+        ),
     )
     assets = c.get("/api/assets").json()
-    a = next(x for x in assets if x["code"] == "LM-1042")
-    b = next(x for x in assets if x["code"] == "LM-1043")
+    a = next(x for x in assets if x["code"] == "TEST-ASSET-001")
+    b = next(x for x in assets if x["code"] == "TEST-ASSET-002")
     share = session.json()["share"]
     for item in [a, b]:
         public = c.get(f"/api/public/{share}/{item['code']}").json()
@@ -50,9 +54,9 @@ with httpx.Client(base_url=args.url, timeout=160, follow_redirects=True) as c:
         "/api/requests",
         json={
             "asset_id": a["id"],
-            "title": "Demo validation: gun leaks at the needle packing",
-            "description": "Fluid seeps at the needle packing after storage.",
-            "category": "Leak",
+            "title": "Demo validation: equipment will not start",
+            "description": "The equipment will not start; record the simulated power-status result.",
+            "category": "Startup",
             "operating": "No",
             "name": "Demo validation technician",
             "email": "demo@example.test",
@@ -62,14 +66,15 @@ with httpx.Client(base_url=args.url, timeout=160, follow_redirects=True) as c:
     req = new.json()
     path = "/api/requests/" + req["id"]
     report = {
-        "diagnosis": "Demo: needle packing wear confirmed",
-        "work": "Demo: technician inspected and replaced the worn needle packing",
-        "parts": ["L015-291"],
-        "test": "Demo: controlled leak and flow test passed",
+        "diagnosis": "Demo: simulated power supply fault confirmed",
+        "work": "Demo: technician replaced the fictional power supply module",
+        "parts": ["TEST-PART-M1-001"],
+        "test": "Demo: simulated startup verification passed",
         "outcome": "Repaired",
+        "close_request": True,
         "inspection_date": date.today().isoformat(),
         "version": req["version"],
-        "submission_id": "azure-validation-" + req["id"],
+        "submission_id": "cloud-validation-" + req["id"],
     }
     res = c.post(path + "/reports", json=report)
     check("Finalize report", res.status_code == 200)
@@ -89,12 +94,23 @@ with httpx.Client(base_url=args.url, timeout=160, follow_redirects=True) as c:
     cases = c.get("/api/knowledge").json()["cases"]
     case = next(x for x in cases if x.get("event_id") == event["id"])
     check("Report becomes correct asset knowledge", case["asset_id"] == a["id"])
+    check("Technician export denied", c.get("/api/export").status_code == 403)
+    check(
+        "Switch to demo super-user",
+        c.post("/api/accounts/switch", json={"name": "Demo super-user"}).status_code
+        == 200,
+    )
     check("Workspace export", c.get("/api/export").status_code == 200)
     if args.live_ai:
+        check(
+            "Return to technician",
+            c.post("/api/accounts/switch", json={"name": technician}).status_code
+            == 200,
+        )
         ai = c.post(
             path + "/recommend",
             json={
-                "problem": "The motor runs normally but the gun leaks at the needle packing after storage. Consider the most recent recorded repair.",
+                "problem": "The equipment will not start. Consider the most recent simulated power-status repair.",
                 "mode": "C",
             },
         )

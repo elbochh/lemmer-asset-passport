@@ -102,6 +102,12 @@ def parts_for(model):
             r"^\| (L\d{3}-\d{3}[A-Za-z]*) \| ([^|]+) \|", d["content"], re.M
         ):
             found[number] = name.strip()
+    if model.startswith("TEST-MODEL-"):
+        # These TEST-PART identifiers are fictional workbook values. They make
+        # the synthetic workflow testable without implying catalogue approval.
+        from .owner_dataset import test_parts
+
+        found.update(test_parts(model))
     return found
 
 
@@ -132,6 +138,18 @@ def corpus(db, workspace, asset, mode):
 
         shared = approved_evidence(db, workspace, asset)
         items += shared
+        # The owner supplied these rows specifically for development testing.
+        # They remain clearly synthetic/unverified and are never converted into
+        # approved procedures merely by being loaded into the demo.
+        synthetic_cases = db.scalars(
+            select(KnowledgeCase).where(
+                KnowledgeCase.workspace_id == workspace,
+                KnowledgeCase.model == reference_key(asset),
+                KnowledgeCase.asset_id.is_(None),
+                KnowledgeCase.source.startswith("Owner-provided synthetic test data"),
+            )
+        ).all()
+        items += [case_evidence(case) for case in synthetic_cases]
     if mode == "C":
         events = db.scalars(
             select(Event)

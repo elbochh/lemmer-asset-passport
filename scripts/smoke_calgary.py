@@ -11,11 +11,11 @@ with httpx.Client(base_url=sys.argv[1],timeout=160) as c:
     check('PostgreSQL v3 health',c.get('/api/health').json().get('version')=='3.0')
     c.post('/api/demo/start').raise_for_status();session=c.get('/api/session').json()
     def switch(name):c.post('/api/accounts/switch',json={'name':name}).raise_for_status()
-    assets=c.get('/api/assets').json();a=next(a for a in assets if a['code']=='LM-1042')
-    check('Model distinct from product number',a['model']=='RP-460HD' and a['product_number']=='L015-201')
+    assets=c.get('/api/assets').json();a=next(a for a in assets if a['code']=='TEST-ASSET-001')
+    check('Asset, model and serial remain distinct',a['model']=='TEST-MODEL-001' and a['serial']=='TEST-SERIAL-001' and a['code']=='TEST-ASSET-001')
     check('Technician cannot administer',c.get('/api/operations').status_code==403)
     switch('Demo super-user');check('Calgary-only administration',c.get('/api/operations').json()['location']=='Calgary')
-    p=c.post('/api/procedures',json={'title':'Hosted synthetic observation checklist','manufacturer':'Lemmer','model':a['model'],'product_number':a['product_number'],'symptoms':['Fluid seeps around the needle packing after use.'],'steps':[{'question':'Has the visible symptom been recorded without operating the equipment?','yes':-1,'no':-1,'unknown':-1}],'references':[{'title':'Synthetic workflow fixture','passage':'This test confirms observation persistence only, not a repair instruction.','page':'Unknown','revision':'Smoke 1'}],'solution':'Record actual technician findings and verification separately.','synthetic':True});p.raise_for_status();p=p.json()
+    p=c.post('/api/procedures',json={'title':'Hosted synthetic startup observation checklist','manufacturer':a['manufacturer'],'model':a['model'],'product_number':a['product_number'],'symptoms':['Will not start'],'steps':[{'question':'Has the simulated power status been recorded without operating the equipment?','yes':-1,'no':-1,'unknown':-1}],'references':[{'title':'Owner-provided synthetic workflow fixture','passage':'This test confirms observation persistence only, not a repair instruction.','page':'Unknown','revision':'Smoke 1'}],'solution':'Record actual technician findings and verification separately.','synthetic':True});p.raise_for_status();p=p.json()
     check('Procedure initially pending',p['status']=='Pending review')
     c.post('/api/procedures/'+p['id']+'/review',json={'status':'Approved','reason':'Synthetic checklist and privacy confirmed for smoke test.','technical_checked':True,'privacy_checked':True}).raise_for_status()
     switch('Taylor Brooks')
@@ -27,7 +27,7 @@ with httpx.Client(base_url=sys.argv[1],timeout=160) as c:
     check('Second asset gets unique identity',registered[0]['id']!=registered[1]['id'] and registered[0]['code']!=registered[1]['code'])
     found=next(x for x in c.get('/api/customers').json() if x['id']==customer['id'])
     check('SAP / previous asset owner lookup available',found['sap_customer_code'] and registered[0]['code'] in found['asset_codes'] and found['asset_count']==2)
-    intake={'asset_id':a['id'],'title':'Synthetic visible seepage','description':'Fluid seeps around the needle packing after use.','category':'Inspection','name':'Synthetic dropoff employee','email':'','technician':'Alex Morgan','reviewed':False,'submission_id':str(uuid.uuid4()),'accessories':'Gun and cup','visible_damage':'Not assessed','customer_instructions':'Record observations only.','dropoff_role':'Employee'}
+    intake={'asset_id':a['id'],'title':'Synthetic startup issue','description':'Will not start','category':'Inspection','name':'Synthetic dropoff employee','email':'','technician':'Alex Morgan','reviewed':False,'submission_id':str(uuid.uuid4()),'accessories':'Not recorded','visible_damage':'Not assessed','customer_instructions':'Record observations only.','dropoff_role':'Employee'}
     check('Review checkbox enforced',c.post('/api/intake/handoff',json=intake).status_code==422)
     intake['reviewed']=True
     check('Existing open visit warning enforced',c.post('/api/intake/handoff',json=intake).status_code==409)

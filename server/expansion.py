@@ -36,7 +36,9 @@ from .ai import visible_result
 
 
 def component_key(value):
-    match = re.search(r"\bL\d{3}-\d{3}[A-Za-z]*\b", value, re.I)
+    match = re.search(
+        r"\b(?:L\d{3}-\d{3}[A-Za-z]*|TEST-PART-[A-Z0-9-]+)\b", value, re.I
+    )
     return match.group(0).upper() if match else " ".join(value.lower().split())
 
 
@@ -689,11 +691,7 @@ def attach(
             "events": events,
             "requests": requests,
             "maintenance": estimates,
-            "parts": (
-                parts_for(reference_key(a))
-                if a.manufacturer.lower() == "lemmer"
-                else {}
-            ),
+            "parts": parts_for(reference_key(a)),
             "visits": [
                 row(v)
                 for v in db.scalars(
@@ -1070,123 +1068,19 @@ def attach(
 
 
 def seed_expansion(db, w):
-    """Seed only new workspaces; never rename existing physical assets or repairs."""
-    from .catalog import RP_PARTS
+    """Seed a new workspace from the owner's synthetic workbook dataset."""
+    from .owner_dataset import seed_owner_dataset
 
-    clients = []
-    for name, kind in [
-        ("Northline Rustproofing", "customer"),
-        ("Prairie Fleet Services", "customer"),
-    ]:
-        c = Customer(
-            workspace_id=w.id,
-            name=name,
-            email="demo@example.test",
-            kind=kind,
-            phone="403-555-0100",
-        )
-        db.add(c)
-        db.flush()
-        clients.append(c)
-        db.add(
-            PortalUser(
-                workspace_id=w.id,
-                customer_id=c.id,
-                email=c.id + "@example.test",
-                demo=True,
-            )
-        )
-    for i, (sku, c) in enumerate(
-        [("L015-201", clients[0]), ("L015-203", clients[0]), ("L033-207", clients[1])]
-    ):
-        p = BY_SKU[sku]
-        a = Asset(
-            workspace_id=w.id,
-            code=f"LM-{1042+i}",
-            name=p["name"],
-            model=model_name(sku),
-            product_number=sku,
-            serial=f"DEMO-RP-{1042+i}",
-            customer=c.name,
-            location="Calgary, AB",
-            image=image_for(sku),
-            condition="Needs service" if i == 0 else "Operational",
-        )
-        db.add(a)
-        db.flush()
-        db.add(
-            AssetOwner(id=a.id, workspace_id=w.id, customer_id=c.id, product_sku=sku)
-        )
-        if i == 0:
-            symptom = "Fluid seeps around the needle packing after use."
-            e = Event(
-                workspace_id=w.id,
-                asset_id=a.id,
-                kind="service",
-                title="Synthetic example: packing replaced",
-                actor=TECHNICIANS[0],
-                created_at=now() - timedelta(days=90),
-                body={
-                    "symptom": symptom,
-                    "diagnosis": "Packing wear confirmed during technician inspection.",
-                    "work": "Technician replaced confirmed worn packing.",
-                    "parts": ["L015-291"],
-                    "test": "Leak check passed.",
-                    "outcome": "Repaired",
-                    "inspection_date": (date.today() - timedelta(days=90)).isoformat(),
-                    "source": "Synthetic demonstration only",
-                },
-            )
-            db.add(e)
-            db.flush()
-            db.add(
-                KnowledgeCase(
-                    workspace_id=w.id,
-                    asset_id=a.id,
-                    event_id=e.id,
-                    code="RP-DEMO-001",
-                    model=sku,
-                    symptom=symptom,
-                    diagnosis=e.body["diagnosis"],
-                    repair=e.body["work"],
-                    parts=["L015-291"],
-                    test=e.body["test"],
-                    outcome="Repaired",
-                    source="Synthetic demonstration only",
-                )
-            )
-            db.add(
-                ComponentRecord(
-                    workspace_id=w.id,
-                    asset_id=a.id,
-                    part="L015-291 · Packing",
-                    installed=(date.today() - timedelta(days=90)).isoformat(),
-                    interval_days=120,
-                    basis="Synthetic example: previous observed interval was 120 days. Not a manufacturer lifetime.",
-                    event_id=e.id,
-                )
-            )
-            r = ServiceRequest(
-                workspace_id=w.id,
-                asset_id=a.id,
-                code="SR-26041",
-                title="Packing area seepage",
-                description=symptom,
-                category="Leak",
-                priority="Normal",
-                operating="No",
-                technician=TECHNICIANS[0],
-                contact={"name": c.name, "email": c.email, "phone": c.phone},
-            )
-            db.add(r)
+    seeded = seed_owner_dataset(db, w)
+    first_customer = seeded["customers"]["TEST-CUST-001"]
     a = Asset(
         workspace_id=w.id,
         code="VH-1001",
-        name="Northline delivery vehicle",
+        name="Synthetic workflow vehicle",
         model="Transit",
         manufacturer="Ford",
         serial="DEMO-VEHICLE-001",
-        customer=clients[0].name,
+        customer=first_customer.name,
         location="Calgary bay 1",
         image="/images/vehicle.svg",
         condition="Inspection due",
@@ -1197,7 +1091,7 @@ def seed_expansion(db, w):
         AssetOwner(
             id=a.id,
             workspace_id=w.id,
-            customer_id=clients[0].id,
+            customer_id=first_customer.id,
             kind="vehicle",
             profile={
                 "vin": "DEMO VIN · not a real vehicle",

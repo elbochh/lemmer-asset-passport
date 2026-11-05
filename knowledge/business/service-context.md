@@ -1,6 +1,6 @@
 # Lemmer Calgary service context
-Source: Project-defined Calgary demo requirements; this file describes proposed demo behavior.
-Status: Demo behavior implemented; branch reviewers's operational approval and real repair evidence are still pending.
+Source: Hussein's feedback email supplied by the project owner, reviewed 27 September 2026, and the project owner's Calgary-only implementation instruction.
+Status: Demo behavior implemented; Brad and Min's operational approval and real repair evidence are still pending.
 
 Reception identifies the equipment owner separately from the person dropping it off. One customer can own several physical assets. Each physical asset has its own Asset ID, serial number and QR code. A repair visit has its own service request number. A catalogue product number is not the familiar model name or the physical asset's identity. SAP customer and sale document references are manually recorded; there is no live SAP connection.
 
@@ -10,10 +10,12 @@ Approved, equipment-applicable troubleshooting procedures are the first source f
 
 A completed report is permanent asset history. It does not train a model, browse the internet, or trigger a model call. A reusable procedure is a separate, versioned technical record with sources, applicability, human technical/privacy review and an approval decision. It must not copy private customer contacts, pricing or confidential notes into shared knowledge. Only approved procedures are shared for troubleshooting. AI evidence review is not Lemmer human approval.
 
-the administrator's manufacturer role means the super-user who controls staff access and material corrections. There is no separate organization repair role. Individual and business owners use the customer role; reception assigns repairs to technicians. Named staff belong to Lemmer Calgary. Other locations are not part of this implementation.
+Hussein's manufacturer role means the super-user who controls staff access and material corrections. There is no separate organization repair role. Individual and business owners use the customer role; reception assigns repairs to technicians. Named staff belong to Lemmer Calgary. Other locations are not part of this implementation.
 
 Customers can report symptoms and request parts for their own equipment. Requests are enquiries to the branch, not stock, compatibility, price, warranty or delivery promises. There is no online payment. Maintenance intervals are observations or explicitly sourced estimates, never guaranteed component lifetime. Do not invent calibrated probabilities.
 
 AI may match free wording to applicable approved procedure IDs, summarize cited evidence and ask questions. Technical support, customer privacy and communication quality are separate checks. Unsupported technical suggestions are withheld. Lack of a source must remain an explicit knowledge gap.
 
-Actual technician experience, reception papers, troubleshooting procedures, repair outcomes, sign-off rules and evaluation holdouts have not been supplied. Do not invent employee qualifications, business policies or confirmed repairs. Synthetic fixtures are clearly labelled. The vehicle interface and later CV integration belong to the project partner and are outside this change.
+The owner supplied a fictional v3 development workbook with troubleshooting scenarios, customers, assets and service history. Its `Verified By` and `Review Date` fields are blank. Treat those rows as synthetic test evidence, never as approved production procedures, validated diagnostic ground truth or confirmed real repairs.
+
+Actual technician experience, reception papers, verified troubleshooting procedures, confirmed repair outcomes, sign-off rules and evaluation holdouts have not been supplied. Do not invent employee qualifications, business policies or confirmed repairs. Synthetic fixtures are clearly labelled. The vehicle interface and later CV integration belong to the project partner and are outside this change.

@@ -143,7 +143,7 @@ def test_calgary_superuser_and_named_staff_revocation(c):
     external = next(
         x["name"]
         for x in c.get("/api/session").json()["accounts"]
-        if x.get("label") == "Prairie Fleet Services"
+            if x.get("label") == "Fictional Customer 002"
     )
     switch(c, external)
     assert c.get("/api/operations").status_code == 403
@@ -295,8 +295,8 @@ def test_intake_open_warning_unassigned_receipt_and_photos(c, monkeypatch):
     assert c.post("/api/intake/handoff", json=b).json()["id"] == r["id"]
     receipt = c.get("/api/requests/" + r["id"] + "/receipt").json()
     assert (
-        receipt["asset"]["model"] == "RP-460HD"
-        and receipt["asset"]["product_number"] == "L015-201"
+        receipt["asset"]["model"] == "TEST-MODEL-001"
+        and receipt["asset"]["product_number"] == ""
     )
     assert len(receipt["documents"]) == 1
     assert c.get("/api/requests/" + r["id"] + "/guidance").status_code == 403
@@ -358,7 +358,9 @@ def test_reports_quantities_open_default_and_amendment_audit(c):
     b = {
         "diagnosis": "Packing wear confirmed",
         "work": "Documented actual replacement",
-        "part_lines": [{"part": "L015-291", "quantity": 2, "action": "Replaced"}],
+        "part_lines": [
+            {"part": "TEST-PART-M1-001", "quantity": 2, "action": "Replaced"}
+        ],
         "test": "Observed leak test completed",
         "outcome": "Repaired",
         "inspection_date": date.today().isoformat(),
@@ -367,7 +369,9 @@ def test_reports_quantities_open_default_and_amendment_audit(c):
     }
     bad = {
         **b,
-        "part_lines": [{"part": "L015-291", "quantity": 0, "action": "Replaced"}],
+        "part_lines": [
+            {"part": "TEST-PART-M1-001", "quantity": 0, "action": "Replaced"}
+        ],
     }
     assert c.post(path + "/reports", json=bad).status_code == 422
     res = c.post(path + "/reports", json=b)
@@ -423,7 +427,11 @@ def test_pending_cases_do_not_leak_to_other_assets(c):
         bb = db.get(Asset, b["id"])
         other = corpus(db, aa.workspace_id, bb, "C")
         assert all(x.get("asset_id") != aa.id for x in other)
-        assert not any(x["kind"] == "case" for x in other)
+        assert all(
+            x.get("source", "").startswith("Owner-provided synthetic test data")
+            for x in other
+            if x["kind"] == "case"
+        )
 
 
 def test_usage_reservation_limits_errors_and_cache(c, monkeypatch):
@@ -479,7 +487,7 @@ def test_customer_document_release_and_cross_customer_isolation(c, monkeypatch):
     accounts = c.get("/api/session").json()["accounts"]
     owner = next(x["name"] for x in accounts if x["role"] == "customer")
     other = next(
-        x["name"] for x in accounts if x.get("label") == "Prairie Fleet Services"
+        x["name"] for x in accounts if x.get("label") == "Fictional Customer 002"
     )
     switch(c, owner)
     assert c.get("/api/owner-documents/" + scan["id"]).status_code == 404

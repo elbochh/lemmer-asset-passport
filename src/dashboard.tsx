@@ -172,7 +172,7 @@ export function Dashboard() {
               to={
                 "/requests/" +
                 data.requests.find(
-                  (r: ServiceRequest) => r.asset.code === "LM-1042",
+                  (r: ServiceRequest) => r.asset.code === "TEST-ASSET-001",
                 )?.id
               }
             >
@@ -184,13 +184,13 @@ export function Dashboard() {
             <div className="orbit o2" />
             <div className="hero-product">
               <img
-                src="/images/catalog/L015-201.webp"
-                alt="Lemmer RP-460HD rustproofing gun"
+                src="/images/equipment.svg"
+                alt="Synthetic TEST-MODEL-001 equipment"
               />
             </div>
             <span className="hero-asset-tag">
               <span className="live-dot" />
-              LM-1042 · RP-460HD
+              TEST-ASSET-001 · TEST-MODEL-001
             </span>
           </div>
         </section>
