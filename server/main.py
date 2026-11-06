@@ -437,6 +437,69 @@ def guidance_status(request_id: str, who=Depends(claims), db=Depends(dbdep)):
     }
 
 
+class GuidanceAnswers(BaseModel):
+    answers: str = Field(min_length=10, max_length=2000)
+    version: int
+
+
+@app.post("/api/requests/{request_id}/guidance/answers")
+def answer_guidance_questions(
+    request_id: str, body: GuidanceAnswers, who=Depends(claims), db=Depends(dbdep)
+):
+    require(who, "technician", "superuser")
+    r = owned(db, ServiceRequest, request_id, who["workspace"], True)
+    if r.status == "Closed" or r.version != body.version:
+        raise HTTPException(
+            409, "This request changed or is completed. Refresh the workspace."
+        )
+
+    questions = []
+    for run in db.scalars(
+        select(AIRun)
+        .where(AIRun.request_id == r.id, AIRun.mode == "C")
+        .order_by(AIRun.created_at.desc())
+        .limit(10)
+    ):
+        questions = (run.result.get("recommendation") or {}).get("questions") or []
+        if questions:
+            break
+    question_text = "\n".join(
+        f"{index}. {question}" for index, question in enumerate(questions[:6], 1)
+    )
+    follow_up = "\n\nTechnician follow-up"
+    if question_text:
+        follow_up += f"\nAI questions:\n{question_text}"
+    follow_up += f"\nTechnician answers: {body.answers.strip()}"
+    if len(r.description + follow_up) > 4000:
+        raise HTTPException(
+            422, "The request is full. Shorten the answers or start a new request."
+        )
+
+    before = {"description": r.description, "version": r.version}
+    r.description += follow_up
+    r.version += 1
+    r.updated_at = now()
+    job = enqueue(db, r)
+    job.status, job.run_id, job.attempts, job.message = (
+        "queued",
+        None,
+        0,
+        "Reviewing the technician's new findings…",
+    )
+    job.updated_at = now()
+    audit(
+        db,
+        who,
+        "Answer AI follow-up questions",
+        r.id,
+        before,
+        {"description": r.description, "version": r.version},
+        "Technician added diagnostic findings",
+    )
+    db.commit()
+    return {"request": req_out(db, r), "guidance": job_out(job)}
+
+
 class NewRequest(BaseModel):
     asset_id: str
     title: str = Field(min_length=4, max_length=140)

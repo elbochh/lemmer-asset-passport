@@ -340,3 +340,52 @@ def test_owner_can_answer_questions_without_opening_another_request(demo):
         ).status_code
         == 404
     )
+
+
+def test_technician_answers_ai_questions_and_requeues_guidance(demo):
+    c = demo
+    _, r = start(c)
+    switch(c, "technician")
+    with Session() as db:
+        run = AIRun(
+            workspace_id=db.get(ServiceRequest, r["id"]).workspace_id,
+            request_id=r["id"],
+            mode="C",
+            result={
+                "verdict": "needs_information",
+                "recommendation": {
+                    "summary": "More information is needed.",
+                    "questions": ["Does pressure fall only while the trigger is open?"],
+                },
+            },
+        )
+        db.add(run)
+        db.flush()
+        job = db.scalar(select(GuidanceJob).where(GuidanceJob.request_id == r["id"]))
+        job.status, job.run_id = "ready", run.id
+        db.commit()
+
+    response = c.post(
+        f"/api/requests/{r['id']}/guidance/answers",
+        json={
+            "version": r["version"],
+            "answers": "Yes. Pressure is stable at rest and drops only with the trigger open.",
+        },
+    )
+    assert response.status_code == 200, response.text
+    payload = response.json()
+    assert payload["guidance"]["status"] == "queued"
+    assert payload["guidance"]["run_id"] is None
+    assert payload["request"]["version"] == r["version"] + 1
+    assert "Does pressure fall only" in payload["request"]["description"]
+    assert "Pressure is stable at rest" in payload["request"]["description"]
+
+    switch(c, "reception")
+    forbidden = c.post(
+        f"/api/requests/{r['id']}/guidance/answers",
+        json={
+            "version": payload["request"]["version"],
+            "answers": "Reception must not submit technician findings.",
+        },
+    )
+    assert forbidden.status_code == 403

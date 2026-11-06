@@ -38,8 +38,17 @@ import {
   IconLabel,
   SourceCard,
 } from "./shared";
-export function AIResult({ result }: { result: any }) {
+export function AIResult({
+  result,
+  onAnswer,
+  answering = false,
+}: {
+  result: any;
+  onAnswer?: (answers: string) => Promise<void>;
+  answering?: boolean;
+}) {
   const [view, setView] = useState("Recommendation");
+  const [answers, setAnswers] = useState("");
   const rec = result.recommendation;
   return (
     <div className="ai-result">
@@ -155,6 +164,47 @@ export function AIResult({ result }: { result: any }) {
                   {q}
                 </p>
               ))}
+              {onAnswer && (
+                <form
+                  className="question-answer-form"
+                  onSubmit={async (event) => {
+                    event.preventDefault();
+                    try {
+                      await onAnswer(answers);
+                      setAnswers("");
+                    } catch {
+                      // The workspace shows the API error and keeps the answer for retry.
+                    }
+                  }}
+                >
+                  <label htmlFor="technician-guidance-answers">
+                    Technician findings and answers
+                  </label>
+                  <textarea
+                    id="technician-guidance-answers"
+                    value={answers}
+                    onChange={(event) => setAnswers(event.target.value)}
+                    placeholder="Answer the questions above and add what you observed during inspection…"
+                    rows={4}
+                    minLength={10}
+                    maxLength={2000}
+                    required
+                  />
+                  <button
+                    className="button dark"
+                    disabled={answering || answers.trim().length < 10}
+                  >
+                    {answering ? (
+                      <Loader2 size={16} className="spin" />
+                    ) : (
+                      <Sparkles size={16} />
+                    )}
+                    {answering
+                      ? "Reviewing new findings…"
+                      : "Send answers and refresh guidance"}
+                  </button>
+                </form>
+              )}
             </div>
           )}
           <div className="ai-footnote">
@@ -251,6 +301,8 @@ export function ServiceWorkspace() {
     [progress, setProgress] = useState(0);
   const [guidance, setGuidance] = useState<any>(null);
   const [refining, setRefining] = useState(false);
+  const [answeringQuestions, setAnsweringQuestions] = useState(false);
+  const [guidanceRefresh, setGuidanceRefresh] = useState(0);
   const [form, setForm] = useState<any>({
     diagnosis: "",
     work: "",
@@ -324,7 +376,7 @@ export function ServiceWorkspace() {
       stopped = true;
       clearTimeout(timer);
     };
-  }, [id, session.role]);
+  }, [id, session.role, guidanceRefresh]);
   useEffect(() => {
     if (!busy) return;
     setProgress(0);
@@ -406,6 +458,26 @@ export function ServiceWorkspace() {
       setAiError(e.message);
     } finally {
       setBusy(false);
+    }
+  }
+  async function answerQuestions(answers: string) {
+    setAnsweringQuestions(true);
+    setAiError("");
+    try {
+      const next = await post("/requests/" + id + "/guidance/answers", {
+        answers,
+        version: r.version,
+      });
+      setData((current: any) => ({ ...current, request: next.request }));
+      setGuidance(next.guidance);
+      setResult(null);
+      setGuidanceRefresh((cycle) => cycle + 1);
+      toast("Answers saved. Guidance is being refreshed.");
+    } catch (e: any) {
+      setAiError(e.message);
+      throw e;
+    } finally {
+      setAnsweringQuestions(false);
     }
   }
   async function finalize(e: FormEvent) {
@@ -1088,7 +1160,13 @@ export function ServiceWorkspace() {
                     <ErrorBox message={aiError} />
                   </div>
                 )}
-                {!busy && result && <AIResult result={result} />}
+                {!busy && result && (
+                  <AIResult
+                    result={result}
+                    onAnswer={answerQuestions}
+                    answering={answeringQuestions}
+                  />
+                )}
                 <details className="panel-body assessment-log">
                   <summary>
                     Previous AI assessments ({data.runs.length})

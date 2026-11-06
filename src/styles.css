@@ -2313,6 +2313,29 @@ textarea::placeholder {
   gap: 8px;
   margin-top: 8px;
 }
+.question-answer-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e3eaf0;
+}
+.question-answer-form label {
+  font-size: 10px;
+  font-weight: 650;
+  color: #526678;
+}
+.question-answer-form textarea {
+  width: 100%;
+  min-height: 92px;
+  resize: vertical;
+  font-size: 12px;
+  line-height: 1.6;
+  background: #fff;
+}
+.question-answer-form .button {
+  justify-self: start;
+}
 .ai-footnote {
   display: flex;
   align-items: flex-start;
