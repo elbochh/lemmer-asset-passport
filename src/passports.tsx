@@ -276,6 +276,7 @@ export function Passport() {
   const [tab, setTab] = useState("Service history"),
     [component, setComponent] = useState(false),
     [qr, setQr] = useState(false),
+    [workQr, setWorkQr] = useState(false),
     [create, setCreate] = useState(false),
     [doc, setDoc] = useState<any>(null);
   if (error) return <ErrorBox message={error} />;
@@ -304,6 +305,13 @@ export function Passport() {
             <button className="button secondary" onClick={() => setQr(true)}>
               <QrCode size={17} />
               Equipment QR
+            </button>
+            <button
+              className="button secondary"
+              onClick={() => setWorkQr(true)}
+            >
+              <QrCode size={17} />
+              Customer work QR
             </button>
             <button className="button primary" onClick={() => setCreate(true)}>
               <Plus size={17} />
@@ -449,6 +457,15 @@ export function Passport() {
           <ComponentForm assetId={a.id} />
         </Modal>
       )}
+      {workQr && (
+        <QRModal
+          asset={a}
+          title="Customer work report QR"
+          subtitle="Scan to see what the technician found, did and checked. Read-only, no account needed."
+          url={`${location.origin}/work/${session.share}/${a.code}`}
+          onClose={() => setWorkQr(false)}
+        />
+      )}
       {qr && (
         <QRModal
           asset={a}
@@ -471,10 +488,14 @@ function QRModal({
   asset,
   url,
   onClose,
+  title = "Equipment QR code",
+  subtitle = "Scan to open this asset’s customer Passport.",
 }: {
   asset: Asset;
   url: string;
   onClose: () => void;
+  title?: string;
+  subtitle?: string;
 }) {
   const [src, setSrc] = useState("");
   const { toast } = useApp();
@@ -487,8 +508,8 @@ function QRModal({
   }, [url]);
   return (
     <Modal
-      title="Equipment QR code"
-      subtitle="Scan to open this asset’s customer Passport."
+      title={title}
+      subtitle={subtitle}
       onClose={onClose}
     >
       <div className="qr-body">

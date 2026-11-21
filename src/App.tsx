@@ -1,3 +1,4 @@
+import { WorkReport } from "./workreport";
 import { Operations, Procedures, Receipt } from "./operations";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -758,7 +759,9 @@ function Root() {
     [revision, setRevision] = useState(0),
     [message, setMessage] = useState("");
   const location = useLocation();
-  const isPublic = location.pathname.startsWith("/passport/");
+  const isPublic =
+    location.pathname.startsWith("/passport/") ||
+    location.pathname.startsWith("/work/");
   useEffect(() => {
     api("/session")
       .then(setSession)
@@ -782,6 +785,7 @@ function Root() {
       {isPublic ? (
         <Routes>
           <Route path="/passport/:share/:code" element={<QRAccess />} />
+          <Route path="/work/:share/:code" element={<WorkReport />} />
         </Routes>
       ) : session === undefined ? (
         <Loading />
