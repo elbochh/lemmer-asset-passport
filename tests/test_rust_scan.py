@@ -177,3 +177,18 @@ def test_public_work_report_shows_only_confirmed_work(demo):
         text = str(body)
         assert "ai_suggestion" not in text and "reviewed_by" not in text
         assert "customer" not in body["asset"]
+
+
+def test_work_report_includes_equipment_repairs(demo):
+    c = demo
+    share = c.get("/api/session").json()["share"]
+    target = None
+    for a in c.get("/api/portal/assets").json():
+        events = c.get("/api/portal/assets/" + a["id"]).json()["events"]
+        if any(e["body"].get("work") for e in events):
+            target = a
+            break
+    assert target, "seed data has no equipment repair"
+    with TestClient(app) as anon:
+        work = anon.get(f"/api/work/{share}/{target['code']}").json()["work"]
+        assert any(w["kind"] == "service" and w["work"] for w in work)
