@@ -17,6 +17,10 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
 
 load_dotenv()
 URL = os.getenv("DATABASE_URL", "postgresql+psycopg://localhost:55432/lemmer_demo")
+# Hosts such as Render give "postgres://" or "postgresql://"; SQLAlchemy needs the psycopg driver name.
+for _prefix in ("postgres://", "postgresql://"):
+    if URL.startswith(_prefix):
+        URL = "postgresql+psycopg://" + URL[len(_prefix) :]
 engine = create_engine(URL, pool_pre_ping=True, pool_size=3, max_overflow=2)
 Session = sessionmaker(engine, expire_on_commit=False)
 
