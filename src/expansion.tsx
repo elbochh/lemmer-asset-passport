@@ -14,7 +14,7 @@ import {
   ScanLine,
 } from "lucide-react";
 import { api, post, patch, date } from "./api";
-import { RustScanPanel } from "./rustscan";
+import { RustScanPanel, draftFindings } from "./rustscan";
 import {
   useApp,
   useData,
@@ -1385,6 +1385,19 @@ export function Vehicles() {
                   </select>
                 </Field>
                 <Field label="Inspection findings">
+                  {active.report.rust_scan && (
+                    <button
+                      type="button"
+                      className="button secondary"
+                      onClick={(e) => {
+                        const el = (e.currentTarget.form as any)?.elements
+                          ?.findings as HTMLTextAreaElement | undefined;
+                        if (el) el.value = draftFindings(active.report.rust_scan);
+                      }}
+                    >
+                      Draft from rust scan
+                    </button>
+                  )}
                   <textarea
                     name="findings"
                     defaultValue={active.report.findings || ""}
