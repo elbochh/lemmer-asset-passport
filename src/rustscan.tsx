@@ -179,3 +179,17 @@ export function RustScanPanel({
     </section>
   );
 }
+
+/** Plain-text draft of the findings from a rust scan. The technician edits it. */
+export function draftFindings(scan: RustScan): string {
+  const n = scan.findings.length;
+  const lines = [
+    n
+      ? `Rust scan (${scan.model.name}${scan.model.version ? " " + scan.model.version : ""}): ${n} region${n > 1 ? "s" : ""} detected, about ${scan.area_pct.toFixed(1)}% of the inspected image. Indicative severity: ${scan.severity}.`
+      : `Rust scan (${scan.model.name}): no rust regions detected in the inspected image.`,
+    `Technician review of the scan: ${scan.review_status}${scan.reviewed_by ? " by " + scan.reviewed_by : ""}.`,
+  ];
+  if (scan.review_notes) lines.push(`Review notes: ${scan.review_notes}`);
+  lines.push("Location on the vehicle and observations: ");
+  return lines.join("\n");
+}
