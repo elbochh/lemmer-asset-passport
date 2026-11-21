@@ -134,6 +134,12 @@ class OrderUpdate(BaseModel):
     notes: str = Field(default="", max_length=2000)
 
 
+class RustReview(BaseModel):
+    status: Literal["Confirmed", "Rejected", "Needs Review"]
+    notes: str = Field(default="", max_length=2000)
+    version: int
+
+
 class VisitUpdate(BaseModel):
     status: Literal[
         "Checked in",
@@ -977,6 +983,78 @@ def attach(
             headers={"Cache-Control": "no-store"},
         )
 
+    @app.post("/api/visits/{key}/rust-scan")
+    def rust_scan(key: str, w=Depends(who), db=Depends(dbdep)):
+        """Scan the visit's 'before' image for rust. The result is a suggestion."""
+        from .rust_scan import detect, DetectorError
+
+        staff(w, "technician")
+        v = own(db, Inspection, key, w)
+        db.refresh(v, with_for_update=True)
+        if v.status in ["Completed", "Cancelled", "Failed"]:
+            raise HTTPException(409, "This visit is closed. Start a new visit.")
+        source = str(v.report.get("before") or "")
+        if not source.startswith("/api/visit-media/"):
+            raise HTTPException(
+                422, "Upload a 'before' inspection image before running a rust scan."
+            )
+        media = own(db, InspectionMedia, source.rsplit("/", 1)[1], w)
+        try:
+            result = detect(media.payload, media.content_type)
+        except DetectorError as exc:
+            raise HTTPException(503, str(exc))
+        result["source_media_id"] = media.id
+        v.report = {**v.report, "rust_scan": result}
+        v.version += 1
+        db.commit()
+        return row(v)
+
+    @app.patch("/api/visits/{key}/rust-scan/review")
+    def rust_scan_review(
+        key: str, body: RustReview, w=Depends(who), db=Depends(dbdep)
+    ):
+        """Technician decision on a rust scan: who decided and when is recorded."""
+        staff(w, "technician")
+        v = own(db, Inspection, key, w)
+        db.refresh(v, with_for_update=True)
+        if v.version != body.version:
+            raise HTTPException(409, "Visit changed. Reload before saving.")
+        if v.status in ["Completed", "Cancelled", "Failed"]:
+            raise HTTPException(409, "This visit is closed. Start a new visit.")
+        scan = v.report.get("rust_scan")
+        if not scan:
+            raise HTTPException(422, "Run a rust scan first.")
+        from datetime import datetime, timezone
+
+        scan = {
+            **scan,
+            "review_status": body.status,
+            "review_notes": body.notes.strip(),
+            "reviewed_by": w["technician"],
+            "reviewed_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        }
+        v.report = {**v.report, "rust_scan": scan}
+        v.version += 1
+        if body.status == "Confirmed":
+            # Only technician-confirmed results reach the passport timeline
+            # (which owners can see); unreviewed AI output stays on the visit.
+            db.add(
+                Event(
+                    workspace_id=w["workspace"],
+                    asset_id=v.asset_id,
+                    kind="inspection",
+                    title=(
+                        "Rust scan confirmed by technician (simulated detector)"
+                        if scan["simulated"]
+                        else "Rust scan confirmed by technician"
+                    ),
+                    actor=w["technician"],
+                    body={"visit_id": v.id, "rust_scan": scan},
+                )
+            )
+        db.commit()
+        return row(v)
+
     @app.patch("/api/visits/{key}")
     def visit(key: str, body: VisitUpdate, w=Depends(who), db=Depends(dbdep)):
         staff(w, "technician")
@@ -1047,7 +1125,17 @@ def attach(
                     kind="inspection",
                     title="Simulated rustproofing visit completed",
                     actor=w["technician"],
-                    body={**v.report, "visit_id": v.id, "simulated": True},
+                    body={
+                        **{
+                            k: val
+                            for k, val in v.report.items()
+                            # unreviewed or rejected AI output stays off the passport
+                            if k != "rust_scan"
+                            or val.get("review_status") == "Confirmed"
+                        },
+                        "visit_id": v.id,
+                        "simulated": True,
+                    },
                 )
             )
         db.commit()
