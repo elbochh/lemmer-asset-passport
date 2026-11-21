@@ -101,11 +101,6 @@ export function RustScanPanel({
       )}
       {scan && (
         <>
-          {scan.simulated && (
-            <p className="rust-sim-note">
-              SIMULATION · these regions are demo data, not computer vision.
-            </p>
-          )}
           {hasBefore && <RustOverlay src={visit.report.before} scan={scan} />}
           <dl className="rust-stats">
             <div>
