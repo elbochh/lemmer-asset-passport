@@ -1384,7 +1384,73 @@ export function Vehicles() {
                     ))}
                   </select>
                 </Field>
-                <Field label="Inspection findings">
+                {active.report.rust_scan && (
+                  <div className="ai-suggestion">
+                    <div className="ai-suggestion-head">
+                      <strong>AI suggestion</strong>
+                      <button
+                        type="button"
+                        className="button secondary"
+                        onClick={async () => {
+                          try {
+                            const v = await post(
+                              "/visits/" + active.id + "/ai-suggestion",
+                              {},
+                            );
+                            setActive({ ...v, asset: active.asset });
+                            refresh();
+                          } catch (err: any) {
+                            toast(err.message);
+                          }
+                        }}
+                      >
+                        {active.report.ai_suggestion
+                          ? "Regenerate suggestion"
+                          : "Suggest findings and treatment"}
+                      </button>
+                    </div>
+                    {active.report.ai_suggestion ? (
+                      <>
+                        {(
+                          [
+                            ["findings", "Findings"],
+                            ["treatment", "Treatment"],
+                            ["verification", "Verification"],
+                          ] as const
+                        ).map(([k, label]) => (
+                          <p key={k}>
+                            <strong>{label}: </strong>
+                            {active.report.ai_suggestion[k]}{" "}
+                            <button
+                              type="button"
+                              className="button secondary"
+                              onClick={(e) => {
+                                const el = (e.currentTarget.closest("form") as any)
+                                  ?.elements?.[k] as HTMLTextAreaElement | undefined;
+                                if (el)
+                                  el.value =
+                                    (el.value ? el.value + "\n" : "") +
+                                    active.report.ai_suggestion[k];
+                              }}
+                            >
+                              Use
+                            </button>
+                          </p>
+                        ))}
+                        <small>
+                          AI-generated suggestion. The technician's fields below
+                          are the record; edit them freely.
+                        </small>
+                      </>
+                    ) : (
+                      <small>
+                        Suggests wording from the rust scan. You decide what is
+                        recorded.
+                      </small>
+                    )}
+                  </div>
+                )}
+                <Field label="Inspection findings (technician)">
                   {active.report.rust_scan && (
                     <button
                       type="button"
@@ -1405,7 +1471,7 @@ export function Vehicles() {
                     rows={3}
                   />
                 </Field>
-                <Field label="Treatment record">
+                <Field label="Treatment record (technician)">
                   <textarea
                     name="treatment"
                     defaultValue={active.report.treatment || ""}
@@ -1413,7 +1479,7 @@ export function Vehicles() {
                     rows={3}
                   />
                 </Field>
-                <Field label="Verification / outcome">
+                <Field label="Verification / outcome (technician)">
                   <textarea
                     name="verification"
                     defaultValue={active.report.verification || ""}

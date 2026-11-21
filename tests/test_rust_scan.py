@@ -144,3 +144,12 @@ def test_service_url_normalisation():
     assert rust_scan._service_url("host:10000") == "http://host:10000/detect"
     assert rust_scan._service_url("https://x.onrender.com/") == "https://x.onrender.com/detect"
     assert rust_scan._service_url("https://x.com/custom") == "https://x.com/custom"
+
+
+def test_ai_suggestion_template_is_labelled_and_grounded():
+    from server import ai_suggest, rust_scan
+
+    scan = rust_scan.simulate(b"x" * 64)
+    out = ai_suggest.template(scan)
+    assert set(out) == {"findings", "treatment", "verification"}
+    assert all(out.values())
