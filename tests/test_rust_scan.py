@@ -138,3 +138,9 @@ def test_rejected_scan_never_reaches_owner(demo):
     switch(c, "customer")
     events = c.get("/api/portal/assets/" + vehicle["id"]).json()["events"]
     assert not any("rust_scan" in e["body"] for e in events)
+
+
+def test_service_url_normalisation():
+    assert rust_scan._service_url("host:10000") == "http://host:10000/detect"
+    assert rust_scan._service_url("https://x.onrender.com/") == "https://x.onrender.com/detect"
+    assert rust_scan._service_url("https://x.com/custom") == "https://x.com/custom"

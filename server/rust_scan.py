@@ -144,8 +144,19 @@ def parse_service_response(data: dict) -> dict:
     )
 
 
+def _service_url(url: str) -> str:
+    """Accept a full URL or a bare internal "host:port" (as Render provides)."""
+    if "://" not in url:
+        url = "http://" + url
+    if url.rstrip("/").count("/") < 3:  # no path given
+        url = url.rstrip("/") + "/detect"
+    return url
+
+
 def _post_to_service(raw: bytes, content_type: str, url: str) -> dict:
     import httpx
+
+    url = _service_url(url)
 
     try:
         response = httpx.post(
@@ -156,7 +167,7 @@ def _post_to_service(raw: bytes, content_type: str, url: str) -> dict:
                 if os.environ.get("RUST_DETECTOR_TOKEN")
                 else {}
             ),
-            timeout=60,
+            timeout=90,  # a sleeping free-tier service needs time to wake up
         )
         response.raise_for_status()
         return response.json()
@@ -165,7 +176,8 @@ def _post_to_service(raw: bytes, content_type: str, url: str) -> dict:
 
 
 def detect(raw: bytes, content_type: str) -> dict:
-    mode = os.environ.get("RUST_DETECTOR", "simulated").lower()
+    default = "http" if os.environ.get("RUST_DETECTOR_URL") else "simulated"
+    mode = os.environ.get("RUST_DETECTOR", default).lower()
     if mode == "simulated":
         return simulate(raw)
     if mode == "http":
