@@ -1009,6 +1009,24 @@ def attach(
         db.commit()
         return row(v)
 
+    @app.post("/api/visits/{key}/ai-suggestion")
+    def ai_suggestion(key: str, w=Depends(who), db=Depends(dbdep)):
+        """AI-suggested findings/treatment/verification, kept apart from the technician's record."""
+        from .ai_suggest import suggest
+
+        staff(w, "technician")
+        v = own(db, Inspection, key, w)
+        db.refresh(v, with_for_update=True)
+        if v.status in ["Completed", "Cancelled", "Failed"]:
+            raise HTTPException(409, "This visit is closed. Start a new visit.")
+        scan = v.report.get("rust_scan")
+        if not scan:
+            raise HTTPException(422, "Run a rust scan first.")
+        v.report = {**v.report, "ai_suggestion": suggest(scan)}
+        v.version += 1
+        db.commit()
+        return row(v)
+
     @app.patch("/api/visits/{key}/rust-scan/review")
     def rust_scan_review(
         key: str, body: RustReview, w=Depends(who), db=Depends(dbdep)
@@ -1130,8 +1148,11 @@ def attach(
                             k: val
                             for k, val in v.report.items()
                             # unreviewed or rejected AI output stays off the passport
-                            if k != "rust_scan"
-                            or val.get("review_status") == "Confirmed"
+                            if k != "ai_suggestion"
+                            and (
+                                k != "rust_scan"
+                                or val.get("review_status") == "Confirmed"
+                            )
                         },
                         "visit_id": v.id,
                         "simulated": True,

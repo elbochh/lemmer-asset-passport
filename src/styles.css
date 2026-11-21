@@ -5481,3 +5481,7 @@ textarea::placeholder {
 .rust-level { padding: 2px 10px; border-radius: 999px; font-weight: 700; background: #e8f5e9; color: #1b5e20; }
 .rust-level.medium { background: #fff4e5; color: #7a4100; }
 .rust-level.high { background: #fdecea; color: #b71c1c; }
+
+.ai-suggestion{border:1px solid var(--border,#d0d5dd);border-radius:8px;padding:12px;margin-bottom:12px;background:var(--surface-2,rgba(127,127,127,.06))}
+.ai-suggestion-head{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.ai-suggestion p{margin:6px 0}
