@@ -14,6 +14,7 @@ import {
   ScanLine,
 } from "lucide-react";
 import { api, post, patch, date } from "./api";
+import { RustScanPanel } from "./rustscan";
 import {
   useApp,
   useData,
@@ -1308,6 +1309,18 @@ export function Vehicles() {
                   ))}
                 </div>
               )}
+            <RustScanPanel
+              visit={active}
+              canEdit={
+                session.role === "technician" &&
+                !["Completed", "Cancelled", "Failed"].includes(active.status)
+              }
+              onChange={(v) => {
+                setActive(v);
+                refresh();
+              }}
+              toast={toast}
+            />
             {session.role === "technician" &&
             !["Completed", "Cancelled", "Failed"].includes(active.status) ? (
               <Form

@@ -432,10 +432,11 @@ export function Passport() {
             <ScanLine size={24} />
             <h3>Inspection intelligence</h3>
             <p>
-              A place for future computer vision findings, linked to this exact
-              asset.
+              Vehicle rust scans are run from the vehicle bay visit and reviewed
+              by a technician. Confirmed results are recorded in this asset’s
+              timeline.
             </p>
-            <span className="tag">Integration planned</span>
+            <span className="tag">Rust scan · technician review</span>
           </div>
         </aside>
       </div>
