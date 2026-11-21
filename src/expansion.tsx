@@ -1384,13 +1384,14 @@ export function Vehicles() {
                     ))}
                   </select>
                 </Field>
-                {active.report.rust_scan && (
+                {(
                   <div className="ai-suggestion">
                     <div className="ai-suggestion-head">
                       <strong>AI suggestion</strong>
                       <button
                         type="button"
                         className="button secondary"
+                        disabled={!active.report.rust_scan}
                         onClick={async () => {
                           try {
                             const v = await post(
@@ -1444,8 +1445,9 @@ export function Vehicles() {
                       </>
                     ) : (
                       <small>
-                        Suggests wording from the rust scan. You decide what is
-                        recorded.
+                        {active.report.rust_scan
+                          ? "Suggests wording from the rust scan. You decide what is recorded."
+                          : "Run a rust scan first (upload a 'before' image above), then the AI can suggest findings, treatment and verification."}
                       </small>
                     )}
                   </div>
