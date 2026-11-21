@@ -1181,7 +1181,7 @@ def attach(
             raise HTTPException(404, "Work report not found. Check the QR code.")
         events = db.scalars(
             select(Event)
-            .where(Event.asset_id == a.id, Event.kind == "inspection")
+            .where(Event.asset_id == a.id, Event.kind.in_(["inspection", "service"]))
             .order_by(Event.created_at.desc())
             .limit(20)
         ).all()
@@ -1194,7 +1194,14 @@ def attach(
             items.append(
                 {
                     "date": e.created_at.isoformat(),
+                    "kind": e.kind,
                     "title": e.title,
+                    "symptom": str(b.get("symptom") or "")[:1000],
+                    "work": str(b.get("work") or "")[:2000],
+                    "test": str(b.get("test") or "")[:1000],
+                    "outcome": str(b.get("outcome") or "")[:60],
+                    "parts": [str(x)[:80] for x in (b.get("parts") or [])][:20],
+                    "notes": str(b.get("notes") or "")[:1000],
                     "findings": str(b.get("findings") or "")[:2000],
                     "treatment": str(b.get("treatment") or "")[:2000],
                     "verification": str(b.get("verification") or "")[:2000],

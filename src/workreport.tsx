@@ -28,7 +28,7 @@ export function WorkReport() {
       <section className="public-identity">
         <span className="asset-code">{data.asset.code}</span>
         <h1>{data.asset.name}</h1>
-        <p>What the Lemmer technician found, did and checked.</p>
+        <p>Repairs, inspections and checks recorded by the Lemmer technician.</p>
       </section>
       {!data.work.length && (
         <p className="muted">No completed work has been recorded yet.</p>
@@ -36,6 +36,42 @@ export function WorkReport() {
       {data.work.map((w: any, i: number) => (
         <section className="panel record-block" key={i}>
           <strong>{w.title}</strong> <small>{fmt(w.date)}</small>
+          {w.outcome && (
+            <p>
+              <strong>Outcome: </strong>
+              {w.outcome}
+            </p>
+          )}
+          {w.symptom && (
+            <p>
+              <strong>Problem reported: </strong>
+              {w.symptom}
+            </p>
+          )}
+          {w.work && (
+            <p>
+              <strong>Work done: </strong>
+              {w.work}
+            </p>
+          )}
+          {w.test && (
+            <p>
+              <strong>Checked by: </strong>
+              {w.test}
+            </p>
+          )}
+          {w.parts?.length > 0 && (
+            <p>
+              <strong>Parts: </strong>
+              {w.parts.join(", ")}
+            </p>
+          )}
+          {w.notes && (
+            <p>
+              <strong>Technician notes: </strong>
+              {w.notes}
+            </p>
+          )}
           {w.rust_review && (
             <p>
               <strong>Rust inspection (reviewed by the technician): </strong>
