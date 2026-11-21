@@ -1,0 +1,24 @@
+databases:
+  - name: lemmer-asset-passport-db
+    plan: free
+    region: oregon
+    postgresMajorVersion: "16"
+
+services:
+  - type: web
+    name: lemmer-asset-passport
+    runtime: docker
+    plan: free
+    region: oregon
+    branch: render-deploy
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: lemmer-asset-passport-db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ENVIRONMENT
+        value: production
