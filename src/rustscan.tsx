@@ -108,7 +108,7 @@ export function RustScanPanel({
               <dd>{scan.findings.length}</dd>
             </div>
             <div>
-              <dt>Area covered</dt>
+              <dt>Detected area</dt>
               <dd>{scan.area_pct.toFixed(1)}%</dd>
             </div>
             <div>

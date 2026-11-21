@@ -4,6 +4,12 @@ databases:
     region: oregon
     postgresMajorVersion: "16"
 
+envVarGroups:
+  - name: rust-detector-shared
+    envVars:
+      - key: RUST_DETECTOR_TOKEN
+        generateValue: true
+
 services:
   - type: web
     name: lemmer-asset-passport
@@ -14,6 +20,7 @@ services:
     dockerfilePath: ./Dockerfile
     healthCheckPath: /
     envVars:
+      - fromGroup: rust-detector-shared
       - key: DATABASE_URL
         fromDatabase:
           name: lemmer-asset-passport-db
@@ -22,3 +29,22 @@ services:
         generateValue: true
       - key: ENVIRONMENT
         value: production
+      - key: RUST_DETECTOR
+        value: http
+      - key: RUST_DETECTOR_URL
+        fromService:
+          type: web
+          name: lemmer-rust-detector
+          property: hostport
+
+  - type: web
+    name: lemmer-rust-detector
+    runtime: docker
+    plan: free
+    region: oregon
+    branch: render-deploy
+    dockerfilePath: ./rust-service/Dockerfile
+    dockerContext: ./rust-service
+    healthCheckPath: /
+    envVars:
+      - fromGroup: rust-detector-shared
