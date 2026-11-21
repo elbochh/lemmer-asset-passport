@@ -1162,6 +1162,58 @@ def attach(
         db.commit()
         return row(v)
 
+    @app.get("/api/work/{share}/{code}")
+    def work_report(share: str, code: str, db=Depends(dbdep)):
+        """Read-only customer view of the technician's confirmed work (no account).
+
+        Only what the technician recorded or confirmed is shown. No customer
+        details, location, technician names or unreviewed AI output.
+        """
+        ws = db.scalar(select(Workspace).where(Workspace.share == share))
+        a = (
+            db.scalar(
+                select(Asset).where(Asset.workspace_id == ws.id, Asset.code == code)
+            )
+            if ws
+            else None
+        )
+        if not a:
+            raise HTTPException(404, "Work report not found. Check the QR code.")
+        events = db.scalars(
+            select(Event)
+            .where(Event.asset_id == a.id, Event.kind == "inspection")
+            .order_by(Event.created_at.desc())
+            .limit(20)
+        ).all()
+        items = []
+        for e in events:
+            b = e.body or {}
+            scan = b.get("rust_scan") or {}
+            if scan.get("review_status") != "Confirmed":
+                scan = None
+            items.append(
+                {
+                    "date": e.created_at.isoformat(),
+                    "title": e.title,
+                    "findings": str(b.get("findings") or "")[:2000],
+                    "treatment": str(b.get("treatment") or "")[:2000],
+                    "verification": str(b.get("verification") or "")[:2000],
+                    "rust_review": (
+                        {
+                            "regions": len(scan.get("findings", [])),
+                            "area_pct": scan.get("area_pct"),
+                            "severity": scan.get("severity"),
+                            "reviewed_at": scan.get("reviewed_at"),
+                            "notes": str(scan.get("review_notes") or "")[:1000],
+                            "model": (scan.get("model") or {}).get("name"),
+                        }
+                        if scan
+                        else None
+                    ),
+                }
+            )
+        return {"asset": {"name": a.name, "code": a.code}, "work": items}
+
     @app.get("/api/qr/{share}/{code}")
     def resolve_qr(share: str, code: str, w=Depends(who), db=Depends(dbdep)):
         ws = db.scalar(select(Workspace).where(Workspace.share == share))
