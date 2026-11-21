@@ -280,6 +280,7 @@ function Shell() {
     : reception
       ? ([
           ["/reception", "New intake", ScanLine],
+          ["/vehicles", "Vehicle rust scan", ScanLine],
           ["/requests", "Open jobs", Wrench],
           ["/customers", "Customers", PanelsTopLeft],
           ["/registry", "Register equipment", PanelsTopLeft],
@@ -292,6 +293,7 @@ function Shell() {
       : ([
           ["/", "Overview", LayoutDashboard],
           ["/my-work", "My work queue", Wrench],
+          ["/vehicles", "Vehicle rust scan", ScanLine],
 
           ["/catalog", "Rustproofing products", BookOpen],
           ["/requests", "Service requests", Wrench],
