@@ -1160,10 +1160,17 @@ export function Vehicles() {
   const [busy, setBusy] = useState(false);
   if (error) return <ErrorBox message={error} />;
   if (!assets || !visits) return <Loading />;
+  const vehicles = assets.filter((a: any) => a.ownership.kind === "vehicle");
+  // visits arrive newest first, so the first scan found per vehicle is the latest
+  const latestScan: Record<string, any> = {};
+  for (const v of visits)
+    if (v.report?.rust_scan && !latestScan[v.asset_id])
+      latestScan[v.asset_id] = { ...v.report.rust_scan, visit: v };
+  const scans = Object.values(latestScan);
   return (
     <>
       <PageHeader
-        title="Vehicle rustproofing bay"
+        title="Vehicle rust inspection"
         subtitle="Vehicle identity, inspection evidence and treatment history in one place."
         actions={
           ["reception", "superuser"].includes(session.role) && (
@@ -1184,10 +1191,30 @@ export function Vehicles() {
           </p>
         </div>
       </div>
+      <div className="rust-summary">
+        <div>
+          <strong>{vehicles.length}</strong>
+          <span>Vehicles</span>
+        </div>
+        <div>
+          <strong>{scans.length}</strong>
+          <span>Rust scanned</span>
+        </div>
+        <div>
+          <strong>
+            {scans.filter((x: any) => x.review_status === "Pending").length}
+          </strong>
+          <span>Awaiting technician review</span>
+        </div>
+        <div>
+          <strong>
+            {scans.filter((x: any) => x.severity === "High").length}
+          </strong>
+          <span>High indicative severity</span>
+        </div>
+      </div>
       <div className="catalog-grid">
-        {assets
-          .filter((a: any) => a.ownership.kind === "vehicle")
-          .map((a: any) => (
+        {vehicles.map((a: any) => (
             <article key={a.id} className="catalog-card">
               <img src={a.image} alt={a.name} />
               <div>
@@ -1198,6 +1225,17 @@ export function Vehicles() {
                 </p>
                 <p>VIN: {a.ownership.profile.vin || "Not recorded"}</p>
                 <small>{a.customer}</small>
+                {latestScan[a.id] ? (
+                  <div className="rust-chip">
+                    <span className={"rust-level " + latestScan[a.id].severity.toLowerCase()}>
+                      Rust: {latestScan[a.id].severity}
+                    </span>
+                    <span>{latestScan[a.id].area_pct.toFixed(1)}% of image</span>
+                    <Badge value={latestScan[a.id].review_status} />
+                  </div>
+                ) : (
+                  <div className="rust-chip muted">No rust scan yet</div>
+                )}
                 <button
                   className="button primary"
                   disabled={busy}
@@ -1214,7 +1252,7 @@ export function Vehicles() {
                     }
                   }}
                 >
-                  Open bay visit <ArrowRight size={16} />
+                  Open visit and rust scan <ArrowRight size={16} />
                 </button>
                 <Link to={"/my-assets/" + a.id}>
                   View passport and prior pictures
