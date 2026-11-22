@@ -44,7 +44,7 @@ Completed repairs add searchable knowledge; they do not automatically retrain th
 
 ## Reserved inspection interface
 
-Computer vision UX, model files and execution remain deferred. The planned integration is an asset-scoped inspection result, separate from service report fields:
+Vehicle rust detection is implemented as a technician-reviewed **Vehicle rust inspection** tab with a locally run ONNX model; see [RUST_SCAN.md](RUST_SCAN.md). The broader contract below (equipment inspections, the inherited student pipeline) is still a proposal: an asset-scoped inspection result, separate from service report fields:
 
 ```json
 {

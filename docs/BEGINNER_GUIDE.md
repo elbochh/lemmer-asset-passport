@@ -301,7 +301,7 @@ The last implementation run had 15 passing PostgreSQL workflow tests. Hosted tes
 | Evolving database structure | Defined database models | Introduce versioned migrations. `create_all()` creates missing tables; it does not safely migrate all changes to existing tables. |
 | Computer vision | Asset/event IDs and a proposed inspection interface | Wrap the inherited model, preserve asset/request IDs, store image evidence and model/version/findings, then implement an agreed inspection UI. |
 
-Computer vision is currently deferred. There is no working rust-model integration in this app, and the scanning/transcription feature is a separate task from corrosion inspection. The proposed inspection contract is documented in `docs/ARCHITECTURE.md`. Physical spray controls and Guardian authorization are also not implemented.
+Vehicle rust detection now works in the **Vehicle rust inspection** tab: a small model trained on public car-body photos runs on the server, draws boxes around likely rust, and a technician confirms or rejects each result before it reaches the passport (see `docs/RUST_SCAN.md`). It has not been trained on Lemmer vehicles or undercarriages. The scanning/transcription feature is a separate task from corrosion inspection. The proposed inspection contract is documented in `docs/ARCHITECTURE.md`. Physical spray controls and Guardian authorization are also not implemented.
 
 **18. Explaining this to your boss.** You can describe the implemented demo this way:
 

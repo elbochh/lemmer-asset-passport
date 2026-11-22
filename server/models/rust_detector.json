@@ -1,0 +1,54 @@
+{
+  "name": "YOLO11n rust detector",
+  "architecture": "yolo11n",
+  "version": "9b08913dbe38",
+  "threshold": 0.17,
+  "nms_iou": 0.5,
+  "evaluated_at": "2026-11-22",
+  "training": {
+    "images": 192,
+    "epochs": 50,
+    "device": "CPU"
+  },
+  "metrics": {
+    "validation": {
+      "images": 55,
+      "rust_regions": 123,
+      "ap50": 0.319,
+      "precision": 0.457,
+      "recall": 0.341,
+      "f1": 0.391,
+      "true_positives": 42,
+      "false_positives": 50,
+      "located_precision": 0.913,
+      "located_recall": 0.659,
+      "photos_flagged": 0.927
+    },
+    "test": {
+      "images": 27,
+      "rust_regions": 70,
+      "ap50": 0.328,
+      "precision": 0.436,
+      "recall": 0.343,
+      "f1": 0.384,
+      "true_positives": 24,
+      "false_positives": 31,
+      "located_precision": 0.927,
+      "located_recall": 0.671,
+      "photos_flagged": 0.926
+    }
+  },
+  "metric_notes": "precision/recall/ap50: strict box matching at IoU 0.5. located_*: a detection and a labelled region agree when half of the smaller box lies inside the other, which tolerates one large box drawn where the labeller drew several small ones. Threshold chosen on validation only; test scored once.",
+  "dataset": {
+    "name": "Rusted_Cars v3",
+    "author": "szymon-pgasw (Roboflow Universe)",
+    "license": "CC BY 4.0",
+    "url": "https://universe.roboflow.com/szymon-pgasw/rusted_cars/dataset/3"
+  },
+  "limitations": [
+    "Trained on public photos of car bodies (wheel arches, sills, panels), not Lemmer vehicles or undercarriages.",
+    "Labels are boxes, so the flagged area includes clean paint around the rust and overstates rust extent.",
+    "Severity is a share of the photo inside detected boxes. It is indicative only and is not a Lemmer standard.",
+    "Every photo in the dataset contains rust, so false alarms on clean vehicles have not been measured."
+  ]
+}

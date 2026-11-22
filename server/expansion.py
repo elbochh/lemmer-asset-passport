@@ -239,6 +239,20 @@ def attach(
             raise HTTPException(404, "Asset not found in your account.")
         return a, link
 
+    def customer_visit(v, w):
+        """A visit as its viewer may see it: customers never see AI wording or
+        unreviewed/rejected rust-scan output, only scans a technician confirmed."""
+        out = row(v)
+        if w["role"] not in STAFF_ROLES:
+            scan = out.get("report", {}).get("rust_scan")
+            hidden = {"ai_suggestion"}
+            if scan and scan.get("review_status") != "Confirmed":
+                hidden.add("rust_scan")
+            out["report"] = {
+                k: val for k, val in out["report"].items() if k not in hidden
+            }
+        return out
+
     def output_session(request, db):
         w = identity(request, db)
         if w["role"] in STAFF_ROLES:
@@ -699,7 +713,7 @@ def attach(
             "maintenance": estimates,
             "parts": parts_for(reference_key(a)),
             "visits": [
-                row(v)
+                customer_visit(v, w)
                 for v in db.scalars(
                     select(Inspection)
                     .where(Inspection.asset_id == a.id)
@@ -963,11 +977,19 @@ def attach(
         )
         db.add(media)
         db.flush()
-        v.report = {
+        report = {
             **v.report,
             kind: "/api/visit-media/" + media.id,
             kind + "_source": "Uploaded by technician",
         }
+        if kind == "before":
+            # A scan (and wording suggested from it) describes the previous
+            # picture; drop both so old regions are never drawn over, or
+            # confirmed against, the new one. A confirmed scan is kept
+            # permanently in its own passport timeline event.
+            report.pop("rust_scan", None)
+            report.pop("ai_suggestion", None)
+        v.report = report
         v.version += 1
         db.commit()
         return row(v)
@@ -983,6 +1005,14 @@ def attach(
             headers={"Cache-Control": "no-store"},
         )
 
+    @app.get("/api/rust-scan/model")
+    def rust_scan_model(w=Depends(who)):
+        """Which detector is active, how it was evaluated and its limitations."""
+        from .rust_scan import model_info
+
+        staff(w)
+        return model_info()
+
     @app.post("/api/visits/{key}/rust-scan")
     def rust_scan(key: str, w=Depends(who), db=Depends(dbdep)):
         """Scan the visit's 'before' image for rust. The result is a suggestion."""
@@ -993,6 +1023,12 @@ def attach(
         db.refresh(v, with_for_update=True)
         if v.status in ["Completed", "Cancelled", "Failed"]:
             raise HTTPException(409, "This visit is closed. Start a new visit.")
+        if (v.report.get("rust_scan") or {}).get("review_status") == "Confirmed":
+            raise HTTPException(
+                409,
+                "This photo's scan is confirmed and recorded on the passport. "
+                "Upload a new photo to scan another area.",
+            )
         source = str(v.report.get("before") or "")
         if not source.startswith("/api/visit-media/"):
             raise HTTPException(
@@ -1042,6 +1078,12 @@ def attach(
         scan = v.report.get("rust_scan")
         if not scan:
             raise HTTPException(422, "Run a rust scan first.")
+        if scan.get("review_status") == "Confirmed":
+            # The confirmed result is already on the owner's passport timeline;
+            # changing it here would leave the two records disagreeing.
+            raise HTTPException(
+                409, "This scan is already confirmed and recorded on the passport."
+            )
         from datetime import datetime, timezone
 
         scan = {
@@ -1144,15 +1186,13 @@ def attach(
                     title="Simulated rustproofing visit completed",
                     actor=w["technician"],
                     body={
+                        # AI wording and unreviewed or rejected scans stay off the
+                        # passport. Confirmed scans already have their own
+                        # timeline event, so they are not repeated here.
                         **{
                             k: val
                             for k, val in v.report.items()
-                            # unreviewed or rejected AI output stays off the passport
-                            if k != "ai_suggestion"
-                            and (
-                                k != "rust_scan"
-                                or val.get("review_status") == "Confirmed"
-                            )
+                            if k not in ["rust_scan", "ai_suggestion"]
                         },
                         "visit_id": v.id,
                         "simulated": True,
@@ -1187,7 +1227,8 @@ def attach(
         ).all()
         items = []
         for e in events:
-            b = e.body or {}
+            # Service reports show their latest amended wording, as on the passport.
+            b = (effective_report(db, e) if e.kind == "service" else e.body) or {}
             scan = b.get("rust_scan") or {}
             if scan.get("review_status") != "Confirmed":
                 scan = None
@@ -1201,7 +1242,6 @@ def attach(
                     "test": str(b.get("test") or "")[:1000],
                     "outcome": str(b.get("outcome") or "")[:60],
                     "parts": [str(x)[:80] for x in (b.get("parts") or [])][:20],
-                    "notes": str(b.get("notes") or "")[:1000],
                     "findings": str(b.get("findings") or "")[:2000],
                     "treatment": str(b.get("treatment") or "")[:2000],
                     "verification": str(b.get("verification") or "")[:2000],

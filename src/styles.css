@@ -5458,20 +5458,7 @@ textarea::placeholder {
   }
 }
 
-/* Rust scan */
-.rust-scan { display: grid; gap: 12px; padding: 16px; border: 1px solid var(--line, #d9dde3); border-radius: 12px; }
-.rust-scan-head { display: flex; align-items: center; gap: 8px; }
-.rust-overlay { position: relative; max-width: 560px; }
-.rust-overlay img { display: block; width: 100%; height: auto; border-radius: 8px; }
-.rust-overlay svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-.rust-overlay polygon { fill: rgba(217, 83, 30, 0.35); stroke: #d9531e; stroke-width: 2; vector-effect: non-scaling-stroke; }
-.rust-sim-note { margin: 0; padding: 6px 10px; border-radius: 8px; background: #fff4e5; color: #7a4100; font-weight: 600; font-size: 0.85rem; }
-.rust-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin: 0; }
-.rust-stats div { padding: 8px 10px; border-radius: 8px; background: rgba(0, 0, 0, 0.04); }
-.rust-stats dt { font-size: 0.75rem; opacity: 0.7; }
-.rust-stats dd { margin: 0; font-weight: 700; }
-.rust-review { display: grid; gap: 8px; }
-.rust-review-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+/* Rust scan: overview counters and vehicle chips */
 .rust-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 16px 0; }
 .rust-summary div { display: grid; gap: 2px; padding: 14px 16px; border: 1px solid var(--line, #d9dde3); border-radius: 12px; background: #fff; }
 .rust-summary strong { font-size: 1.6rem; }
@@ -5485,3 +5472,421 @@ textarea::placeholder {
 .ai-suggestion{border:1px solid var(--border,#d0d5dd);border-radius:8px;padding:12px;margin-bottom:12px;background:var(--surface-2,rgba(127,127,127,.06))}
 .ai-suggestion-head{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
 .ai-suggestion p{margin:6px 0}
+
+/* Rust inspection */
+.badge.pending,
+.badge.needs-review {
+  background: #fff5e5;
+  color: #bb9653;
+}
+.badge.confirmed {
+  background: #ecf6f0;
+  color: #5b9777;
+}
+.badge.rejected {
+  background: #fceeed;
+  color: #c5756e;
+}
+.rust-model {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin: 20px 0;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #eaf1f4;
+  color: #193b50;
+}
+.rust-model > svg {
+  flex: none;
+  color: var(--green);
+  margin-top: 2px;
+}
+.rust-model.warning {
+  background: #fff4e5;
+  color: #7a4100;
+}
+.rust-model.warning > svg {
+  color: #c27a12;
+}
+.rust-model p {
+  margin: 4px 0 0;
+  line-height: 1.5;
+}
+.rust-model-body {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 10px;
+}
+.rust-model-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.rust-model-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+.rust-model-metrics div {
+  min-width: 96px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: white;
+}
+.rust-model-metrics dt {
+  font-size: 10px;
+  line-height: 1.3;
+  color: var(--muted);
+}
+.rust-model-metrics dd {
+  margin: 2px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.rust-model-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  justify-self: start;
+  padding: 0;
+  font-weight: 600;
+  color: #2b5d78;
+}
+.rust-model-details ul {
+  margin: 0 0 8px;
+  padding-left: 18px;
+  line-height: 1.6;
+}
+.rust-model-details a {
+  text-decoration: underline;
+}
+.rust-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.rust-layout > .panel {
+  padding: 20px;
+  overflow: visible;
+}
+.rust-layout h2,
+.rust-workspace h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
+}
+.rust-layout h2 {
+  font-size: 16px;
+}
+.rust-workspace h3 {
+  font-size: 14px;
+}
+.rust-step {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  flex: none;
+}
+.rust-vehicle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+}
+.rust-vehicle:hover:not(:disabled),
+.rust-vehicle.selected {
+  border-color: var(--orange);
+}
+.rust-vehicle.selected {
+  background: #fff7f3;
+}
+.rust-vehicle > svg {
+  flex: none;
+  color: #4b6577;
+}
+.rust-vehicle > div {
+  flex: 1;
+  min-width: 0;
+}
+.rust-vehicle small {
+  display: block;
+  margin-top: 4px;
+  color: #697e8b;
+}
+.rust-workspace {
+  display: grid;
+  gap: 22px;
+  min-height: 320px;
+}
+.rust-visit-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.rust-visit-head h2 {
+  margin: 6px 0 4px;
+  font-size: 18px;
+}
+.rust-photo {
+  display: grid;
+  gap: 10px;
+}
+.rust-photo h3 {
+  margin-bottom: 4px;
+}
+.rust-photo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.rust-upload {
+  position: relative;
+  cursor: pointer;
+}
+.rust-upload input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.rust-upload:focus-within {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+.rust-sample {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px 4px 4px;
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  font-size: 12px;
+  font-weight: 550;
+}
+.rust-sample:hover:not(:disabled) {
+  border-color: var(--orange);
+}
+.rust-sample img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.rust-preview {
+  display: block;
+  max-width: min(100%, 420px);
+  border-radius: 8px;
+}
+.rust-scan {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+}
+.rust-scan-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rust-run {
+  justify-self: start;
+}
+.rust-overlay {
+  margin: 0;
+  max-width: 560px;
+}
+.rust-overlay.compact {
+  max-width: 220px;
+}
+.rust-overlay-frame {
+  position: relative;
+}
+.rust-overlay img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.rust-overlay svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.rust-overlay polygon {
+  fill: rgba(241, 104, 52, 0.22);
+  stroke: #f16834;
+  stroke-width: 2.5;
+  vector-effect: non-scaling-stroke;
+}
+.rust-label {
+  position: absolute;
+  transform: translateY(-100%);
+  padding: 2px 6px;
+  border-radius: 4px 4px 4px 0;
+  background: #f16834;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.rust-sim-note {
+  margin: 0;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #fff4e5;
+  color: #7a4100;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.rust-clear,
+.rust-final {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+.rust-clear {
+  background: #eef3f6;
+  color: #33546a;
+}
+.rust-final {
+  background: #ecf6f0;
+  color: #28604b;
+  font-weight: 550;
+}
+.rust-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+.rust-stats div {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #f3f5f7;
+}
+.rust-stats dt {
+  font-size: 11px;
+  color: var(--muted);
+}
+.rust-stats dd {
+  margin: 2px 0 0;
+  font-weight: 700;
+}
+.rust-severity.low {
+  color: #8a6a1f;
+}
+.rust-severity.medium {
+  color: #b8551f;
+}
+.rust-severity.high {
+  color: #b23b32;
+}
+.rust-review {
+  display: grid;
+  gap: 8px;
+}
+.rust-review-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.rust-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+.rust-passport-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  justify-self: start;
+  font-weight: 600;
+  color: #2b5d78;
+}
+.rust-record {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: 14px;
+  margin-top: 8px;
+}
+.rust-record p {
+  margin: 8px 0 4px;
+}
+.rust-history-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  margin-bottom: 10px;
+  text-align: left;
+  cursor: pointer;
+  overflow: visible;
+}
+.rust-history-row > div {
+  flex: 1;
+  min-width: 0;
+}
+.rust-history-row small {
+  display: block;
+  margin-top: 4px;
+  color: #697e8b;
+}
+@media (max-width: 1050px) {
+  .rust-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .rust-record {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .rust-model {
+    padding: 16px;
+  }
+  .rust-model-head > div:first-child,
+  .rust-model-metrics {
+    width: 100%;
+  }
+  .rust-model-metrics div {
+    min-width: 0;
+    padding: 8px;
+  }
+  .rust-layout > .panel {
+    padding: 16px;
+  }
+}

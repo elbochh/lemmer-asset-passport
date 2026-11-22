@@ -30,6 +30,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import { post, date, Asset } from "./api";
+import { RustScanSummary } from "./rustscan";
 import {
   useApp,
   useData,
@@ -248,6 +249,20 @@ export function Timeline({ events }: { events: any[] }) {
                   Original report retained · {e.body.original_event_id}
                 </small>
               </div>
+            ) : e.body.rust_scan ? (
+              <RustScanSummary scan={e.body.rust_scan} />
+            ) : e.body.findings ? (
+              <div>
+                {["findings", "treatment", "verification"].map(
+                  (k) =>
+                    e.body[k] && (
+                      <p key={k}>
+                        <strong>{k[0].toUpperCase() + k.slice(1)}: </strong>
+                        {e.body[k]}
+                      </p>
+                    ),
+                )}
+              </div>
             ) : (
               <p>
                 {e.body.description ||
@@ -440,11 +455,13 @@ export function Passport() {
             <ScanLine size={24} />
             <h3>Inspection intelligence</h3>
             <p>
-              Vehicle rust scans are run from the vehicle bay visit and reviewed
-              by a technician. Confirmed results are recorded in this asset’s
-              timeline.
+              Vehicle rust scans run in Vehicle rust inspection and are
+              reviewed by a technician. Confirmed results are recorded in this
+              asset’s timeline.
             </p>
-            <span className="tag">Rust scan · technician review</span>
+            <Link to="/rust-scan" className="tag">
+              Open rust inspection →
+            </Link>
           </div>
         </aside>
       </div>

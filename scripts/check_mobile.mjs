@@ -111,6 +111,7 @@ try {
     `/requests/${dashboard.requests[0].id}`,
     `/requests/${dashboard.requests[0].id}/receipt`,
     "/catalog",
+    "/rust-scan",
     "/knowledge",
     "/procedures",
     "/evaluation",
@@ -177,7 +178,7 @@ try {
   await page
     .getByRole("button", { name: "Search equipment or requests" })
     .click();
-  await page.getByRole("textbox", { name: "Search workspace" }).fill("LM-1042");
+  await page.getByRole("textbox", { name: "Search workspace" }).fill("TEST-ASSET-001");
   await page.locator(".search-results a").first().waitFor();
   await layout("Search results at 375px");
   assert.equal(

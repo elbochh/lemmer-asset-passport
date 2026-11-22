@@ -73,7 +73,13 @@ The sample paper is explicitly fictional. Your actual service-paper template has
 
 The default demo is seeded from the owner-provided `Asset_Passport_Synthetic_Test_Data hb v3 Emailed.xlsx` workbook: 10 fictional customers, 25 equipment assets, 50 service records, 32 part-use records, 30 attachment placeholders and 200 troubleshooting test cases. The workbook rows remain synthetic and technically unverified; they are not production-approved procedures.
 
-This is a demonstrable application, not a production deployment. It uses synthetic customers and cases. Email notifications are previews, CV is deferred, and the product reference contains selected sourced material, not a complete verified service library. No real company repair history has been received or validated.
+This is a demonstrable application, not a production deployment. It uses synthetic customers and cases. Email notifications are previews, vehicle rust detection is trained on public car-body photos rather than Lemmer vehicles, and the product reference contains selected sourced material, not a complete verified service library. No real company repair history has been received or validated.
+
+## Vehicle rust inspection
+
+Technicians and super-users have a **Vehicle rust inspection** tab. Choose a vehicle, add a photo (or one of three held-out sample photos), run the scan, then confirm, reject or flag the result. Detected regions are drawn on the photo with their confidence. Only a confirmed result is written to the vehicle passport and the QR work report, where the customer can see it; pending and rejected results and AI-suggested wording stay internal.
+
+The detector is a YOLO11 model trained on the public Rusted_Cars dataset (CC BY 4.0), shipped as `server/models/rust_detector.onnx` and run on the server's CPU with onnxruntime: no cloud service, API key or per-scan cost. Measured accuracy and limitations are shown in the tab and documented in [docs/RUST_SCAN.md](docs/RUST_SCAN.md); training and evaluation scripts are in `ml/rust/`.
 
 ## AI configuration
 

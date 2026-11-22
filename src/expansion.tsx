@@ -1,6 +1,11 @@
 import { GuidanceStatus, PartCandidates } from "./guidance-ui";
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import {
+  Link,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 import {
   Plus,
   Search,
@@ -14,7 +19,7 @@ import {
   ScanLine,
 } from "lucide-react";
 import { api, post, patch, date } from "./api";
-import { RustScanPanel, draftFindings } from "./rustscan";
+import { RustScanPanel, RustScanSummary, draftFindings } from "./rustscan";
 import {
   useApp,
   useData,
@@ -824,6 +829,9 @@ export function OwnerPassport() {
                         {Array.isArray(v) ? v.join(", ") : String(v)}
                       </p>
                     ))}
+                  {e.body.rust_scan && (
+                    <RustScanSummary scan={e.body.rust_scan} />
+                  )}
                 </article>
               ))
             ) : (
@@ -1158,6 +1166,15 @@ export function Vehicles() {
   const { session, refresh, toast } = useApp();
   const [active, setActive] = useState<any>(null);
   const [busy, setBusy] = useState(false);
+  const [params, setParams] = useSearchParams();
+  const requested = params.get("visit");
+  useEffect(() => {
+    // Opened from Vehicle rust inspection: show that visit's record directly.
+    if (!requested || !visits) return;
+    const v = visits.find((x: any) => x.id === requested);
+    if (v) setActive(v);
+    setParams({}, { replace: true });
+  }, [requested, visits]);
   if (error) return <ErrorBox message={error} />;
   if (!assets || !visits) return <Loading />;
   const vehicles = assets.filter((a: any) => a.ownership.kind === "vehicle");
@@ -1170,15 +1187,23 @@ export function Vehicles() {
   return (
     <>
       <PageHeader
-        title="Vehicle rust inspection"
+        title="Vehicle bay records"
         subtitle="Vehicle identity, inspection evidence and treatment history in one place."
         actions={
-          ["reception", "superuser"].includes(session.role) && (
-            <Link to="/registry" className="button primary">
-              <Plus size={16} />
-              Register vehicle
-            </Link>
-          )
+          <>
+            {["technician", "superuser"].includes(session.role) && (
+              <Link to="/rust-scan" className="button secondary">
+                <ScanLine size={16} />
+                Guided rust scan
+              </Link>
+            )}
+            {["reception", "superuser"].includes(session.role) && (
+              <Link to="/registry" className="button primary">
+                <Plus size={16} />
+                Register vehicle
+              </Link>
+            )}
+          </>
         }
       />
       <div className="catalog-intro">
@@ -1348,6 +1373,7 @@ export function Vehicles() {
                 </div>
               )}
             <RustScanPanel
+              key={active.id + (active.report?.rust_scan?.scanned_at || "")}
               visit={active}
               canEdit={
                 session.role === "technician" &&

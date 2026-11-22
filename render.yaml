@@ -29,8 +29,10 @@ services:
         generateValue: true
       - key: ENVIRONMENT
         value: production
+      # "local" runs server/models/rust_detector.onnx inside this service (no
+      # second service to wake up). Set to "http" to use lemmer-rust-detector.
       - key: RUST_DETECTOR
-        value: http
+        value: local
       - key: GEMINI_API_KEY
         sync: false
       - key: RUST_DETECTOR_URL

@@ -61,6 +61,7 @@ import {
   PartsRequests,
   Vehicles,
 } from "./expansion";
+import { RustInspection } from "./rustscan";
 
 function Welcome({ onStart }: { onStart: (s: any) => void }) {
   const [account, setAccount] = useState(
@@ -281,7 +282,7 @@ function Shell() {
     : reception
       ? ([
           ["/reception", "New intake", ScanLine],
-          ["/vehicles", "Vehicle rust inspection", ScanLine],
+          ["/vehicles", "Vehicle bay", ScanLine],
           ["/requests", "Open jobs", Wrench],
           ["/customers", "Customers", PanelsTopLeft],
           ["/registry", "Register equipment", PanelsTopLeft],
@@ -294,7 +295,7 @@ function Shell() {
       : ([
           ["/", "Overview", LayoutDashboard],
           ["/my-work", "My work queue", Wrench],
-          ["/vehicles", "Vehicle rust inspection", ScanLine],
+          ["/rust-scan", "Vehicle rust inspection", ScanLine],
 
           ["/catalog", "Rustproofing products", BookOpen],
           ["/requests", "Service requests", Wrench],
@@ -615,6 +616,7 @@ function Shell() {
               />
               <Route path="/parts-requests" element={<PartsRequests />} />
               <Route path="/vehicles" element={<Vehicles />} />
+              <Route path="/rust-scan" element={<RustInspection />} />
               <Route path="/my-assets/:id" element={<OwnerPassport />} />
               <Route
                 path="*"
@@ -681,8 +683,9 @@ function Shell() {
           <div className="note-box">
             <Info size={18} />
             <p>
-              Seeded repair cases are synthetic. Emails are previews. Computer
-              vision is reserved for a later phase.
+              Seeded repair cases are synthetic. Emails are previews. Rust
+              inspection runs a locally trained detector on public sample
+              photos; a technician confirms every result.
             </p>
           </div>
         </Modal>
