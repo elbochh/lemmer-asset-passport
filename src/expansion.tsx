@@ -69,10 +69,16 @@ function Form({
     </form>
   );
 }
-export function AccountAccess({ onClose }: { onClose: () => void }) {
+export function AccountAccess({
+  onClose,
+  qr,
+}: {
+  onClose: () => void;
+  qr?: { share: string; code: string; token: string };
+}) {
   const { setSession } = useApp();
   const [signup, setSignup] = useState(
-    !!new URLSearchParams(location.search).get("invite"),
+    !!qr || !!new URLSearchParams(location.search).get("invite"),
   );
   const navigate = useNavigate();
   return (
@@ -86,11 +92,19 @@ export function AccountAccess({ onClose }: { onClose: () => void }) {
       <Form
         label={signup ? "Create account" : "Sign in"}
         onSubmit={async (b) => {
-          await post(signup ? "/auth/signup" : "/auth/login", b);
+          await post(
+            signup ? "/auth/signup" : "/auth/login",
+            signup && qr
+              ? { ...b, qr_share: qr.share, qr_code: qr.code, qr_token: qr.token }
+              : b,
+          );
           const signedIn = await api("/session");
           setSession(signedIn);
           onClose();
-          if (!location.pathname.startsWith("/passport/"))
+          if (
+            !location.pathname.startsWith("/passport/") &&
+            !location.pathname.startsWith("/work/")
+          )
             navigate(
               signedIn.role === "superuser"
                 ? "/operations"
@@ -120,7 +134,7 @@ export function AccountAccess({ onClose }: { onClose: () => void }) {
             autoComplete={signup ? "new-password" : "current-password"}
           />
         </Field>
-        {signup && (
+        {signup && !qr && (
           <Field label="Private reception invitation (optional)">
             <input
               name="invite"

@@ -474,15 +474,7 @@ export function Passport() {
           <ComponentForm assetId={a.id} />
         </Modal>
       )}
-      {workQr && (
-        <QRModal
-          asset={a}
-          title="Customer work report QR"
-          subtitle="Scan to see what the technician found, did and checked. Read-only, no account needed."
-          url={`${location.origin}/work/${session.share}/${a.code}`}
-          onClose={() => setWorkQr(false)}
-        />
-      )}
+      {workQr && <WorkQr asset={a} share={session.share} onClose={() => setWorkQr(false)} />}
       {qr && (
         <QRModal
           asset={a}
@@ -501,6 +493,28 @@ export function Passport() {
     </>
   );
 }
+function WorkQr({
+  asset,
+  share,
+  onClose,
+}: {
+  asset: Asset;
+  share: string;
+  onClose: () => void;
+}) {
+  const { data } = useData(`/assets/${asset.id}/work-qr`);
+  if (!data) return <Loading />;
+  return (
+    <QRModal
+      asset={asset}
+      title="Customer work report QR"
+      subtitle="Scan to create an account and see what the technician did. Read-only: the customer cannot change anything."
+      url={`${location.origin}/work/${share}/${asset.code}?t=${data.token}`}
+      onClose={onClose}
+    />
+  );
+}
+
 function QRModal({
   asset,
   url,

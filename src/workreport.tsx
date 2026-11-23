@@ -1,7 +1,8 @@
-import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ShieldCheck } from "lucide-react";
 import { useApp, useData, Loading, ErrorBox } from "./shared";
+import { post } from "./api";
 import { AccountAccess } from "./expansion";
 
 const fmt = (d: string) =>
@@ -15,7 +16,16 @@ const fmt = (d: string) =>
 export function WorkReport() {
   const { share, code } = useParams();
   const { session } = useApp();
+  const [params] = useSearchParams();
+  const token = params.get("t") || "";
   const [login, setLogin] = useState(false);
+  const [joined, setJoined] = useState(!token);
+  useEffect(() => {
+    if (session && token && share && code)
+      post(`/work/${share}/${code}/join?token=${encodeURIComponent(token)}`, {})
+        .catch(() => {})
+        .finally(() => setJoined(true));
+  }, [session, token, share, code]);
   if (!session)
     return (
       <main className="qr-gate">
@@ -23,16 +33,22 @@ export function WorkReport() {
         <ShieldCheck size={40} />
         <h1>Your work report</h1>
         <p>
-          Sign in or create your account to see what the technician did on{" "}
-          {code}. Only the assigned owner or authorized staff can view it.
+          Create your account or sign in to see what the technician did on{" "}
+          {code}. The report is read-only: you can view the completed work, not change it.
         </p>
         <button className="button primary" onClick={() => setLogin(true)}>
           Sign in / create account
         </button>
         <Link to="/">Return to the app</Link>
-        {login && <AccountAccess onClose={() => setLogin(false)} />}
+        {login && (
+          <AccountAccess
+            onClose={() => setLogin(false)}
+            qr={token ? { share: share!, code: code!, token } : undefined}
+          />
+        )}
       </main>
     );
+  if (!joined) return <Loading />;
   return <Report share={share} code={code} />;
 }
 

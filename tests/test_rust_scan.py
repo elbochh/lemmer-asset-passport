@@ -386,3 +386,27 @@ def test_public_work_report_hides_internal_notes_and_shows_amendments(demo):
     text = str(c.get(f"/api/work/{share}/{code}").json())
     assert "INTERNAL-ONLY" not in text
     assert "Corrected work wording." in text and "Original work wording." not in text
+
+
+def test_customer_creates_account_from_qr_and_only_reads_that_asset(demo):
+    c = demo
+    share = c.get("/api/session").json()["share"]
+    assets = c.get("/api/portal/assets").json()
+    a, other = assets[0], assets[1]
+    token = c.get(f"/api/assets/{a['id']}/work-qr").json()["token"]
+    creds = {"email": "qr.customer@example.com", "password": "a-long-password-1",
+             "name": "QR Customer"}
+    with TestClient(app) as cust:
+        url = f"/api/work/{share}/{a['code']}"
+        assert cust.get(url).status_code in (401, 403)
+        bad = cust.post("/api/auth/signup", json={**creds, "qr_share": share,
+                        "qr_code": a["code"], "qr_token": "0" * 24})
+        assert bad.status_code == 404
+        ok = cust.post("/api/auth/signup", json={**creds, "qr_share": share,
+                       "qr_code": a["code"], "qr_token": token})
+        assert ok.status_code == 200, ok.text
+        assert cust.get(url).status_code == 200  # can read this asset's work
+        assert cust.get(f"/api/work/{share}/{other['code']}").status_code == 404
+        # read-only: no staff action is allowed
+        assert cust.post("/api/visits", json={"asset_id": a["id"]}).status_code == 403
+        assert cust.get(f"/api/assets/{a['id']}/work-qr").status_code in (403, 404)
