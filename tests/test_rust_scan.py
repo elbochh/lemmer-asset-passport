@@ -162,7 +162,7 @@ def test_ai_suggestion_template_is_labelled_and_grounded():
     assert all(out.values())
 
 
-def test_public_work_report_shows_only_confirmed_work(demo):
+def test_work_report_shows_only_confirmed_work_to_account_holders(demo):
     c = demo
     share = c.get("/api/session").json()["share"]
     vehicle, visit = visit_with_before(c, "red")
@@ -170,20 +170,20 @@ def test_public_work_report_shows_only_confirmed_work(demo):
     c.post(f"/api/visits/{visit['id']}/ai-suggestion")
     url = f"/api/work/{share}/{vehicle['code']}"
     with TestClient(app) as anon:  # no account, no cookie
-        assert anon.get(url).status_code == 200
-        assert anon.get(f"/api/work/{share}/NOPE").status_code == 404
-        assert anon.get(f"/api/work/bad/{vehicle['code']}").status_code == 404
-        # unreviewed scan is not shown
-        assert not any(w["rust_review"] for w in anon.get(url).json()["work"])
-        c.patch(
-            f"/api/visits/{visit['id']}/rust-scan/review",
-            json={"status": "Confirmed", "notes": "ok", "version": v["version"] + 1},
-        )
-        body = anon.get(url).json()
-        assert any(w["rust_review"] for w in body["work"])
-        text = str(body)
-        assert "ai_suggestion" not in text and "reviewed_by" not in text
-        assert "customer" not in body["asset"]
+        assert anon.get(url).status_code in (401, 403)
+    assert c.get(f"/api/work/{share}/NOPE").status_code == 404
+    assert c.get(f"/api/work/bad/{vehicle['code']}").status_code == 404
+    # unreviewed scan is not shown
+    assert not any(w["rust_review"] for w in c.get(url).json()["work"])
+    c.patch(
+        f"/api/visits/{visit['id']}/rust-scan/review",
+        json={"status": "Confirmed", "notes": "ok", "version": v["version"] + 1},
+    )
+    body = c.get(url).json()
+    assert any(w["rust_review"] for w in body["work"])
+    text = str(body)
+    assert "ai_suggestion" not in text and "reviewed_by" not in text
+    assert "customer" not in body["asset"]
 
 
 def test_work_report_includes_equipment_repairs(demo):
@@ -196,9 +196,8 @@ def test_work_report_includes_equipment_repairs(demo):
             target = a
             break
     assert target, "seed data has no equipment repair"
-    with TestClient(app) as anon:
-        work = anon.get(f"/api/work/{share}/{target['code']}").json()["work"]
-        assert any(w["kind"] == "service" and w["work"] for w in work)
+    work = c.get(f"/api/work/{share}/{target['code']}").json()["work"]
+    assert any(w["kind"] == "service" and w["work"] for w in work)
 
 
 def review(c, visit, status, version, notes=""):
@@ -381,7 +380,9 @@ def test_public_work_report_hides_internal_notes_and_shows_amendments(demo):
             )
         )
         db.commit()
-    with TestClient(app) as anon:
-        text = str(anon.get(f"/api/work/{share}/{code}").json())
+    with TestClient(app) as anon:  # the report needs an account
+        assert anon.get(f"/api/work/{share}/{code}").status_code in (401, 403)
+    assert c.get(f"/api/work/{share}/NOPE").status_code == 404
+    text = str(c.get(f"/api/work/{share}/{code}").json())
     assert "INTERNAL-ONLY" not in text
     assert "Corrected work wording." in text and "Original work wording." not in text
