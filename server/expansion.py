@@ -20,6 +20,7 @@ from .expansion_models import (
     Customer,
     PortalUser,
     AssetOwner,
+    AssetViewer,
     PartOrder,
     Inspection,
     ComponentRecord,
@@ -95,6 +96,9 @@ class Credentials(BaseModel):
     password: str = Field(min_length=10, max_length=128)
     invite: str = Field(default="", max_length=100)
     name: str = Field(default="", max_length=100)
+    qr_share: str = Field(default="", max_length=80)
+    qr_code: str = Field(default="", max_length=60)
+    qr_token: str = Field(default="", max_length=64)
 
     @field_validator("email")
     @classmethod
@@ -253,6 +257,25 @@ def attach(
             }
         return out
 
+    def work_token(asset):
+        """Unguessable per-asset key carried by the customer QR code (not stored)."""
+        return hmac.new(
+            secret.encode(), ("work:" + asset.id).encode(), hashlib.sha256
+        ).hexdigest()[:24]
+
+    def qr_asset(db, share, code, token):
+        ws = db.scalar(select(Workspace).where(Workspace.share == share))
+        a = (
+            db.scalar(
+                select(Asset).where(Asset.workspace_id == ws.id, Asset.code == code)
+            )
+            if ws
+            else None
+        )
+        if not a or not hmac.compare_digest(token or "", work_token(a)):
+            raise HTTPException(404, "This QR code is not valid. Ask Lemmer for a new one.")
+        return ws, a
+
     def output_session(request, db):
         w = identity(request, db)
         if w["role"] in STAFF_ROLES:
@@ -351,6 +374,20 @@ def attach(
             if c.email and c.email.lower() != body.email:
                 raise HTTPException(422, "Use the email address on the invitation.")
             c.invite_hash = None
+        elif body.qr_token:
+            # Created from a work-report QR: the account joins the asset's workspace
+            # and can only read that asset's completed work.
+            if existing:
+                raise HTTPException(
+                    409, "An account already uses that email. Sign in instead."
+                )
+            if len(body.name.strip()) < 2:
+                raise HTTPException(422, "Enter your name.")
+            ws, qa = qr_asset(db, body.qr_share, body.qr_code, body.qr_token)
+            c = Customer(workspace_id=ws.id, name=body.name, email=body.email)
+            db.add(c)
+            db.flush()
+            db.add(AssetViewer(asset_id=qa.id, customer_id=c.id))
         else:
             if len(body.name.strip()) < 2:
                 raise HTTPException(422, "Enter your name.")
@@ -1202,6 +1239,22 @@ def attach(
         db.commit()
         return row(v)
 
+    @app.get("/api/assets/{key}/work-qr")
+    def work_qr(key: str, w=Depends(who), db=Depends(dbdep)):
+        staff(w)
+        a = own(db, Asset, key, w)
+        return {"token": work_token(a)}
+
+    @app.post("/api/work/{share}/{code}/join")
+    def work_join(share: str, code: str, token: str, w=Depends(who), db=Depends(dbdep)):
+        """A signed-in customer who scanned the asset's QR gets read access to it."""
+        ws, a = qr_asset(db, share, code, token)
+        if w["role"] == "customer" and w["workspace"] == ws.id:
+            if not db.get(AssetViewer, (a.id, w["customer_id"])):
+                db.add(AssetViewer(asset_id=a.id, customer_id=w["customer_id"]))
+                db.commit()
+        return {"ok": True}
+
     @app.get("/api/work/{share}/{code}")
     def work_report(share: str, code: str, w=Depends(who), db=Depends(dbdep)):
         """Read-only view of the technician's confirmed work for the asset owner or staff.
@@ -1219,7 +1272,11 @@ def attach(
         )
         if not a or w["workspace"] != ws.id:
             raise HTTPException(404, "Work report not found. Check the QR code.")
-        permitted(db, a.id, w)  # staff, or the customer assigned to this asset
+        if w["role"] not in STAFF_ROLES:  # customers: the owner or a QR-granted viewer
+            owner = db.get(AssetOwner, a.id)
+            viewer = db.get(AssetViewer, (a.id, w["customer_id"]))
+            if not viewer and not (owner and owner.customer_id == w["customer_id"]):
+                raise HTTPException(404, "Work report not found. Check the QR code.")
         events = db.scalars(
             select(Event)
             .where(Event.asset_id == a.id, Event.kind.in_(["inspection", "service"]))

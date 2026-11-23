@@ -28,6 +28,16 @@ class PortalUser(Base):
     demo: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
+class AssetViewer(Base):
+    """A customer who may read an asset's completed-work report (granted by its QR)."""
+
+    __tablename__ = "asset_viewers"
+    asset_id: Mapped[str] = mapped_column(ForeignKey("assets.id"), primary_key=True)
+    customer_id: Mapped[str] = mapped_column(
+        ForeignKey("customer_accounts.id"), primary_key=True
+    )
+
+
 class AssetOwner(Base):
     __tablename__ = "asset_owners"
     id: Mapped[str] = mapped_column(ForeignKey("assets.id"), primary_key=True)
