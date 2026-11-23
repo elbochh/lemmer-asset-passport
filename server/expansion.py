@@ -1203,8 +1203,8 @@ def attach(
         return row(v)
 
     @app.get("/api/work/{share}/{code}")
-    def work_report(share: str, code: str, db=Depends(dbdep)):
-        """Read-only customer view of the technician's confirmed work (no account).
+    def work_report(share: str, code: str, w=Depends(who), db=Depends(dbdep)):
+        """Read-only view of the technician's confirmed work for the asset owner or staff.
 
         Only what the technician recorded or confirmed is shown. No customer
         details, location, technician names or unreviewed AI output.
@@ -1217,8 +1217,9 @@ def attach(
             if ws
             else None
         )
-        if not a:
+        if not a or w["workspace"] != ws.id:
             raise HTTPException(404, "Work report not found. Check the QR code.")
+        permitted(db, a.id, w)  # staff, or the customer assigned to this asset
         events = db.scalars(
             select(Event)
             .where(Event.asset_id == a.id, Event.kind.in_(["inspection", "service"]))

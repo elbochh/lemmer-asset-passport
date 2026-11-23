@@ -1,5 +1,8 @@
-import { useParams } from "react-router-dom";
-import { useData, Loading, ErrorBox } from "./shared";
+import { useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { ShieldCheck } from "lucide-react";
+import { useApp, useData, Loading, ErrorBox } from "./shared";
+import { AccountAccess } from "./expansion";
 
 const fmt = (d: string) =>
   new Date(d).toLocaleDateString(undefined, {
@@ -8,9 +11,32 @@ const fmt = (d: string) =>
     day: "numeric",
   });
 
-/** Read-only customer view of the technician's confirmed work, opened by QR code. */
+/** Account-gated, read-only view of the technician's confirmed work, opened by QR code. */
 export function WorkReport() {
   const { share, code } = useParams();
+  const { session } = useApp();
+  const [login, setLogin] = useState(false);
+  if (!session)
+    return (
+      <main className="qr-gate">
+        <img src="/images/lemmer-logo.svg" alt="Lemmer" />
+        <ShieldCheck size={40} />
+        <h1>Your work report</h1>
+        <p>
+          Sign in or create your account to see what the technician did on{" "}
+          {code}. Only the assigned owner or authorized staff can view it.
+        </p>
+        <button className="button primary" onClick={() => setLogin(true)}>
+          Sign in / create account
+        </button>
+        <Link to="/">Return to the app</Link>
+        {login && <AccountAccess onClose={() => setLogin(false)} />}
+      </main>
+    );
+  return <Report share={share} code={code} />;
+}
+
+function Report({ share, code }: { share?: string; code?: string }) {
   const { data, error } = useData(`/work/${share}/${code}`);
   if (error)
     return (
