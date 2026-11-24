@@ -616,8 +616,10 @@ export function MyAssets() {
       />
       {!data.length && (
         <Empty title="No assets assigned yet">
-          Give reception your account details so they can register your
-          equipment and provide an invitation.
+          To see the work done on your vehicle or equipment, scan the QR code
+          your technician gave you. Your account then shows the completed
+          work. To have your own equipment registered, give reception your
+          account details.
         </Empty>
       )}
       <div className="catalog-grid">
