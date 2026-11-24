@@ -57,6 +57,8 @@ DATABASE_URL=postgresql+psycopg://localhost/lemmer_test AUTO_GUIDANCE_WORKER=0 .
 
 The `Dockerfile` builds the front end and serves everything from one FastAPI container. `render.yaml` describes the Render setup (a web service plus a PostgreSQL database). Any host that runs Docker and provides PostgreSQL works.
 
+`render.production.yaml` is a ready blueprint for Lemmer's own Render account (paid web service and database, `main` branch). `scripts/backup_db.sh` makes a database backup with `pg_dump`; schedule it regularly and keep copies off the host.
+
 For continuous production use, do not use free plans: free web services sleep when idle (the first request can take 30 to 60 seconds) and free PostgreSQL databases expire. Use paid plans for both and enable database backups.
 
 ## 5. Configuration (environment variables)
