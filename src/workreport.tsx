@@ -76,7 +76,7 @@ function Report({ share, code }: { share?: string; code?: string }) {
         <p className="muted">No completed work has been recorded yet.</p>
       )}
       {data.work.map((w: any, i: number) => (
-        <section className="panel record-block" key={i}>
+        <section className="panel record-block" key={i} style={{ padding: "18px 20px" }}>
           <strong>{w.title}</strong> <small>{fmt(w.date)}</small>
           {w.outcome && (
             <p>
