@@ -29,8 +29,9 @@ Rules (enforced by the API and covered by `tests/test_rust_scan.py`):
   so old regions are never shown over a different picture. To inspect another area, upload
   its photo and scan again. Each confirmed photo keeps its own timeline event.
 - The visit completion record does not repeat confirmed scans or AI wording.
-- The public work report (`/work/{share}/{code}`, no sign-in) shows recorded and confirmed
-  work only. Service reports appear with their latest amendments, and the technician's
+- The customer work report (`/work/{share}/{code}?t=<token>`) requires a signed-in account
+  (staff, or a customer who created an account from that asset's QR code) and is read-only.
+  It shows recorded and confirmed work only. Service reports appear with their latest amendments, and the technician's
   internal `notes` field is never included.
 
 ## Detector (`RUST_DETECTOR`)
