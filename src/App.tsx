@@ -67,6 +67,7 @@ function Welcome({ onStart }: { onStart: (s: any) => void }) {
   const [account, setAccount] = useState(
     !!new URLSearchParams(location.search).get("invite"),
   );
+  const [audience, setAudience] = useState<"team" | "customer" | undefined>();
   const [busy, setBusy] = useState(false),
     [error, setError] = useState("");
   return (
@@ -75,13 +76,29 @@ function Welcome({ onStart }: { onStart: (s: any) => void }) {
         <img src="/images/lemmer-logo.svg" alt="Lemmer" />
         <span>ASSET PASSPORT</span>
       </div>
-      <button
-        className="button secondary customer-login"
-        onClick={() => setAccount(true)}
-      >
-        Staff / customer sign in
-      </button>
-      {account && <AccountAccess onClose={() => setAccount(false)} />}
+      <div className="entrances">
+        <button
+          className="button secondary"
+          onClick={() => {
+            setAudience("team");
+            setAccount(true);
+          }}
+        >
+          Lemmer team sign in
+        </button>
+        <button
+          className="button secondary"
+          onClick={() => {
+            setAudience("customer");
+            setAccount(true);
+          }}
+        >
+          Customer sign in / create account
+        </button>
+      </div>
+      {account && (
+        <AccountAccess audience={audience} onClose={() => setAccount(false)} />
+      )}
       <div className="welcome-grid">
         <section>
           <div className="eyebrow orange">SERVICE KNOWLEDGE, CONNECTED</div>
@@ -136,6 +153,11 @@ function Welcome({ onStart }: { onStart: (s: any) => void }) {
             <ScanLine size={18} />
             Try reception
           </button>
+          <p className="small muted">
+            Lemmer team: view and edit everything. Customers: sign in or scan
+            your technician’s QR code to see, read-only, the work done on your
+            equipment.
+          </p>
           <p className="small muted">
             No signup required · Your own persistent sample workspace
           </p>
@@ -646,9 +668,7 @@ function Shell() {
           <ol className="demo-steps">
             <li>
               <strong>Open TEST-ASSET-001’s request</strong>
-              <p>
-                Start with “Will not start” in Service requests.
-              </p>
+              <p>Start with “Will not start” in Service requests.</p>
             </li>
             <li>
               <strong>Receive service assistance automatically</strong>

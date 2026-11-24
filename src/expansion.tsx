@@ -72,8 +72,10 @@ function Form({
 export function AccountAccess({
   onClose,
   qr,
+  audience,
 }: {
   onClose: () => void;
+  audience?: "team" | "customer";
   qr?: { share: string; code: string; token: string };
 }) {
   const { setSession } = useApp();
@@ -84,7 +86,13 @@ export function AccountAccess({
   return (
     <Modal
       title={
-        signup ? "Create or connect your account" : "Staff or customer sign in"
+        signup
+          ? "Create your customer account"
+          : audience === "team"
+            ? "Lemmer team sign in"
+            : audience === "customer"
+              ? "Customer sign in"
+              : "Staff or customer sign in"
       }
       subtitle="Your equipment, service history and parts requests in one place."
       onClose={onClose}
@@ -95,7 +103,12 @@ export function AccountAccess({
           await post(
             signup ? "/auth/signup" : "/auth/login",
             signup && qr
-              ? { ...b, qr_share: qr.share, qr_code: qr.code, qr_token: qr.token }
+              ? {
+                  ...b,
+                  qr_share: qr.share,
+                  qr_code: qr.code,
+                  qr_token: qr.token,
+                }
               : b,
           );
           const signedIn = await api("/session");
@@ -150,15 +163,17 @@ export function AccountAccess({
             </small>
           </Field>
         )}
-        <button
-          type="button"
-          className="text-button"
-          onClick={() => setSignup(!signup)}
-        >
-          {signup
-            ? "Already registered? Sign in"
-            : "New customer? Create an account"}
-        </button>
+        {audience !== "team" && (
+          <button
+            type="button"
+            className="text-button"
+            onClick={() => setSignup(!signup)}
+          >
+            {signup
+              ? "Already registered? Sign in"
+              : "New customer? Create an account"}
+          </button>
+        )}
       </Form>
     </Modal>
   );
@@ -617,9 +632,9 @@ export function MyAssets() {
       {!data.length && (
         <Empty title="No assets assigned yet">
           To see the work done on your vehicle or equipment, scan the QR code
-          your technician gave you. Your account then shows the completed
-          work. To have your own equipment registered, give reception your
-          account details.
+          your technician gave you. Your account then shows the completed work.
+          To have your own equipment registered, give reception your account
+          details.
         </Empty>
       )}
       <div className="catalog-grid">
@@ -1256,51 +1271,55 @@ export function Vehicles() {
       </div>
       <div className="catalog-grid">
         {vehicles.map((a: any) => (
-            <article key={a.id} className="catalog-card">
-              <img src={a.image} alt={a.name} />
-              <div>
-                <span className="eyebrow">{a.code}</span>
-                <h3>{a.name}</h3>
-                <p>
-                  {a.manufacturer} {a.model} · {a.ownership.profile.year}
-                </p>
-                <p>VIN: {a.ownership.profile.vin || "Not recorded"}</p>
-                <small>{a.customer}</small>
-                {latestScan[a.id] ? (
-                  <div className="rust-chip">
-                    <span className={"rust-level " + latestScan[a.id].severity.toLowerCase()}>
-                      Rust: {latestScan[a.id].severity}
-                    </span>
-                    <span>{latestScan[a.id].area_pct.toFixed(1)}% of image</span>
-                    <Badge value={latestScan[a.id].review_status} />
-                  </div>
-                ) : (
-                  <div className="rust-chip muted">No rust scan yet</div>
-                )}
-                <button
-                  className="button primary"
-                  disabled={busy}
-                  onClick={async () => {
-                    setBusy(true);
-                    try {
-                      const v = await post("/visits", { asset_id: a.id });
-                      setActive({ ...v, asset: a });
-                      refresh();
-                    } catch (e: any) {
-                      toast(e.message);
-                    } finally {
-                      setBusy(false);
+          <article key={a.id} className="catalog-card">
+            <img src={a.image} alt={a.name} />
+            <div>
+              <span className="eyebrow">{a.code}</span>
+              <h3>{a.name}</h3>
+              <p>
+                {a.manufacturer} {a.model} · {a.ownership.profile.year}
+              </p>
+              <p>VIN: {a.ownership.profile.vin || "Not recorded"}</p>
+              <small>{a.customer}</small>
+              {latestScan[a.id] ? (
+                <div className="rust-chip">
+                  <span
+                    className={
+                      "rust-level " + latestScan[a.id].severity.toLowerCase()
                     }
-                  }}
-                >
-                  Open visit and rust scan <ArrowRight size={16} />
-                </button>
-                <Link to={"/my-assets/" + a.id}>
-                  View passport and prior pictures
-                </Link>
-              </div>
-            </article>
-          ))}
+                  >
+                    Rust: {latestScan[a.id].severity}
+                  </span>
+                  <span>{latestScan[a.id].area_pct.toFixed(1)}% of image</span>
+                  <Badge value={latestScan[a.id].review_status} />
+                </div>
+              ) : (
+                <div className="rust-chip muted">No rust scan yet</div>
+              )}
+              <button
+                className="button primary"
+                disabled={busy}
+                onClick={async () => {
+                  setBusy(true);
+                  try {
+                    const v = await post("/visits", { asset_id: a.id });
+                    setActive({ ...v, asset: a });
+                    refresh();
+                  } catch (e: any) {
+                    toast(e.message);
+                  } finally {
+                    setBusy(false);
+                  }
+                }}
+              >
+                Open visit and rust scan <ArrowRight size={16} />
+              </button>
+              <Link to={"/my-assets/" + a.id}>
+                View passport and prior pictures
+              </Link>
+            </div>
+          </article>
+        ))}
       </div>
       <h2 className="section-heading">Visit history</h2>
       <div className="order-list">
@@ -1426,7 +1445,7 @@ export function Vehicles() {
                     ))}
                   </select>
                 </Field>
-                {(
+                {
                   <div className="ai-suggestion">
                     <div className="ai-suggestion-head">
                       <strong>AI suggestion</strong>
@@ -1468,8 +1487,10 @@ export function Vehicles() {
                               type="button"
                               className="button secondary"
                               onClick={(e) => {
-                                const el = (e.currentTarget.closest("form") as any)
-                                  ?.elements?.[k] as HTMLTextAreaElement | undefined;
+                                const el = (
+                                  e.currentTarget.closest("form") as any
+                                )?.elements?.[k] as
+                                  HTMLTextAreaElement | undefined;
                                 if (el)
                                   el.value =
                                     (el.value ? el.value + "\n" : "") +
@@ -1493,7 +1514,7 @@ export function Vehicles() {
                       </small>
                     )}
                   </div>
-                )}
+                }
                 <Field label="Inspection findings (technician)">
                   {active.report.rust_scan && (
                     <button
@@ -1502,7 +1523,8 @@ export function Vehicles() {
                       onClick={(e) => {
                         const el = (e.currentTarget.form as any)?.elements
                           ?.findings as HTMLTextAreaElement | undefined;
-                        if (el) el.value = draftFindings(active.report.rust_scan);
+                        if (el)
+                          el.value = draftFindings(active.report.rust_scan);
                       }}
                     >
                       Draft from rust scan
