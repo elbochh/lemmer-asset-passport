@@ -389,6 +389,11 @@ def attach(
             db.flush()
             db.add(AssetViewer(asset_id=qa.id, customer_id=c.id))
         else:
+            from .production import forbid_in_production
+
+            forbid_in_production(
+                "Scan the QR code your technician gave you, or use your reception invitation, to create your account."
+            )
             if len(body.name.strip()) < 2:
                 raise HTTPException(422, "Enter your name.")
             if db.scalar(select(func.count()).select_from(Workspace)) >= 200:

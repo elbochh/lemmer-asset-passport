@@ -39,7 +39,9 @@ def ensure_site(db, wid):
 
 def staff_identity(db, wid, key):
     if key in TECHNICIANS + RECEPTIONISTS + [DEMO_ADMIN]:
-        if not db.get(Workspace, wid):
+        from .production import is_demo
+
+        if not is_demo() or not db.get(Workspace, wid):
             raise ValueError()
         return {
             "workspace": wid,

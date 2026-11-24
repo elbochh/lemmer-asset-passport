@@ -62,6 +62,13 @@ async def lifespan(app):
                 "CREATE INDEX IF NOT EXISTS case_search_idx ON knowledge_cases USING gin(to_tsvector('english', symptom || ' ' || diagnosis || ' ' || repair))"
             )
         )
+    from . import production
+
+    if not production.is_demo():
+        from .database import Session
+
+        with Session() as db:
+            production.bootstrap(db)
     task = (
         asyncio.create_task(worker())
         if os.getenv("AUTO_GUIDANCE_WORKER", "1") == "1"
@@ -217,6 +224,13 @@ def health(db=Depends(dbdep)):
     }
 
 
+@app.get("/api/config")
+def public_config():
+    from .production import is_demo
+
+    return {"demo_mode": is_demo()}
+
+
 @app.get("/api/session")
 def get_session(request: Request, db=Depends(dbdep)):
     return app.state.portal_session(request, db)
@@ -224,6 +238,9 @@ def get_session(request: Request, db=Depends(dbdep)):
 
 @app.post("/api/demo/start")
 def start(response: Response, db=Depends(dbdep)):
+    from .production import forbid_in_production
+
+    forbid_in_production()
     # Keep public demo resource growth bounded. Existing workspace cookies last 30 days.
     db.execute(text("SELECT pg_advisory_xact_lock(7771042)"))
     if db.scalar(select(func.count()).select_from(Workspace)) >= 200:
@@ -244,6 +261,9 @@ class Switch(BaseModel):
 
 @app.post("/api/session/technician")
 def switch(body: Switch, response: Response, who=Depends(claims), db=Depends(dbdep)):
+    from .production import forbid_in_production
+
+    forbid_in_production()
     if not who.get("demo", True):
         raise HTTPException(
             403, "Account switching is only available in synthetic demos."

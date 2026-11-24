@@ -57,7 +57,7 @@ DATABASE_URL=postgresql+psycopg://localhost/lemmer_test AUTO_GUIDANCE_WORKER=0 .
 
 The `Dockerfile` builds the front end and serves everything from one FastAPI container. `render.yaml` describes the Render setup (a web service plus a PostgreSQL database). Any host that runs Docker and provides PostgreSQL works.
 
-`render.production.yaml` is a ready blueprint for Lemmer's own Render account (paid web service and database, `main` branch). `scripts/backup_db.sh` makes a database backup with `pg_dump`; schedule it regularly and keep copies off the host.
+`render.production.yaml` is a ready blueprint for Lemmer's own Render account (paid web service and database, `main` branch, production mode on). After applying it, set `GEMINI_API_KEY`, `ADMIN_EMAIL`, `ADMIN_PASSWORD` and `ADMIN_NAME` in the Render dashboard. `scripts/backup_db.sh` makes a database backup with `pg_dump`; schedule it regularly and keep copies off the host.
 
 For continuous production use, do not use free plans: free web services sleep when idle (the first request can take 30 to 60 seconds) and free PostgreSQL databases expire. Use paid plans for both and enable database backups.
 
@@ -71,6 +71,8 @@ For continuous production use, do not use free plans: free web services sleep wh
 | `RUST_DETECTOR` | `local` (recommended: runs the ONNX model in the server), `http` (separate service via `RUST_DETECTOR_URL`), or `simulated` (not real detection). |
 | `RUST_DETECTOR_URL`, `RUST_DETECTOR_TOKEN` | Only for `http` mode. |
 | `RUST_DETECTOR_THREADS` | CPU threads for local detection (default 2). |
+| `DEMO_MODE` | `1` (default) keeps the demonstration behaviour. `0` is production mode: no demonstration workspaces, no no-signup entry, customers can only join through an asset's QR code or a reception invitation. |
+| `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `ADMIN_NAME` | Production mode only: the first super-user, created on first start when no staff exist. Password at least 10 characters. |
 | `ENVIRONMENT` | `production` or `development`. |
 | `AUTO_GUIDANCE_WORKER` | `0` disables background AI calls (useful in development and tests). |
 | `AI_DAILY_LIMIT` and related `AI_*` limits | Caps on daily AI usage. |
@@ -78,6 +80,11 @@ For continuous production use, do not use free plans: free web services sleep wh
 Never commit real keys. Regenerate any key that has been shared in a chat or an email.
 
 ## 6. How to operate it
+
+**Production setup (DEMO_MODE=0)**
+1. Start the app with the `ADMIN_*` variables set; the super-user is created automatically.
+2. Sign in with "Lemmer team sign in" and open the operations area to create staff accounts (reception, technician, super-user).
+3. Reception adds customers and registers vehicles and equipment, then the technician works with them as described below.
 
 **Lemmer team**
 1. Open the site and choose "Lemmer team sign in" (or use the demo buttons in the demonstration build).
@@ -95,14 +102,14 @@ Never commit real keys. Regenerate any key that has been shared in a chat or an 
 - This is a working prototype built on synthetic customers and sample cases. No real Lemmer repair history or approved service library has been loaded or validated.
 - The rust detector is a small YOLO11n model trained on public car-body photos, not on Lemmer vehicles. It locates rust with boxes and is indicative only; the technician must review every result. Measured accuracy is in `docs/RUST_SCAN.md`. Undercarriage photos from Lemmer would be needed to improve it.
 - AI output is a suggestion and is never a substitute for the technician's judgement.
-- The demonstration build includes no-signup demo workspaces with synthetic data. For real use, disable the demo entry points and create real staff accounts (an open decision for Lemmer).
+- The default build is a demonstration with no-signup demo workspaces and synthetic data. For real use set `DEMO_MODE=0` (section 5): the app then starts with one empty company workspace and one super-user, and everything is created by Lemmer's own staff.
 - Photos are stored in PostgreSQL in this version. A larger deployment should use object storage.
 - Email notifications are previews only.
 
 ## 8. Suggested final adjustments to discuss
 
 1. Hosting account and ownership (Lemmer's own Render or other hosting, paid database, backups).
-2. Real staff accounts and removal of the demo mode.
+2. Who at Lemmer owns the super-user account and creates staff accounts.
 3. Real service forms and procedures to load into the knowledge library.
 4. Lemmer undercarriage photos to retrain and re-measure the rust model.
 5. A named contact at Lemmer responsible for keys, costs and redeployment.
