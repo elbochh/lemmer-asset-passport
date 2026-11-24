@@ -1,0 +1,32 @@
+# Production blueprint for Lemmer's own Render account.
+# Unlike render.yaml (free demo plans), these plans do not sleep and the
+# database does not expire. Check current plan names and prices on Render
+# before applying. Deploy from the `main` branch of the repository.
+databases:
+  - name: lemmer-asset-passport-db
+    plan: basic-256mb
+    region: oregon
+    postgresMajorVersion: "16"
+
+services:
+  - type: web
+    name: lemmer-asset-passport
+    runtime: docker
+    plan: starter
+    region: oregon
+    branch: main
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: lemmer-asset-passport-db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ENVIRONMENT
+        value: production
+      - key: RUST_DETECTOR
+        value: local
+      - key: GEMINI_API_KEY   # Lemmer's own key, entered in the Render dashboard
+        sync: false
