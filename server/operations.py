@@ -184,9 +184,9 @@ def attach(app, dbdep, claims, owned, serialize, req_out):
                 .select_from(StaffUser)
                 .where(StaffUser.workspace_id == w["workspace"])
             )
-            >= 30
+            >= __import__("server.production", fromlist=["x"]).staff_limit()
         ):
-            raise HTTPException(429, "Demo staff limit reached.")
+            raise HTTPException(429, "Staff account limit reached.")
         u = StaffUser(
             workspace_id=w["workspace"],
             location_id=site.id,

@@ -68,6 +68,12 @@ function Welcome({ onStart }: { onStart: (s: any) => void }) {
     !!new URLSearchParams(location.search).get("invite"),
   );
   const [audience, setAudience] = useState<"team" | "customer" | undefined>();
+  const [demoMode, setDemoMode] = useState(true);
+  useEffect(() => {
+    api("/config")
+      .then((c) => setDemoMode(c.demo_mode !== false))
+      .catch(() => {});
+  }, []);
   const [busy, setBusy] = useState(false),
     [error, setError] = useState("");
   return (
@@ -114,53 +120,72 @@ function Welcome({ onStart }: { onStart: (s: any) => void }) {
             relevant repair knowledge, and make the next service decision with
             better context.
           </p>
-          <button
-            className="button primary big"
-            disabled={busy}
-            onClick={async () => {
-              setBusy(true);
-              try {
-                await post("/demo/start");
-                onStart(await api("/session"));
-              } catch (e: any) {
-                setError(e.message);
-                setBusy(false);
-              }
-            }}
-          >
-            {busy ? (
-              <Loader2 className="spin" size={18} />
-            ) : (
+          {demoMode ? (
+            <>
+              <button
+                className="button primary big"
+                disabled={busy}
+                onClick={async () => {
+                  setBusy(true);
+                  try {
+                    await post("/demo/start");
+                    onStart(await api("/session"));
+                  } catch (e: any) {
+                    setError(e.message);
+                    setBusy(false);
+                  }
+                }}
+              >
+                {busy ? (
+                  <Loader2 className="spin" size={18} />
+                ) : (
+                  <ArrowRight size={18} />
+                )}
+                Open technician workspace
+              </button>
+              <button
+                className="button secondary welcome-reception"
+                disabled={busy}
+                onClick={async () => {
+                  setBusy(true);
+                  try {
+                    await post("/demo/start");
+                    await post("/session/technician", {
+                      name: "Taylor Brooks",
+                    });
+                    onStart(await api("/session"));
+                  } catch (e: any) {
+                    setError(e.message);
+                    setBusy(false);
+                  }
+                }}
+              >
+                <ScanLine size={18} />
+                Try reception
+              </button>
+            </>
+          ) : (
+            <button
+              className="button primary big"
+              onClick={() => {
+                setAudience("team");
+                setAccount(true);
+              }}
+            >
               <ArrowRight size={18} />
-            )}
-            Open technician workspace
-          </button>
-          <button
-            className="button secondary welcome-reception"
-            disabled={busy}
-            onClick={async () => {
-              setBusy(true);
-              try {
-                await post("/demo/start");
-                await post("/session/technician", { name: "Taylor Brooks" });
-                onStart(await api("/session"));
-              } catch (e: any) {
-                setError(e.message);
-                setBusy(false);
-              }
-            }}
-          >
-            <ScanLine size={18} />
-            Try reception
-          </button>
+              Lemmer team sign in
+            </button>
+          )}
           <p className="small muted">
             Lemmer team: view and edit everything. Customers: sign in or scan
             your technician’s QR code to see, read-only, the work done on your
             equipment.
           </p>
-          <p className="small muted">
-            No signup required · Your own persistent sample workspace
-          </p>
+          {demoMode && (
+            <p className="small muted">
+              No signup required · Your own persistent sample workspace
+            </p>
+          )}
           {error && <ErrorBox message={error} />}
           <div className="welcome-points">
             <span>
@@ -200,7 +225,9 @@ function Welcome({ onStart }: { onStart: (s: any) => void }) {
       </div>
       <footer>
         <span>Built for the people who keep equipment running.</span>
-        <span>Demo only · Synthetic customers and repair cases</span>
+        {demoMode && (
+          <span>Demo only · Synthetic customers and repair cases</span>
+        )}
       </footer>
     </main>
   );

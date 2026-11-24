@@ -1,10 +1,17 @@
 # Production blueprint for Lemmer's own Render account.
-# Unlike render.yaml (free demo plans), these plans do not sleep and the
-# database does not expire. Check current plan names and prices on Render
-# before applying. Deploy from the `main` branch of the repository.
+# Unlike render.yaml (free demo plans), these paid plans do not sleep and the
+# database does not expire. Plan IDs follow Render's Blueprint reference
+# (https://render.com/docs/blueprint-spec); check current prices at
+# https://render.com/pricing before applying. Deploy from the `main` branch.
+#
+# After applying, set in the Render dashboard (sync: false = not stored here):
+#   GEMINI_API_KEY  Lemmer's own Google AI key
+#   ADMIN_EMAIL, ADMIN_PASSWORD (10+ chars), ADMIN_NAME  first super-user
+# Sign in as that super-user, then create the other staff accounts in the app.
+# Once the first super-user exists you may delete ADMIN_PASSWORD.
 databases:
   - name: lemmer-asset-passport-db
-    plan: basic-256mb
+    plan: 0.1c-256mb
     region: oregon
     postgresMajorVersion: "16"
 
@@ -12,7 +19,7 @@ services:
   - type: web
     name: lemmer-asset-passport
     runtime: docker
-    plan: starter
+    plan: 0.5c-512mb
     region: oregon
     branch: main
     dockerfilePath: ./Dockerfile
@@ -26,6 +33,14 @@ services:
         generateValue: true
       - key: ENVIRONMENT
         value: production
+      - key: DEMO_MODE      # 0 = real accounts only, no demonstration workspaces
+        value: "0"
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_NAME
+        sync: false
       - key: RUST_DETECTOR
         value: local
       - key: GEMINI_API_KEY   # Lemmer's own key, entered in the Render dashboard
